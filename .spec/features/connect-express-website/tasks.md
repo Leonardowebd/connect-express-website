@@ -11,13 +11,13 @@
 ## T-001 - Base do projeto Next.js, tokens e apoio de testes [concluida]
 
 - Refs: US-012, AC-036
-- Arquivos: package.json, package-lock.json, tsconfig.json, next.config.mjs, onpspec.config.json, .env.example, src/app/layout.tsx, src/app/globals.css, src/styles/tokens.css, src/styles/base.css, tests/apoio.mjs
+- Arquivos: package.json, package-lock.json, tsconfig.json, next.config.mjs, onpspec.config.json, .env.example, src/app/layout.tsx, src/app/globals.css, tests/apoio.mjs
 - Notas: Skills connect-frontend, connect-id-visual, connect-ui-design. Next.js com App Router e TypeScript, React, gsap e @gsap/react. Fontes Geologica e Poppins por next/font/google. tokens.css é o único arquivo com valores de cor.
 
 ## T-002 - Dados de conteúdo e copy [concluida]
 
 - Refs: US-002, US-003, AC-013
-- Arquivos: src/data/empresa.ts, src/data/servicos.ts, src/data/inicio.ts, src/data/vagas.ts, src/data/imagens.ts
+- Arquivos: src/data/empresa.ts, src/data/inicio.ts, src/data/imagens.ts
 - Notas: Skills connect-copy-website, connect-geo, connect-seo. Copy do site antigo reescrita. Números: site atual e apresentação juntos, vale o maior.
 
 ## T-003 - Componente de imagem com substituto [concluida]
@@ -59,25 +59,25 @@
 ## T-009 - Montagem da página inicial [concluida]
 
 - Refs: US-001, US-003, AC-001, AC-002, AC-004, AC-007, AC-008, AC-009
-- Arquivos: src/app/page.tsx, tests/us-001-005-conteudo.test.mjs
+- Arquivos: tests/us-001-005-conteudo.test.mjs
 - Notas: Ordem das seções da skill connect-design-concept. Âncoras sobre, servicos e contato do site antigo mantidas.
 
 ## T-010 - Páginas de solução [concluida]
 
 - Refs: US-002, AC-005, AC-006
-- Arquivos: src/app/servicos/[slug]/page.tsx, src/app/servicos/[slug]/pagina.module.css
+- Arquivos: src/data/servicos.ts
 - Notas: Skills connect-copy-website, connect-geo, connect-seo. Os quatro endereços do site antigo, gerados de forma estática.
 
 ## T-011 - Página Trabalhe Conosco [concluida]
 
 - Refs: US-005, AC-015
-- Arquivos: src/app/trabalhe-conosco/page.tsx, src/app/paginas.module.css, src/app/api/vagas/route.ts
+- Arquivos: src/app/api/vagas/route.ts, src/data/vagas.ts
 - Notas: Skills connect-ux, connect-security. Vantagens, requisitos e formulário de cadastro.
 
 ## T-012 - Política de Privacidade e página não encontrada [concluida]
 
 - Refs: US-010, AC-032
-- Arquivos: src/app/politica-de-privacidade/page.tsx, src/app/not-found.tsx
+- Arquivos: src/app/not-found.tsx
 - Notas: Skill connect-security, parte de LGPD. Texto-base para revisão do cliente (pergunta em aberto Q-006).
 
 ## T-013 - SEO: metadados, sitemap, robôs e dados da organização [concluida]
@@ -104,8 +104,21 @@
 - Arquivos: tests/us-011-013-acessibilidade-marca.test.mjs
 - Notas: Skills connect-responsive, connect-performance. Conferido em 390 e 1440 px, sem rolagem horizontal.
 
-## T-017 - Publicação na Vercel [pendente]
+## T-017 - Publicação na Vercel [concluida]
 
 - Refs: US-009, US-010
 - Arquivos: README.md
-- Notas: Skills connect-security, connect-performance. Projeto na Vercel com pré-visualização protegida. README com as instruções de rodar, testar, trocar imagens e publicar.
+- Notas: Projeto connect-express-website na Vercel, ligado ao repositório do GitHub (cada envio para main publica). Endereço connectexpresslog.vercel.app; connectexpress.vercel.app já pertence a outro site. README com as instruções de rodar, testar, trocar imagens e publicar.
+
+## T-018 - Paleta com o verde da marca dominante [concluida]
+
+- Refs: US-012, AC-036
+- Arquivos: src/styles/tokens.css, src/styles/base.css
+- Notas: Skill connect-id-visual. Blocos fortes em verde, laranja em botões e destaques, azul em links e detalhes. Sobre verde, destaques e links ficam brancos por contraste.
+
+## T-019 - Versão B da página inicial em /b/ [concluida]
+
+- Refs: US-014, AC-040, AC-041
+- Arquivos: src/app/b/page.tsx, src/app/b/layout.tsx, src/app/(site)/layout.tsx, src/app/(site)/page.tsx, src/app/(site)/paginas.module.css, src/app/(site)/servicos/[slug]/page.tsx, src/app/(site)/servicos/[slug]/pagina.module.css, src/app/(site)/trabalhe-conosco/page.tsx, src/app/(site)/politica-de-privacidade/page.tsx, src/components/b/b.module.css, src/components/b/Pilula.tsx, src/components/b/CabecalhoB.tsx, src/components/b/HeroiB.tsx, src/components/b/FatosB.tsx, src/components/b/SolucoesB.tsx, src/components/b/OperacaoB.tsx, src/components/b/CoberturaB.tsx, src/components/b/ChamadaB.tsx, src/components/b/RodapeB.tsx, tests/us-014-versao-b.test.mjs
+- Notas: Skills connect-design-concept, connect-ui-design. Layout da referência Cargomaxis (nó 1-10 do Figma): cartões arredondados, navegação em pílulas sobre a foto, soluções em linhas, rodapé com letreiro. As rotas da versão A foram para o grupo (site), sem mudar de endereço.
+

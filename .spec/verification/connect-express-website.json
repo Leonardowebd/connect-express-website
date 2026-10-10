@@ -1,11 +1,11 @@
 {
   "feature": "connect-express-website",
-  "timestamp": "2026-10-10T15:05:47.009Z",
-  "gitRev": "98df95a",
+  "timestamp": "2026-10-10T18:32:14.502Z",
+  "gitRev": "3a86a82",
   "command": "npm run build --silent 1>&2 && node --test --test-reporter=tap tests/*.test.mjs",
   "reporter": "tap",
   "exitCode": 0,
-  "testsParsed": 39,
+  "testsParsed": 41,
   "results": {
     "AC-001": {
       "status": "pass",
@@ -200,6 +200,16 @@
     "AC-039": {
       "status": "pass",
       "testName": "@spec:AC-039 trocar uma imagem é trocar um arquivo",
+      "method": "tap"
+    },
+    "AC-040": {
+      "status": "pass",
+      "testName": "@spec:AC-040 a versão B mostra o mesmo conteúdo em outro layout",
+      "method": "tap"
+    },
+    "AC-041": {
+      "status": "pass",
+      "testName": "@spec:AC-041 a versão B não concorre com a oficial nos buscadores",
       "method": "tap"
     }
   },

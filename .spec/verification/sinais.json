@@ -837,6 +837,33 @@
       "primeiraVez": "2026-10-10T14:45:14.849Z",
       "ultimaVez": "2026-10-10T14:45:14.849Z",
       "gitRev": "69ac554"
+    },
+    "VERIFY_FALHOU::connect-express-website::AC-026": {
+      "codigo": "VERIFY_FALHOU",
+      "feature": "connect-express-website",
+      "ref": "AC-026",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-10T18:31:44.578Z",
+      "ultimaVez": "2026-10-10T18:31:48.474Z",
+      "gitRev": "3a86a82"
+    },
+    "TASK_CONCLUIDA_SEM_PROVA::connect-express-website::T-016": {
+      "codigo": "TASK_CONCLUIDA_SEM_PROVA",
+      "feature": "connect-express-website",
+      "ref": "T-016",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-10T18:31:48.616Z",
+      "ultimaVez": "2026-10-10T18:31:48.617Z",
+      "gitRev": "3a86a82"
+    },
+    "AC_SEM_PROVA::connect-express-website::AC-026": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "connect-express-website",
+      "ref": "AC-026",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-10T18:31:48.617Z",
+      "ultimaVez": "2026-10-10T18:31:48.617Z",
+      "gitRev": "3a86a82"
     }
   }
 }

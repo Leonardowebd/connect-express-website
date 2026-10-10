@@ -111,7 +111,11 @@ const gzip = (conteudo) => zlib.gzipSync(conteudo).length;
 /** Peso comprimido do HTML mais o CSS e o JavaScript que a página carrega na primeira carga. */
 export function pesoDaPrimeiraCarga(h) {
   const recursos = new Set();
-  for (const t of h.match(/<script[^>]*\ssrc="[^"]+"[^>]*>/g) ?? []) recursos.add(attr(t, 'src'));
+  // O polyfill com nomodule (cerca de 39 KB) fica de fora: navegadores com
+  // suporte a módulos não baixam esse arquivo, então ele não entra na primeira carga.
+  for (const t of h.match(/<script[^>]*\ssrc="[^"]+"[^>]*>/g) ?? []) {
+    if (!temAttr(t, 'nomodule')) recursos.add(attr(t, 'src'));
+  }
   for (const t of h.match(/<link[^>]*>/g) ?? []) if (attr(t, 'rel') === 'stylesheet') recursos.add(attr(t, 'href'));
   let total = gzip(h);
   for (const r of recursos) {

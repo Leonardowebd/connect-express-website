@@ -53,7 +53,7 @@
 
 .lista a:hover,
 .atalhos a:not(:global(.botao)):hover {
-  border-bottom-color: var(--cor-destaque);
+  border-bottom-color: var(--cor-marca);
 }
 
 .atalhos a:not(:global(.botao)) {

@@ -43,14 +43,21 @@ Regras:
 | `--cor-verde` | `#47A81B` | Assinatura da marca. Detalhes, selos de confirmação, bloco de marca. |
 | `--cor-azul` | `#0E7BD6` | Apoio. Links, detalhes de mapa e de dados. |
 
-No Figma, o laranja é a cor usada nos textos de exemplo e vem primeiro na paleta. Ele é a cor de destaque do site. O verde identifica a marca pelo logotipo e entra com moderação.
+Regra de uso, definida pelo dono do projeto em 2026-10-10: **o verde domina**.
+
+- Verde: blocos fortes (herói, mosaico de soluções, bloco de diferenciais, cartão do rodapé), réguas e detalhes de marca. Os blocos usam o verde escuro, com texto branco, por contraste.
+- Laranja: botões e a palavra destacada dos títulos sobre fundo claro.
+- Azul: links, siglas dos estados, numeração e foco do teclado.
+- Preto: só texto. Não há bloco preto no site.
+- Sobre verde, laranja não tem contraste para texto: destaques e links ficam brancos. Laranja sobre verde só como bloco ou botão, com texto escuro.
 
 ### Decisão de projeto (não está no Figma)
 
 | Token | Valor | Papel |
 |---|---|---|
 | `--cor-laranja-escuro` | `#C2410C` | Texto laranja pequeno e fundo de botão com texto branco pequeno. |
-| `--cor-verde-escuro` | `#2F7A0E` | Texto verde e fundo verde com texto branco. |
+| `--cor-verde-escuro` | `#2F7A0E` | Fundo dos blocos fortes, com texto branco. |
+| `--cor-verde-profundo` | `#17420A` | Fundo do herói, ladrilhos do mosaico e rodapé da versão B. |
 | `--cor-azul-escuro` | `#0A5FA8` | Links em texto corrido. |
 | `--cor-tinta` | `#111111` | Texto principal e blocos escuros. |
 | `--cor-tinta-suave` | `#5B6168` | Texto secundário e rótulos. |
@@ -95,4 +102,5 @@ Decisão de projeto:
 - Não usar as fontes das referências (Helvetica Now Display, condensadas em caixa alta). A marca usa Geologica e Poppins.
 - Não usar o azul vivo das referências SwiftMove e Logistica OS como cor dominante. O azul da marca é apoio.
 - Não usar laranja ou verde de marca em texto pequeno.
+- Não usar bloco preto.
 - Não misturar as três cores com o mesmo peso em uma seção. Uma domina, as outras pontuam.

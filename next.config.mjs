@@ -1,7 +1,9 @@
 // Cabeçalhos de segurança, cache e formatos de imagem.
 // Regras e justificativas: .claude/skills/connect-security e connect-performance.
 
-const emProducao = process.env.VERCEL_ENV === 'production';
+// O site só fica visível para buscadores depois do lançamento no domínio
+// oficial: defina SITE_NO_AR=sim na Vercel quando o cliente aprovar.
+const noAr = process.env.VERCEL_ENV === 'production' && process.env.SITE_NO_AR === 'sim';
 
 // O App Router embute scripts de hidratação no HTML. Páginas estáticas não
 // podem usar nonce, então script-src aceita 'unsafe-inline'. style-src aceita
@@ -37,8 +39,8 @@ const nextConfig = {
   images: { formats: ['image/avif', 'image/webp'] },
   async headers() {
     const cabecalhos = [...cabecalhosDeSeguranca];
-    // Pré-visualizações da Vercel não podem ser indexadas.
-    if (!emProducao) cabecalhos.push({ key: 'X-Robots-Tag', value: 'noindex, nofollow' });
+    // Pré-visualizações e o endereço vercel.app, antes do lançamento, não podem ser indexados.
+    if (!noAr) cabecalhos.push({ key: 'X-Robots-Tag', value: 'noindex, nofollow' });
     return [{ source: '/:path*', headers: cabecalhos }];
   },
 };

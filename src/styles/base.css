@@ -129,6 +129,13 @@ textarea {
   color: var(--cor-destaque);
 }
 
+/* Sobre verde, o laranja não tem contraste: o destaque vira branco e mais pesado. */
+.secao-escura .destaque,
+.sobre-escuro .destaque {
+  color: var(--cor-destaque-inverso);
+  font-weight: 600;
+}
+
 .texto-g {
   font-size: var(--tam-texto-g);
 }
@@ -166,7 +173,7 @@ p > .link:only-child {
 }
 
 .secao-escura .link {
-  color: var(--cor-destaque);
+  color: var(--cor-destaque-inverso);
 }
 
 /* Botões */
@@ -197,7 +204,7 @@ p > .link:only-child {
 }
 
 .botao-acao:hover {
-  background: var(--cor-tinta);
+  background: var(--cor-acao-realce);
   color: var(--cor-branco);
 }
 
@@ -213,8 +220,8 @@ p > .link:only-child {
 }
 
 .botao-contorno:hover {
-  background: var(--cor-tinta);
-  border-color: var(--cor-tinta);
+  background: var(--cor-acao-realce);
+  border-color: var(--cor-acao-realce);
   color: var(--cor-branco);
 }
 

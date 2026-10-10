@@ -33,7 +33,7 @@
 
 .requisitos {
   counter-reset: requisito;
-  border-top: 1px solid var(--cor-tinta);
+  border-top: 2px solid var(--cor-regua);
 }
 
 .requisitos li {
@@ -47,7 +47,7 @@
 .requisitos li::before {
   content: '0' counter(requisito);
   font-family: var(--fonte-titulo);
-  color: var(--cor-destaque-texto);
+  color: var(--cor-detalhe);
 }
 
 .painel {

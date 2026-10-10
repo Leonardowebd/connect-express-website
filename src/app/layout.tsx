@@ -1,9 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Geologica, Poppins } from 'next/font/google';
 import { BotaoWhatsApp } from '@/components/BotaoWhatsApp';
-import { Cabecalho } from '@/components/Cabecalho/Cabecalho';
 import { JsonLd } from '@/components/JsonLd';
-import { Rodape } from '@/components/Rodape/Rodape';
 import { empresa } from '@/data/empresa';
 import { organizacao } from '@/lib/jsonld';
 import { metadataBase } from '@/lib/metadados';
@@ -44,9 +42,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <a className="pular" href="#conteudo">
           Pular para o conteúdo
         </a>
-        <Cabecalho />
-        <main id="conteudo">{children}</main>
-        <Rodape />
+        {children}
         <BotaoWhatsApp />
         <JsonLd dados={organizacao()} />
       </body>

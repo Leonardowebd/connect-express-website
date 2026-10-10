@@ -11,3 +11,4 @@ dist/
 out/
 next-env.d.ts
 .playwright-mcp/
+.vercel

@@ -22,7 +22,7 @@
   position: relative;
   overflow: hidden;
   background:
-    repeating-linear-gradient(135deg, transparent 0 22px, var(--cor-branco-70) 22px 23px),
+    repeating-linear-gradient(135deg, transparent 0 22px, var(--cor-branco-suave) 22px 23px),
     var(--cor-linha);
 }
 
@@ -40,7 +40,7 @@
 .escuro {
   background:
     repeating-linear-gradient(135deg, transparent 0 22px, var(--cor-borda-inversa) 22px 23px),
-    var(--cor-tinta-2);
+    var(--cor-fundo-escuro-2);
 }
 
 .escuro::after {

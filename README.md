@@ -50,7 +50,16 @@ Os formulários de contato e de vagas enviam para o endereço da variável de am
 
 ## Publicar
 
-O projeto está ligado à Vercel. `vercel deploy` cria uma pré-visualização protegida; `vercel deploy --prod` publica em produção. Fora de produção, o site responde com `X-Robots-Tag: noindex`.
+O projeto está ligado à Vercel e ao repositório do GitHub: cada envio para `main` publica em https://connectexpresslog.vercel.app.
+
+Enquanto a variável `SITE_NO_AR` não for `sim` na Vercel, o site responde com `X-Robots-Tag: noindex` e fica fora dos buscadores. Defina essa variável só no lançamento, junto com o domínio oficial.
+
+## Versões A e B
+
+- Versão A: `/`, layout editorial (referência CargoKite).
+- Versão B: `/b/`, só a página inicial, layout em cartões arredondados (referência Cargomaxis, nó 1-10 do Figma).
+
+As duas usam os mesmos dados de `src/data/`. Depois da escolha, a versão descartada sai do código.
 
 ## Pendências antes de ir ao ar
 

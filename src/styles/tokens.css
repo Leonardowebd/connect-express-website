@@ -13,11 +13,11 @@
   /* Variações para contraste (decisão de projeto) */
   --cor-laranja-escuro: #c2410c;
   --cor-verde-escuro: #2f7a0e;
+  --cor-verde-profundo: #17420a;
   --cor-azul-escuro: #0a5fa8;
 
   /* Neutros (decisão de projeto) */
   --cor-tinta: #111111;
-  --cor-tinta-2: #1c1c1c;
   --cor-tinta-suave: #5b6168;
   --cor-linha: #d9dee3;
   --cor-nevoa: #e9ecef;
@@ -25,27 +25,33 @@
   --cor-branco: #ffffff;
 
   /* Transparências */
-  --cor-branco-70: rgb(255 255 255 / 0.72);
+  --cor-branco-suave: rgb(255 255 255 / 0.86);
   --cor-branco-15: rgb(255 255 255 / 0.15);
-  --cor-tinta-60: rgb(17 17 17 / 0.6);
+  --cor-veu: rgb(23 66 10 / 0.62);
   --cor-erro: #b42318;
 
   /* Papéis: componentes usam só estes */
   --cor-fundo: var(--cor-branco);
   --cor-fundo-alt: var(--cor-nevoa);
   --cor-superficie: var(--cor-papel);
-  --cor-fundo-escuro: var(--cor-tinta);
+  /* Verde domina: os blocos fortes usam o verde da marca, como no logotipo. */
+  --cor-fundo-escuro: var(--cor-verde-escuro);
+  --cor-fundo-escuro-2: var(--cor-verde-profundo);
   --cor-texto: var(--cor-tinta);
   --cor-texto-suave: var(--cor-tinta-suave);
   --cor-texto-inverso: var(--cor-branco);
-  --cor-texto-inverso-suave: var(--cor-branco-70);
+  --cor-texto-inverso-suave: var(--cor-branco-suave);
   --cor-borda: var(--cor-linha);
   --cor-borda-inversa: var(--cor-branco-15);
   --cor-acao: var(--cor-laranja);
   --cor-acao-texto: var(--cor-tinta);
   --cor-destaque: var(--cor-laranja);
   --cor-destaque-texto: var(--cor-laranja-escuro);
-  --cor-link: var(--cor-laranja-escuro);
+  --cor-destaque-inverso: var(--cor-branco);
+  --cor-acao-realce: var(--cor-verde-escuro);
+  --cor-link: var(--cor-azul-escuro);
+  --cor-detalhe: var(--cor-azul-escuro);
+  --cor-regua: var(--cor-verde);
   --cor-marca: var(--cor-verde);
   --cor-foco: var(--cor-azul);
 
@@ -85,6 +91,9 @@
   /* Forma */
   --raio-controle: 2px;
   --raio-cartao: 4px;
+  /* Versão B: cartões bem arredondados e botões em pílula */
+  --raio-b: 1.75rem;
+  --raio-pilula: 999px;
   --toque-minimo: 2.75rem;
 
   /* Movimento */

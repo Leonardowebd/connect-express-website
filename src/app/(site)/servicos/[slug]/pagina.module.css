@@ -59,7 +59,7 @@
 }
 
 .inclui {
-  border-top: 1px solid var(--cor-tinta);
+  border-top: 2px solid var(--cor-regua);
 }
 
 .inclui li {
@@ -95,14 +95,14 @@
   gap: var(--espaco-3);
   align-content: start;
   padding: var(--espaco-6);
-  background: var(--cor-tinta-2);
+  background: var(--cor-fundo-escuro-2);
 }
 
 .motivoNumero {
   margin-bottom: var(--espaco-8);
   font-family: var(--fonte-titulo);
   font-size: 1.5rem;
-  color: var(--cor-destaque);
+  color: var(--cor-destaque-inverso);
 }
 
 .estados {
@@ -122,7 +122,7 @@
   font-family: var(--fonte-titulo);
   font-weight: 500;
   text-decoration: none;
-  color: var(--cor-destaque-texto);
+  color: var(--cor-detalhe);
 }
 
 .final {

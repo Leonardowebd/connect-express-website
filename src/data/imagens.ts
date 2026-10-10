@@ -111,6 +111,14 @@ export const imagens: EspacoDeImagem[] = [
     alt: 'Pacotes de e-commerce em triagem no centro de distribuição',
     pedido: 'Foto horizontal de triagem de pacotes no centro de distribuição.',
   },
+  {
+    id: 'chamada-final',
+    arquivo: 'chamada-final.webp',
+    largura: 2400,
+    altura: 900,
+    alt: 'Motos da Connect Express Log saindo para rota ao amanhecer',
+    pedido: 'Foto panorâmica, escura o bastante para texto branco por cima, com a frota ou a base em atividade.',
+  },
 ];
 
 export const buscarImagem = (id: string) => {

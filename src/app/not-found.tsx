@@ -1,10 +1,15 @@
 import Link from 'next/link';
-import styles from './paginas.module.css';
+import { Cabecalho } from '@/components/Cabecalho/Cabecalho';
+import { Rodape } from '@/components/Rodape/Rodape';
+import styles from './(site)/paginas.module.css';
 
 export const metadata = { title: 'Página não encontrada | Connect Express Log' };
 
 export default function NaoEncontrada() {
   return (
+    <>
+      <Cabecalho />
+      <main id="conteudo">
     <section className="secao" aria-labelledby="titulo-404">
       <div className={`conteudo ${styles.vazio}`}>
         <p className="rotulo">Erro 404</p>
@@ -25,5 +30,8 @@ export default function NaoEncontrada() {
         </div>
       </div>
     </section>
+      </main>
+      <Rodape />
+    </>
   );
 }

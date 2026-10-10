@@ -19,7 +19,7 @@
   align-items: end;
   min-height: calc(100dvh - var(--altura-cabecalho));
   padding-block: var(--espaco-16) var(--espaco-8);
-  background: var(--cor-fundo-escuro);
+  background: var(--cor-fundo-escuro-2);
   color: var(--cor-texto-inverso);
   isolation: isolate;
 }
@@ -28,7 +28,7 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(to top, var(--cor-tinta) 8%, var(--cor-tinta-60) 55%, transparent);
+  background: linear-gradient(to top, var(--cor-fundo-escuro-2) 8%, var(--cor-veu) 55%, transparent);
 }
 
 .heroiGrade {
@@ -166,7 +166,7 @@
   gap: var(--espaco-3);
   min-height: 16rem;
   padding: var(--espaco-6);
-  background: var(--cor-tinta-2);
+  background: var(--cor-fundo-escuro-2);
 }
 
 .ladrilhoAcao {
@@ -213,7 +213,7 @@
   align-self: flex-start;
   min-height: var(--toque-minimo);
   margin-top: auto;
-  color: var(--cor-destaque);
+  color: var(--cor-destaque-inverso);
   font-family: var(--fonte-titulo);
   font-weight: 500;
   border-bottom: 1px solid transparent;
@@ -270,7 +270,7 @@
   margin-bottom: auto;
   font-family: var(--fonte-titulo);
   font-size: 1.5rem;
-  color: var(--cor-destaque-texto);
+  color: var(--cor-detalhe);
 }
 
 /* Cobertura */
@@ -307,7 +307,7 @@
   font-size: 1.125rem;
   font-weight: 500;
   text-decoration: none;
-  color: var(--cor-destaque-texto);
+  color: var(--cor-detalhe);
 }
 
 .bases {
@@ -327,7 +327,7 @@
   gap: var(--espaco-2);
   align-content: start;
   padding-top: var(--espaco-4);
-  border-top: 2px solid var(--cor-tinta);
+  border-top: 2px solid var(--cor-regua);
 }
 
 /* Clientes */
@@ -461,7 +461,7 @@
 }
 
 .contatoLista a:hover {
-  color: var(--cor-destaque-texto);
+  color: var(--cor-link);
 }
 
 .contatoEnderecos {

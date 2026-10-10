@@ -26,7 +26,7 @@ O diagnóstico do projeto (`Dados/Sobre Connect/Connecte_Express_Projeto_.pptx`)
 ## Princípios
 
 1. **Prova antes de promessa.** Números reais, nomes de clientes e cobertura aparecem cedo e grandes.
-2. **Uma cor por vez.** Fundo branco e cinza claro como base. Laranja para ação e para a palavra destacada do título. Verde como assinatura da marca, com moderação.
+2. **Verde domina.** Fundo branco e cinza claro como base, blocos fortes em verde, laranja para ação e para a palavra destacada do título, azul para links e detalhes. Sem bloco preto.
 3. **Espaço é sinal de confiança.** Seções respiram. Coluna de texto estreita, margens generosas.
 4. **Texto é texto.** Nenhuma informação fica presa dentro de imagem.
 5. **Cantos retos ou quase.** A referência principal usa blocos de canto reto. Raio pequeno e único.
@@ -97,6 +97,15 @@ Servem pelo método (tokens semânticos, estados obrigatórios de componente, po
 10. Perguntas frequentes.
 11. Contato, com formulário e localização.
 12. Rodapé com cartão de cotação.
+
+## Versões A e B
+
+Enquanto o cliente não escolhe, existem duas direções para a página inicial, com o mesmo conteúdo e a mesma paleta:
+
+- **Versão A**, em `/`: a tradução da referência CargoKite descrita acima. Cantos retos, mosaico, tipografia grande.
+- **Versão B**, em `/b/`: a referência Cargomaxis (nó `1-10` do Figma). Blocos em cartões bem arredondados, navegação em pílulas sobre a foto do herói, caixa de vidro com o título, fatos rápidos com os números à direita, faixa de clientes, soluções em linhas com botão em pílula, bloco arredondado de diferenciais, cobertura em foto e cartões, chamada sobre foto e rodapé com letreiro. Componentes em `src/components/b/`.
+
+A versão B fica fora dos buscadores. Depois da escolha, a outra sai do código.
 
 ## Movimento
 
