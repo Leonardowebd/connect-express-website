@@ -1,0 +1,495 @@
+{
+  "runId": "Connect Express-connect-express-website-mv2iafpw",
+  "feature": "connect-express-website",
+  "agent": "claude",
+  "modo": "paralelo",
+  "paralelizar": null,
+  "modeloForcado": null,
+  "esforcoForcado": null,
+  "geradoEm": "2026-10-10 14:45",
+  "branchTrabalho": "spec/connect-express-website",
+  "baseDir": ".spec/features/connect-express-website",
+  "specDir": ".spec",
+  "repoName": "Connect Express",
+  "logsDir": "../onp-worktrees/Connect Express-connect-express-website-logs",
+  "ondas": [
+    [
+      "faixa-1",
+      "faixa-2",
+      "faixa-3"
+    ],
+    [
+      "faixa-4",
+      "faixa-5",
+      "faixa-6"
+    ],
+    [
+      "faixa-7",
+      "faixa-8",
+      "faixa-9"
+    ],
+    [
+      "faixa-10",
+      "faixa-11",
+      "faixa-12"
+    ],
+    [
+      "faixa-13",
+      "faixa-14",
+      "faixa-15"
+    ],
+    [
+      "faixa-16"
+    ]
+  ],
+  "faixas": [
+    {
+      "id": "faixa-1",
+      "branch": "spec/connect-express-website-faixa-1",
+      "worktree": "../onp-worktrees/Connect Express-connect-express-website-faixa-1",
+      "tarefas": [
+        {
+          "id": "T-001",
+          "titulo": "Base do projeto Next.js, tokens e apoio de testes",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "package.json",
+            "package-lock.json",
+            "tsconfig.json",
+            "next.config.ts",
+            "eslint.config.mjs",
+            "onpspec.config.json",
+            ".spec/constituicao.md",
+            "src/app/layout.tsx",
+            "src/app/globals.css",
+            "src/app/page.tsx",
+            "src/styles/tokens.css",
+            "src/styles/base.css",
+            "tests/apoio.mjs",
+            "tests/us-012-marca.test.mjs"
+          ],
+          "refs": [
+            "US-012",
+            "AC-036"
+          ]
+        },
+        {
+          "id": "T-009",
+          "titulo": "Montagem da página inicial",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "src/app/page.tsx",
+            "tests/us-001-proposta.test.mjs",
+            "tests/us-003-confianca.test.mjs"
+          ],
+          "refs": [
+            "US-001",
+            "US-003",
+            "AC-001",
+            "AC-002",
+            "AC-004",
+            "AC-007",
+            "AC-008",
+            "AC-009"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faixa-2",
+      "branch": "spec/connect-express-website-faixa-2",
+      "worktree": "../onp-worktrees/Connect Express-connect-express-website-faixa-2",
+      "tarefas": [
+        {
+          "id": "T-002",
+          "titulo": "Dados de conteúdo e copy",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "src/data/empresa.ts",
+            "src/data/servicos.ts",
+            "src/data/inicio.ts",
+            "src/data/imagens.ts"
+          ],
+          "refs": [
+            "US-002",
+            "US-003",
+            "AC-013"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faixa-3",
+      "branch": "spec/connect-express-website-faixa-3",
+      "worktree": "../onp-worktrees/Connect Express-connect-express-website-faixa-3",
+      "tarefas": [
+        {
+          "id": "T-003",
+          "titulo": "Componente de imagem com substituto",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "src/components/Imagem/Imagem.tsx",
+            "src/components/Imagem/Imagem.module.css",
+            "public/imagens/.gitkeep",
+            "tests/us-013-imagens.test.mjs"
+          ],
+          "refs": [
+            "US-013",
+            "AC-038",
+            "AC-039",
+            "AC-034",
+            "AC-028"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faixa-4",
+      "branch": "spec/connect-express-website-faixa-4",
+      "worktree": "../onp-worktrees/Connect Express-connect-express-website-faixa-4",
+      "tarefas": [
+        {
+          "id": "T-004",
+          "titulo": "Componentes de animação com GSAP",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "src/animacoes/gsap.ts",
+            "src/animacoes/Revelar.tsx",
+            "src/animacoes/Escalonar.tsx",
+            "src/animacoes/Contador.tsx",
+            "src/animacoes/constantes.ts"
+          ],
+          "refs": [
+            "US-009",
+            "AC-027"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faixa-5",
+      "branch": "spec/connect-express-website-faixa-5",
+      "worktree": "../onp-worktrees/Connect Express-connect-express-website-faixa-5",
+      "tarefas": [
+        {
+          "id": "T-005",
+          "titulo": "Cabeçalho, menu, rodapé e botão de WhatsApp",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "src/components/Cabecalho/Cabecalho.tsx",
+            "src/components/Cabecalho/Cabecalho.module.css",
+            "src/components/Cabecalho/MenuCelular.tsx",
+            "src/components/Rodape/Rodape.tsx",
+            "src/components/Rodape/Rodape.module.css",
+            "src/components/BotaoWhatsApp/BotaoWhatsApp.tsx",
+            "src/components/BotaoWhatsApp/BotaoWhatsApp.module.css",
+            "src/components/Botao/Botao.tsx",
+            "src/components/Botao/Botao.module.css",
+            "src/components/PularConteudo/PularConteudo.tsx",
+            "public/logos/.gitkeep",
+            "tests/us-011-acessibilidade.test.mjs",
+            "tests/us-005-atalhos.test.mjs"
+          ],
+          "refs": [
+            "US-001",
+            "AC-003",
+            "AC-012",
+            "AC-014",
+            "AC-017",
+            "AC-037",
+            "US-011",
+            "AC-033",
+            "AC-035",
+            "AC-030"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faixa-6",
+      "branch": "spec/connect-express-website-faixa-6",
+      "worktree": "../onp-worktrees/Connect Express-connect-express-website-faixa-6",
+      "tarefas": [
+        {
+          "id": "T-006",
+          "titulo": "Seções da página inicial: herói, números, quem somos e desafio",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "src/components/secoes/Heroi.tsx",
+            "src/components/secoes/Heroi.module.css",
+            "src/components/secoes/Numeros.tsx",
+            "src/components/secoes/Numeros.module.css",
+            "src/components/secoes/QuemSomos.tsx",
+            "src/components/secoes/QuemSomos.module.css",
+            "src/components/secoes/Desafio.tsx",
+            "src/components/secoes/Desafio.module.css",
+            "src/components/secoes/Valores.tsx",
+            "src/components/secoes/Valores.module.css"
+          ],
+          "refs": [
+            "AC-001",
+            "AC-002",
+            "AC-007"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faixa-7",
+      "branch": "spec/connect-express-website-faixa-7",
+      "worktree": "../onp-worktrees/Connect Express-connect-express-website-faixa-7",
+      "tarefas": [
+        {
+          "id": "T-007",
+          "titulo": "Seções da página inicial: soluções, operação, cobertura e clientes",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "src/components/secoes/Solucoes.tsx",
+            "src/components/secoes/Solucoes.module.css",
+            "src/components/secoes/Operacao.tsx",
+            "src/components/secoes/Operacao.module.css",
+            "src/components/secoes/Cobertura.tsx",
+            "src/components/secoes/Cobertura.module.css",
+            "src/components/secoes/Clientes.tsx",
+            "src/components/secoes/Clientes.module.css"
+          ],
+          "refs": [
+            "AC-004",
+            "AC-008",
+            "AC-009"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faixa-8",
+      "branch": "spec/connect-express-website-faixa-8",
+      "worktree": "../onp-worktrees/Connect Express-connect-express-website-faixa-8",
+      "tarefas": [
+        {
+          "id": "T-008",
+          "titulo": "Perguntas frequentes, contato e envio do formulário",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "src/components/secoes/Perguntas.tsx",
+            "src/components/secoes/Perguntas.module.css",
+            "src/components/secoes/Contato.tsx",
+            "src/components/secoes/Contato.module.css",
+            "src/components/Formulario/FormularioContato.tsx",
+            "src/components/Formulario/Formulario.module.css",
+            "src/components/Formulario/validacao.ts",
+            "src/app/api/contato/route.ts",
+            ".env.example",
+            "tests/us-004-cotacao.test.mjs"
+          ],
+          "refs": [
+            "US-004",
+            "AC-010",
+            "AC-011",
+            "AC-031",
+            "AC-006"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faixa-9",
+      "branch": "spec/connect-express-website-faixa-9",
+      "worktree": "../onp-worktrees/Connect Express-connect-express-website-faixa-9",
+      "tarefas": [
+        {
+          "id": "T-010",
+          "titulo": "Páginas de solução",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "src/app/servicos/[slug]/page.tsx",
+            "src/app/servicos/[slug]/pagina.module.css",
+            "tests/us-002-solucoes.test.mjs"
+          ],
+          "refs": [
+            "US-002",
+            "AC-005",
+            "AC-006"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faixa-10",
+      "branch": "spec/connect-express-website-faixa-10",
+      "worktree": "../onp-worktrees/Connect Express-connect-express-website-faixa-10",
+      "tarefas": [
+        {
+          "id": "T-011",
+          "titulo": "Página Trabalhe Conosco",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "src/app/trabalhe-conosco/page.tsx",
+            "src/app/trabalhe-conosco/pagina.module.css",
+            "src/components/Formulario/FormularioVagas.tsx",
+            "src/app/api/vagas/route.ts"
+          ],
+          "refs": [
+            "US-005",
+            "AC-015"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faixa-11",
+      "branch": "spec/connect-express-website-faixa-11",
+      "worktree": "../onp-worktrees/Connect Express-connect-express-website-faixa-11",
+      "tarefas": [
+        {
+          "id": "T-012",
+          "titulo": "Política de Privacidade e página não encontrada",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "src/app/politica-de-privacidade/page.tsx",
+            "src/app/politica-de-privacidade/pagina.module.css",
+            "src/app/not-found.tsx"
+          ],
+          "refs": [
+            "US-010",
+            "AC-032"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faixa-12",
+      "branch": "spec/connect-express-website-faixa-12",
+      "worktree": "../onp-worktrees/Connect Express-connect-express-website-faixa-12",
+      "tarefas": [
+        {
+          "id": "T-013",
+          "titulo": "SEO: metadados, sitemap, robôs e dados da organização",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "src/app/sitemap.ts",
+            "src/app/robots.ts",
+            "src/lib/metadados.ts",
+            "src/lib/jsonld.ts",
+            "src/components/JsonLd/JsonLd.tsx",
+            "tests/us-007-seo.test.mjs"
+          ],
+          "refs": [
+            "US-007",
+            "AC-019",
+            "AC-020",
+            "AC-021",
+            "AC-022"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faixa-13",
+      "branch": "spec/connect-express-website-faixa-13",
+      "worktree": "../onp-worktrees/Connect Express-connect-express-website-faixa-13",
+      "tarefas": [
+        {
+          "id": "T-014",
+          "titulo": "GEO: llms.txt e dados estruturados de perguntas e serviços",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "src/app/llms.txt/route.ts",
+            "tests/us-008-geo.test.mjs"
+          ],
+          "refs": [
+            "US-008",
+            "AC-023",
+            "AC-024",
+            "AC-025"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faixa-14",
+      "branch": "spec/connect-express-website-faixa-14",
+      "worktree": "../onp-worktrees/Connect Express-connect-express-website-faixa-14",
+      "tarefas": [
+        {
+          "id": "T-015",
+          "titulo": "Segurança: cabeçalhos e links externos",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "tests/us-010-seguranca.test.mjs"
+          ],
+          "refs": [
+            "US-010",
+            "AC-029",
+            "AC-030"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faixa-15",
+      "branch": "spec/connect-express-website-faixa-15",
+      "worktree": "../onp-worktrees/Connect Express-connect-express-website-faixa-15",
+      "tarefas": [
+        {
+          "id": "T-016",
+          "titulo": "Responsividade, toque e orçamento de peso",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "tests/us-006-responsivo.test.mjs",
+            "tests/us-009-velocidade.test.mjs"
+          ],
+          "refs": [
+            "US-006",
+            "AC-016",
+            "AC-017",
+            "AC-018",
+            "US-009",
+            "AC-026",
+            "AC-027",
+            "AC-028"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faixa-16",
+      "branch": "spec/connect-express-website-faixa-16",
+      "worktree": "../onp-worktrees/Connect Express-connect-express-website-faixa-16",
+      "tarefas": [
+        {
+          "id": "T-017",
+          "titulo": "Publicação na Vercel",
+          "modelo": "claude-sonnet-5",
+          "esforco": "medium",
+          "arquivos": [
+            "README.md"
+          ],
+          "refs": [
+            "US-009",
+            "US-010"
+          ]
+        }
+      ]
+    }
+  ],
+  "sequenciais": [],
+  "concluidas": [],
+  "avisos": []
+}

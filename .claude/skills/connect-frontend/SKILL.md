@@ -78,7 +78,7 @@ next.config.ts                    cabeçalhos de segurança, cache e redireciona
 - **Conteúdo em dados.** Todo fato (telefone, endereço, estados, números, clientes, soluções) vem de `src/data/`. Componente não tem telefone escrito à mão.
 - **Tokens.** Nenhum hexadecimal, `rgb()` ou `hsl()` fora de `tokens.css`. Módulos CSS usam `var(--...)`.
 - **HTML semântico primeiro.** `button` para ação, `Link` para navegação interna, `details` para perguntas frequentes, `form` com `label`.
-- **Fontes** com `next/font/local`, a partir dos arquivos da identidade. Nada de Google Fonts por CDN.
+- **Fontes** Geologica e Poppins com `next/font/google`, que baixa os arquivos no build e serve pelo próprio domínio. Nenhuma requisição ao Google no navegador.
 - **Imagens** com `next/image`, sempre com `width`, `height`, `alt` e `sizes`. `priority` só na imagem do herói.
 - **Sem dependência nova** sem necessidade clara. Cada pacote entra com justificativa na tarefa.
 - **Links externos** que abrem em nova aba levam `rel="noopener noreferrer"`.
@@ -123,7 +123,7 @@ Mantenha no manifesto a lista das imagens pendentes, com proporção e descriç�
 ## Antes de entregar uma página
 
 1. `next build` sem erro e sem aviso; a página aparece como estática no resumo do build.
-2. Confere com o quadro do Figma em 360, 768 e 1440 px.
+2. Conferida em 360, 768 e 1440 px, ao lado da referência principal do Figma.
 3. Navegável só por teclado.
 4. Com JavaScript desligado, todo o conteúdo está visível e os links funcionam.
 5. Com movimento reduzido ativo, nada se anima.

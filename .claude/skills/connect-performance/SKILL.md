@@ -47,9 +47,9 @@ Medidas em celular intermediário com rede 4G, no percentil 75:
 
 ## Fontes
 
-- `next/font/local` com os arquivos WOFF2 da identidade, servidos pelo próprio domínio. Nada de Google Fonts por CDN.
+- Geologica e Poppins com `next/font/google`: os arquivos WOFF2 são baixados no build e servidos pelo próprio domínio. Nenhuma requisição ao Google no navegador.
 - `display: 'swap'` em toda fonte.
-- Só os pesos usados. Subconjunto latino. Fonte variável quando existir.
+- Só os pesos usados: Geologica variável (400 a 600), Poppins 400, 500 e 600. Subconjunto `latin`.
 - `preload: true` só para a fonte do título do herói.
 - Manter o ajuste automático da fonte reserva do `next/font`, para o texto não pular na troca.
 

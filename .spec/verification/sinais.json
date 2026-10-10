@@ -5,694 +5,838 @@
       "codigo": "ARQUIVO_INEXISTENTE",
       "feature": "connect-express-website",
       "ref": "T-001",
-      "ocorrencias": 2,
+      "ocorrencias": 15,
       "primeiraVez": "2026-10-10T14:23:17.406Z",
-      "ultimaVez": "2026-10-10T14:30:22.848Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-004": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-004",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-005": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-005",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-006": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-006",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-007": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-007",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-008": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-008",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-009": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-009",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-010": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-010",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-011": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-011",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-012": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-012",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-013": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-013",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-014": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-014",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-015": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-015",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-016": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-016",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-017": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-017",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-018": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-018",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-019": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-019",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-020": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-020",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-021": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-021",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-022": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-022",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-023": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-023",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-024": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-024",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-025": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-025",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-026": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-026",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.407Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-027": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-027",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.862Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-028": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-028",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-029": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-029",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-030": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-030",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-031": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-031",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-032": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-032",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-033": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-033",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-034": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-034",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-035": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-035",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-036": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-036",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-037": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-037",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-038": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-038",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TASK::connect-express-website::AC-039": {
       "codigo": "AC_SEM_TASK",
       "feature": "connect-express-website",
       "ref": "AC-039",
-      "ocorrencias": 2,
+      "ocorrencias": 3,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:44:21.811Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-001": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-001",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-002": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-002",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-003": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-003",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-004": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-004",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-005": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-005",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-006": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-006",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-007": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-007",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-008": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-008",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-009": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-009",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-010": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-010",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-011": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-011",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-012": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-012",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-013": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-013",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-014": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-014",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-015": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-015",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-016": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-016",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-017": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-017",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-018": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-018",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-019": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-019",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-020": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-020",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-021": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-021",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-022": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-022",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-023": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-023",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-024": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-024",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-025": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-025",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-026": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-026",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-027": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-027",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-028": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-028",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-029": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-029",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-030": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-030",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-031": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-031",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-032": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-032",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-033": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-033",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-034": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-034",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-035": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-035",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-036": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-036",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-037": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-037",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-038": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-038",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "AC_SEM_TESTE::connect-express-website::AC-039": {
       "codigo": "AC_SEM_TESTE",
       "feature": "connect-express-website",
       "ref": "AC-039",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     },
     "GLOB_SEM_ARQUIVOS::—::P-002": {
       "codigo": "GLOB_SEM_ARQUIVOS",
       "feature": "—",
       "ref": "P-002",
-      "ocorrencias": 2,
+      "ocorrencias": 4,
       "primeiraVez": "2026-10-10T14:23:17.408Z",
-      "ultimaVez": "2026-10-10T14:30:22.863Z",
-      "gitRev": "5d242bc"
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
+    },
+    "ARQUIVO_INEXISTENTE::connect-express-website::T-002": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "connect-express-website",
+      "ref": "T-002",
+      "ocorrencias": 4,
+      "primeiraVez": "2026-10-10T14:45:14.849Z",
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
+    },
+    "ARQUIVO_INEXISTENTE::connect-express-website::T-003": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "connect-express-website",
+      "ref": "T-003",
+      "ocorrencias": 4,
+      "primeiraVez": "2026-10-10T14:45:14.849Z",
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
+    },
+    "ARQUIVO_INEXISTENTE::connect-express-website::T-004": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "connect-express-website",
+      "ref": "T-004",
+      "ocorrencias": 5,
+      "primeiraVez": "2026-10-10T14:45:14.849Z",
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
+    },
+    "ARQUIVO_INEXISTENTE::connect-express-website::T-005": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "connect-express-website",
+      "ref": "T-005",
+      "ocorrencias": 13,
+      "primeiraVez": "2026-10-10T14:45:14.849Z",
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
+    },
+    "ARQUIVO_INEXISTENTE::connect-express-website::T-006": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "connect-express-website",
+      "ref": "T-006",
+      "ocorrencias": 10,
+      "primeiraVez": "2026-10-10T14:45:14.849Z",
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
+    },
+    "ARQUIVO_INEXISTENTE::connect-express-website::T-007": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "connect-express-website",
+      "ref": "T-007",
+      "ocorrencias": 8,
+      "primeiraVez": "2026-10-10T14:45:14.849Z",
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
+    },
+    "ARQUIVO_INEXISTENTE::connect-express-website::T-008": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "connect-express-website",
+      "ref": "T-008",
+      "ocorrencias": 10,
+      "primeiraVez": "2026-10-10T14:45:14.849Z",
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
+    },
+    "ARQUIVO_INEXISTENTE::connect-express-website::T-009": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "connect-express-website",
+      "ref": "T-009",
+      "ocorrencias": 3,
+      "primeiraVez": "2026-10-10T14:45:14.849Z",
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
+    },
+    "ARQUIVO_INEXISTENTE::connect-express-website::T-010": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "connect-express-website",
+      "ref": "T-010",
+      "ocorrencias": 3,
+      "primeiraVez": "2026-10-10T14:45:14.849Z",
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
+    },
+    "ARQUIVO_INEXISTENTE::connect-express-website::T-011": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "connect-express-website",
+      "ref": "T-011",
+      "ocorrencias": 4,
+      "primeiraVez": "2026-10-10T14:45:14.849Z",
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
+    },
+    "ARQUIVO_INEXISTENTE::connect-express-website::T-012": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "connect-express-website",
+      "ref": "T-012",
+      "ocorrencias": 3,
+      "primeiraVez": "2026-10-10T14:45:14.849Z",
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
+    },
+    "ARQUIVO_INEXISTENTE::connect-express-website::T-013": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "connect-express-website",
+      "ref": "T-013",
+      "ocorrencias": 6,
+      "primeiraVez": "2026-10-10T14:45:14.849Z",
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
+    },
+    "ARQUIVO_INEXISTENTE::connect-express-website::T-014": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "connect-express-website",
+      "ref": "T-014",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-10T14:45:14.849Z",
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
+    },
+    "ARQUIVO_INEXISTENTE::connect-express-website::T-015": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "connect-express-website",
+      "ref": "T-015",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-10T14:45:14.849Z",
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
+    },
+    "ARQUIVO_INEXISTENTE::connect-express-website::T-016": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "connect-express-website",
+      "ref": "T-016",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-10T14:45:14.849Z",
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
+    },
+    "ARQUIVO_INEXISTENTE::connect-express-website::T-017": {
+      "codigo": "ARQUIVO_INEXISTENTE",
+      "feature": "connect-express-website",
+      "ref": "T-017",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-10T14:45:14.849Z",
+      "ultimaVez": "2026-10-10T14:45:14.849Z",
+      "gitRev": "69ac554"
     }
   }
 }

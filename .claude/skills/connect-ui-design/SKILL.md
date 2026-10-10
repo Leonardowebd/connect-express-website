@@ -5,21 +5,20 @@ description: Regras de interface do site da Connect Express Log - grade, espaça
 
 # UI design: Connect Express Log
 
-Leia antes `connect-id-visual` (cores e fontes) e `connect-design-concept` (direção). O Figma é a fonte do layout:
+Leia antes `connect-id-visual` (cores e fontes) e `connect-design-concept` (direção e referências).
 
-- Layout: `node-id=1-11` e `node-id=1-1196`
-- Identidade e fontes: `node-id=1-3472`
-- Arquivo: `https://www.figma.com/design/skgCHymwiw2aKVL59plhxy/Connect-Express`
+O Figma do projeto não tem layout pronto da Connect Express: tem a identidade e páginas de referência de outros sites. Os componentes abaixo são o sistema do site. Para conferir uma referência, abra o arquivo `https://www.figma.com/design/skgCHymwiw2aKVL59plhxy/Connect-Express` (referência principal em `node-id=1-1196`).
 
-Ao implementar um quadro do Figma, use a skill `figma:figma-design-to-code` e leia as variáveis do arquivo. Os valores do Figma substituem os padrões abaixo.
-
-## Fundamentos (padrões até o Figma definir)
+## Fundamentos
 
 - **Grade:** 12 colunas, conteúdo com largura máxima de 1200 px, calha de 24 px. Margem lateral de 16 px no celular, 32 px no tablet, 48 px no desktop.
 - **Espaçamento:** escala de 4 px: 4, 8, 12, 16, 24, 32, 48, 64, 96, 128. Nada fora da escala.
 - **Ritmo vertical de seção:** 64 px no celular, 96 px no tablet, 128 px no desktop.
-- **Raios:** um para controles (botões, campos), um para cartões, um para blocos grandes. Definir como `--raio-controle`, `--raio-cartao`, `--raio-bloco`.
-- **Tipografia:** escala fluida com `clamp()`. Texto corrido nunca abaixo de 16 px. Linha de texto com no máximo 70 caracteres.
+- **Raios:** cantos retos ou quase, como na referência principal. `--raio-controle: 2px`, `--raio-cartao: 4px`. Sem cantos muito arredondados.
+- **Superfícies:** branco, cinza claro (`--cor-nevoa`) e um bloco preto (`--cor-tinta`) por página. Sem sombra em cartões; a separação é por fundo e por linha fina.
+- **Tipografia:** Geologica nos títulos, peso 500, entrelinha de 1,05 a 1,15 e espaçamento entre letras levemente negativo. Poppins no texto, peso 400, entrelinha 1,6. Escala fluida com `clamp()`: título do herói de 40 a 88 px, título de seção de 32 a 56 px, subtítulo de 20 a 28 px, texto 16 a 18 px, rótulo 14 px. Texto corrido nunca abaixo de 16 px. Linha de texto com no máximo 70 caracteres.
+- **Rótulo de seção:** texto pequeno em `--cor-tinta-suave`, à esquerda do título no desktop e acima dele no celular.
+- **Destaque em título:** uma palavra ou expressão em `--cor-laranja`. No máximo uma por título.
 
 ## Componentes e estados obrigatórios
 
@@ -65,4 +64,4 @@ Antes de dar um componente por pronto:
 4. Funciona com conteúdo longo (título de 3 linhas) e curto.
 5. Funciona em 360, 768 e 1440 px.
 6. Funciona com o substituto de imagem.
-7. Confere com o quadro do Figma lado a lado.
+7. Ao lado da referência principal, tem o mesmo ritmo de espaço e de tipografia.

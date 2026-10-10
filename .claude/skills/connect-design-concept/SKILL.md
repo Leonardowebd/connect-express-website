@@ -1,13 +1,23 @@
 ---
 name: connect-design-concept
-description: Conceito de design do site da Connect Express Log - a ideia central, o que tirar de cada referência e o que evitar. Use ao decidir a direção visual de uma seção nova, ao adaptar algo que o Figma não cobre, ou ao revisar se uma tela "parece Connect Express".
+description: Conceito de design do site da Connect Express Log - a ideia central, o que tirar de cada referência do Figma e o que evitar. Use ao desenhar uma seção, ao decidir a direção visual de algo novo, ou ao revisar se uma tela "parece Connect Express".
 ---
 
 # Conceito de design: Connect Express Log
 
+## Ponto de partida
+
+O Figma do projeto (lido em 2026-10-10) NÃO tem um layout pronto da Connect Express. Ele tem três seções:
+
+- **Identidade** (`node-id=1-3472`): logotipo, três cores, duas fontes. Ver `connect-id-visual`.
+- **REFERENCIA** (`node-id=1-1196`): uma página inteira de outro site (CargoKite), com 1724 px de largura. É a referência principal de estrutura e de ritmo.
+- **Referencias** (`node-id=1-11`): dois layouts completos (Cargomaxis e SwiftMove, os mesmos da pasta `Referencias/`) e três heróis (Logistica OS, "AI that automates your pallet accounting", BeyRoute).
+
+O layout da Connect Express é desenhado a partir dessas referências, com a identidade da marca. Nada é copiado: estrutura e ritmo servem de guia, conteúdo, cores e fontes são da Connect.
+
 ## A ideia em uma frase
 
-Uma operação de saúde que já é grande, mostrada com a calma de quem entrega no prazo: muito espaço, números grandes, poucas cores, nenhuma decoração que não informe.
+Uma operação de saúde que já é grande, mostrada com a calma de quem entrega no prazo: página editorial clara, tipografia grande, muito espaço, laranja só onde importa, números e clientes como prova.
 
 ## Por que este conceito
 
@@ -15,36 +25,54 @@ O diagnóstico do projeto (`Dados/Sobre Connect/Connecte_Express_Projeto_.pptx`)
 
 ## Princípios
 
-1. **Prova antes de promessa.** Números reais, nomes de clientes e cobertura aparecem cedo e grandes. Adjetivo sem dado não entra.
-2. **Uma cor por vez.** Fundo neutro como base. Verde identifica a marca, laranja é reservado para a ação. Nunca um bloco verde ao lado de um bloco laranja.
-3. **Espaço é sinal de confiança.** Seções respiram. Conteúdo em largura contida, margens generosas.
-4. **Texto é texto.** Nenhuma informação fica presa dentro de imagem. Títulos, números e estados são HTML.
-5. **Cantos e superfícies consistentes.** Um raio para cartões, um para botões. Sombra só onde há elevação real.
-6. **Funciona sem foto.** O layout precisa ficar de pé com os substitutos de imagem, porque as fotos chegam depois.
+1. **Prova antes de promessa.** Números reais, nomes de clientes e cobertura aparecem cedo e grandes.
+2. **Uma cor por vez.** Fundo branco e cinza claro como base. Laranja para ação e para a palavra destacada do título. Verde como assinatura da marca, com moderação.
+3. **Espaço é sinal de confiança.** Seções respiram. Coluna de texto estreita, margens generosas.
+4. **Texto é texto.** Nenhuma informação fica presa dentro de imagem.
+5. **Cantos retos ou quase.** A referência principal usa blocos de canto reto. Raio pequeno e único.
+6. **Funciona sem foto.** As fotos chegam depois; o layout precisa ficar de pé com os substitutos.
 
 ## O que tirar de cada referência
 
-**Figma (fonte principal do layout):** nós `1-11` e `1-1196`. A estrutura, a ordem das seções, a grade e os componentes saem dali. As referências abaixo só orientam quando o Figma não responde.
+### CargoKite (referência principal, `1-1196`)
 
-**`Referencias/B2B logistics corporate website template` (Cargomaxis):**
+Ordem das seções na referência e a tradução para a Connect:
 
-- Herói com imagem ocupando a largura e cartão de texto sobreposto.
-- Bloco "fatos rápidos": título à esquerda, grade de números à direita.
-- Faixa escura com logotipos de clientes.
-- Lista de serviços em linhas, com botão à direita, em vez de cartões.
-- Seção de valores em bloco escuro com três colunas.
-- Rótulo pequeno sublinhado acima de cada título de seção.
+| Na referência | Na Connect Express |
+|---|---|
+| Herói em tela cheia sobre imagem escura, título grande à esquerda, parágrafo curto à direita com trechos em laranja, faixa de logotipos na base | Herói com proposta de valor, frase com os dados em destaque, logotipos de clientes na base |
+| "Company": rótulo pequeno à esquerda, título grande, coluna de texto com foto e link | Quem Somos |
+| "Problem": título e blocos de imagem com legenda em grade assimétrica, sobre cinza claro | O desafio da última milha na saúde: o que dá errado quando a entrega de medicamento não é especializada |
+| "Solution": título centralizado com palavra em laranja e esquema central com quatro chamadas ao redor | Como a operação funciona, em quatro pontos |
+| "Technology": bloco preto com mosaico de quadrados, um quadrado laranja com o título e outro com a chamada | Soluções ou diferenciais em mosaico escuro, cada quadrado com um dado |
+| "Why us": título com palavra em laranja, botão, e quadrados cinza em escada com ícone de traço laranja | Por que a Connect, com três motivos |
+| "Trusted by": título centralizado, botão, grade de logotipos com linhas finas | Clientes |
+| "FAQ": rótulo e título à esquerda, lista com sinal de mais à direita | Perguntas frequentes |
+| Rodapé cinza claro com cartão preto sobreposto, navegação em linha, endereço e contatos em tipo grande | Rodapé com cartão escuro de cotação no lugar do boletim |
 
-**`Referencias/Logistics Landing Page UI_UX Design` (SwiftMove):**
+Detalhes de estilo a manter: rótulo de seção pequeno e cinza à esquerda do título; título em peso médio com entrelinha apertada; palavra-chave do título em laranja; links sublinhados em laranja; botão retangular laranja; ícones de traço fino em laranja; alternância entre branco, cinza claro e um bloco preto.
 
-- Títulos condensados em caixa alta, muito pesados.
+### Cargomaxis (`Referencias/B2B logistics corporate website template`)
+
+- Bloco "fatos rápidos": título à esquerda, grade de números à direita. Usar para os números da operação.
+- Lista de serviços em linhas com botão à direita. Alternativa aos cartões de solução.
+- Chamada final sobre imagem com um único botão.
+
+### SwiftMove (`Referencias/Logistics Landing Page UI_UX Design`)
+
 - Linha de indicadores logo abaixo do herói.
-- Cartões de serviço em grade 2 por 2, com etiqueta no canto e botão "saiba mais".
-- Bloco "setores atendidos" como lista com seta, sobre imagem.
-- Cartão de métrica em destaque (um número grande em fundo de cor sólida).
-- Chamada final sobre imagem, com um único botão.
+- Cartões de serviço em grade 2 por 2 com etiqueta no canto.
+- Bloco "setores atendidos" como lista com seta. Usar para os públicos: farmácias, laboratórios, clínicas, e-commerce.
+- Cartão de métrica em destaque, com um número grande em fundo de cor sólida.
 
-**`Dados/DESIGN.md` e `Dados/SKILL.md` (Terminal Yard Operating System):** servem pelo método (tokens semânticos, estados obrigatórios de componente, portões de qualidade). As cores, a fonte SuisseIntl e o fundo preto NÃO são da Connect Express.
+### Os três heróis
+
+- Logistica OS e "pallet accounting": título em caixa alta centralizado sobre fundo azul. Aproveitar só a composição (título, subtítulo, um botão, faixa de logotipos). Não aproveitar o azul nem a caixa alta.
+- BeyRoute: foto escura em tela cheia, título à esquerda, indicador grande no canto inferior ("5M+"), cartão pequeno de prova à direita. É a composição mais próxima do herói da Connect.
+
+### `Dados/DESIGN.md` e `Dados/SKILL.md` (Terminal Yard Operating System)
+
+Servem pelo método (tokens semânticos, estados obrigatórios de componente, portões de qualidade). Cores, fonte e fundo preto não são da Connect Express.
 
 ## O que não repetir do site antigo
 
@@ -55,21 +83,25 @@ O diagnóstico do projeto (`Dados/Sobre Connect/Connecte_Express_Projeto_.pptx`)
 - Dois botões de cores diferentes com o mesmo peso lado a lado.
 - Faixa de WhatsApp repetida acima e abaixo do conteúdo.
 
-## Ordem de seções recomendada para a página inicial
+## Ordem de seções da página inicial
 
-Vale até o Figma confirmar ou corrigir:
-
-1. Herói: proposta de valor, cotação, soluções.
+1. Herói: proposta de valor, cotação, faixa de clientes.
 2. Números da operação.
-3. Clientes.
-4. Soluções.
-5. Diferenciais da operação farmacêutica.
-6. Cobertura.
-7. Quem Somos e valores.
-8. Perguntas frequentes.
-9. Chamada final de cotação.
-10. Contato e localização.
+3. Quem Somos.
+4. O desafio da última milha na saúde.
+5. Soluções (as quatro).
+6. Como a operação funciona e por que a Connect.
+7. Cobertura.
+8. Valores.
+9. Clientes.
+10. Perguntas frequentes.
+11. Contato, com formulário e localização.
+12. Rodapé com cartão de cotação.
+
+## Movimento
+
+Entradas discretas ao rolar, números que contam, e nada mais. Regras em `connect-ui-design` e `connect-frontend`.
 
 ## Teste rápido de aderência
 
-Uma tela está no conceito quando: dá para entender o que a empresa faz sem ler além do título; o laranja aparece só em ações; nenhum texto está em imagem; ela continua organizada com os substitutos de imagem.
+Uma tela está no conceito quando: dá para entender o que a empresa faz sem ler além do título; o laranja aparece só em ações e destaques; nenhum texto está em imagem; ela continua organizada com os substitutos de imagem; ao lado da referência CargoKite, tem o mesmo ritmo de espaço e de tipografia.

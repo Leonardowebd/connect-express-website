@@ -20,7 +20,7 @@ Celular primeiro. O CSS base serve 360 px; `@media (min-width: ...)` acrescenta 
 
 Conteúdo com largura máxima de 1200 px. Acima de 1440 px só as margens crescem.
 
-Se o Figma trouxer quadros de celular e de desktop, eles definem os extremos; tablet é interpolado por estas regras.
+O Figma só tem referências em largura de desktop (1724 px). Celular e tablet são desenhados por estas regras.
 
 ## Comportamento por seção
 

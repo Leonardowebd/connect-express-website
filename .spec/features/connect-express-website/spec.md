@@ -5,14 +5,14 @@
 
 ## Contexto
 
-A Connect Express Log é uma transportadora especializada em logística para a saúde (entrega expressa de medicamentos, materiais biológicos, motoboy e e-commerce) cuja operação cresceu mais do que a comunicação: o site atual está defasado e gera cerca de 1 lead por mês. Esta feature entrega o novo site institucional, com o layout dos Figmas de referência, a identidade visual da marca e a copy do site antigo reescrita, para que decisores de redes de farmácias, laboratórios, clínicas e e-commerces entendam o valor da operação e peçam uma cotação.
+A Connect Express Log é uma transportadora especializada em logística para a saúde (entrega expressa de medicamentos, materiais biológicos, motoboy e e-commerce) cuja operação cresceu mais do que a comunicação: o site atual está defasado e gera cerca de 1 lead por mês. Esta feature entrega o novo site institucional, com layout desenhado a partir das referências do Figma, a identidade visual da marca e a copy do site antigo reescrita, para que decisores de redes de farmácias, laboratórios, clínicas e e-commerces entendam o valor da operação e peçam uma cotação.
 
 Fontes usadas nesta especificação:
 
 - Site atual: https://www.connectexpresslog.com.br/ (home, 4 páginas de serviço, trabalhe conosco).
 - `Dados/Sobre Connect/Connecte_Express_Projeto_.pptx` (posicionamento e números da operação).
 - `Dados/Site-antigo.png`, `Referencias/` (2 referências Behance), `ID Visual/` (2 logos).
-- Figma (layout e identidade): ainda NÃO lido, depende de autorização. Ver ASM-009.
+- Figma, lido em 2026-10-10: seção de identidade (logotipo, três cores, fontes Geologica e Poppins) e páginas de referência de outros sites. Não contém layout pronto da Connect Express.
 
 ## Histórias
 
@@ -330,7 +330,8 @@ Como equipe do projeto, quero publicar o site sem as fotos definitivas e trocá-
 | ASM-006 | Contatos, endereços, CNPJ e redes sociais do site atual continuam válidos. | aberta | - |
 | ASM-007 | A lista de clientes exibida no site atual (Decathlon, Drogaria Pacheco, Drogaria Rosário, Drogaria São Paulo, Extrafarma, Magazine Luiza, Pague Menos, Salvador Medical) pode ser mantida. | aberta | - |
 | ASM-008 | `Dados/SKILL.md` e `Dados/DESIGN.md` descrevem outra marca (Terminal Yard Operating System, terminal-industries.com). Servem como referência de método e de estilo, não como tokens da Connect Express. | aberta | - |
-| ASM-009 | O layout final, as fontes e a paleta completa vêm dos três nós do Figma. As cores extraídas do logotipo (verde `#47A81B`, laranja `#F3570B`, azul `#0D7BD6`) valem até a leitura do Figma. | aberta | - |
+| ASM-009 | O layout final, as fontes e a paleta completa vêm dos três nós do Figma. | invalidada | Figma lido em 2026-10-10: ele só tem a identidade (logotipo, três cores, fontes Geologica e Poppins) e páginas de referência de outros sites. Não há layout pronto. Ver ASM-012. |
+| ASM-012 | O layout é desenhado a partir das referências do Figma (CargoKite como principal), com a identidade da marca. Neutros, escala tipográfica, espaçamentos e variações escuras das cores são decisão de projeto, registrada nas skills `connect-id-visual` e `connect-ui-design`. | aberta | - |
 | ASM-010 | O site é só em português do Brasil. | aberta | - |
 
 ## Perguntas em aberto
@@ -343,4 +344,4 @@ Como equipe do projeto, quero publicar o site sem as fotos definitivas e trocá-
 | Q-004 | Existem depoimentos ou cases autorizados para publicação? As referências de layout têm seção de depoimentos. | aberta | - |
 | Q-005 | Haverá ferramentas de medição (Google Analytics, Tag Manager, pixel)? Afeta a política de conteúdo, o aviso de cookies e o peso das páginas. | aberta | - |
 | Q-006 | O texto atual da Política de Privacidade será reaproveitado ou reescrito? | aberta | - |
-| Q-007 | O Figma prevê página única ou páginas separadas para Quem Somos, Soluções e Contato? | aberta | - |
+| Q-007 | O Figma prevê página única ou páginas separadas para Quem Somos, Soluções e Contato? | respondida | O Figma não define estrutura de páginas. Adotado: página inicial com as seções, uma página por solução, Trabalhe Conosco e Política de Privacidade, como no site atual. |

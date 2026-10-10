@@ -7,15 +7,15 @@ description: Identidade visual da Connect Express Log - logotipos, paleta, tipog
 
 Fonte da verdade, em ordem de prioridade:
 
-1. Figma, nó de identidade e fontes: `https://www.figma.com/design/skgCHymwiw2aKVL59plhxy/Connect-Express?node-id=1-3472`
+1. Figma, seção "Identidade": `https://www.figma.com/design/skgCHymwiw2aKVL59plhxy/Connect-Express?node-id=1-3472`
 2. Pasta `ID Visual/` do projeto.
 3. Este arquivo.
 
 Se o Figma e este arquivo divergirem, o Figma vence e este arquivo deve ser atualizado na mesma tarefa.
 
-## Estado atual
+## O que o Figma define (lido em 2026-10-10)
 
-O Figma ainda não foi lido (falta autorização do conector). Tudo marcado como PROVISÓRIO abaixo foi extraído do logotipo em PNG e precisa ser conferido no nó `1-3472` antes de implementar componentes.
+A seção "Identidade" contém só quatro coisas: o logotipo, três cores, a fonte primária e a fonte secundária. Não há neutros, escala tipográfica, espaçamentos nem componentes. Tudo o que não está nas tabelas "Marca" abaixo é decisão de projeto, marcada como tal.
 
 ## Logotipos
 
@@ -29,42 +29,70 @@ Regras:
 - O logotipo nunca é recolorido, distorcido, girado ou recebe sombra.
 - Área de respiro mínima: a altura da letra "C" em todos os lados.
 - Largura mínima em tela: 120 px.
-- No site o logotipo é servido em SVG (pedir ao cliente ou exportar do Figma). PNG só como último recurso, em 2x.
+- Só existem versões em PNG de 900 por 486 px. Pedir ao cliente o arquivo vetorial (SVG). Enquanto não chegar, usar o PNG por `next/image`.
 - Texto alternativo: "Connect Express Log".
 - O nome da empresa em texto corrido é "Connect Express Log". Nunca "Connecte".
 
-## Paleta (PROVISÓRIA, extraída do logotipo)
+## Cores
+
+### Marca (do Figma)
 
 | Token | Valor | Papel |
 |---|---|---|
-| `--cor-verde` | `#47A81B` | Cor principal da marca. Fundos de destaque, ícones, detalhes. |
-| `--cor-laranja` | `#F3570B` | Ação. Botão principal e chamadas de cotação. |
-| `--cor-azul` | `#0D7BD6` | Apoio. Links secundários e detalhes pontuais. |
+| `--cor-laranja` | `#F3570B` | Ação e destaque. Botão principal, palavra destacada em título, ícones. |
+| `--cor-verde` | `#47A81B` | Assinatura da marca. Detalhes, selos de confirmação, bloco de marca. |
+| `--cor-azul` | `#0E7BD6` | Apoio. Links, detalhes de mapa e de dados. |
 
-Contraste, medido contra branco:
+No Figma, o laranja é a cor usada nos textos de exemplo e vem primeiro na paleta. Ele é a cor de destaque do site. O verde identifica a marca pelo logotipo e entra com moderação.
 
-- Verde `#47A81B`: cerca de 3,1:1. Não usar para texto pequeno sobre branco nem texto branco pequeno sobre verde. Para texto use uma variação mais escura (a definir no Figma).
-- Laranja `#F3570B`: cerca de 3,4:1. Texto branco sobre laranja só em tamanho grande (18,66 px negrito ou 24 px regular). Para botões com texto pequeno, usar a variação escura.
-- Azul `#0D7BD6`: cerca de 4,4:1. Abaixo do mínimo de 4,5:1 por pouco. Conferir antes de usar em texto corrido.
+### Decisão de projeto (não está no Figma)
 
-Faltam, e vêm do Figma: neutros (fundo, superfície, texto, borda), variações escuras e claras de cada cor, cor de erro e de sucesso.
+| Token | Valor | Papel |
+|---|---|---|
+| `--cor-laranja-escuro` | `#C2410C` | Texto laranja pequeno e fundo de botão com texto branco pequeno. |
+| `--cor-verde-escuro` | `#2F7A0E` | Texto verde e fundo verde com texto branco. |
+| `--cor-azul-escuro` | `#0A5FA8` | Links em texto corrido. |
+| `--cor-tinta` | `#111111` | Texto principal e blocos escuros. |
+| `--cor-tinta-suave` | `#5B6168` | Texto secundário e rótulos. |
+| `--cor-linha` | `#D9DEE3` | Bordas e divisores. |
+| `--cor-nevoa` | `#E9ECEF` | Fundo de seção alternada. |
+| `--cor-papel` | `#F5F5F5` | Fundo de cartão. É o fundo da seção de identidade no Figma. |
+| `--cor-branco` | `#FFFFFF` | Fundo base. |
 
-## Tipografia
+As variações escuras existem por contraste. Conferir cada par com uma ferramenta antes de fechar `tokens.css`.
 
-A definir pelo Figma (nó `1-3472`). Até lá:
+### Contraste das cores de marca contra branco
 
-- Não escolher fonte por conta própria.
-- As fontes serão servidas pelo próprio site em WOFF2, nunca por CDN de terceiros (ver `connect-performance`).
-- Registrar aqui: família de títulos, família de texto, pesos usados, escala de tamanhos e altura de linha.
+- Laranja `#F3570B`: cerca de 3,4:1. Serve para título grande (24 px ou mais, ou 18,66 px em negrito) e elementos gráficos. Não serve para texto pequeno.
+- Verde `#47A81B`: cerca de 3,1:1. Mesma restrição.
+- Azul `#0E7BD6`: cerca de 4,4:1. Abaixo do mínimo de 4,5:1 por pouco. Para texto corrido, usar o azul escuro.
+
+## Tipografia (do Figma)
+
+| Papel | Família | Uso |
+|---|---|---|
+| Primária | **Geologica** (peso Medium, 500, no Figma) | Títulos, números da operação, botões, navegação. |
+| Secundária | **Poppins** (peso Regular, 400, no Figma) | Texto corrido, legendas, formulários. |
+
+As duas são distribuídas pelo Google Fonts com licença aberta (OFL). Geologica é fonte variável.
+
+Decisão de projeto:
+
+- Geologica: pesos 400, 500 e 600. Eixos `CRSV`, `SHRP` e `slnt` em zero, como no Figma.
+- Poppins: pesos 400, 500 e 600.
+- Carregar com `next/font/google`, que baixa os arquivos no build e serve pelo próprio domínio. Nenhuma requisição ao Google no navegador.
+- Escala de tamanhos, altura de linha e espaçamento entre letras ficam em `connect-ui-design`.
 
 ## Como aplicar no código
 
 - Todo valor de cor, fonte, raio, sombra e espaçamento vive em `src/styles/tokens.css` como propriedade CSS (`--cor-*`, `--fonte-*`, `--espaco-*`, `--raio-*`).
 - Nenhum outro arquivo CSS ou componente contém valor hexadecimal. O critério de aceite AC-036 testa isso.
-- Tokens têm nome pelo papel (`--cor-acao`, `--cor-texto`), apontando para os tokens de marca (`--cor-laranja`). Componentes usam só os tokens de papel.
+- Tokens de papel (`--cor-acao`, `--cor-texto`, `--cor-fundo`) apontam para os tokens acima. Componentes usam só os tokens de papel.
 
 ## Não fazer
 
 - Não usar os tokens de `Dados/DESIGN.md` nem de `Dados/SKILL.md`: descrevem outra marca (Terminal Yard Operating System).
-- Não usar o verde como cor de texto sobre branco.
-- Não misturar as três cores da marca com o mesmo peso em uma mesma seção. Uma domina, as outras pontuam.
+- Não usar as fontes das referências (Helvetica Now Display, condensadas em caixa alta). A marca usa Geologica e Poppins.
+- Não usar o azul vivo das referências SwiftMove e Logistica OS como cor dominante. O azul da marca é apoio.
+- Não usar laranja ou verde de marca em texto pequeno.
+- Não misturar as três cores com o mesmo peso em uma seção. Uma domina, as outras pontuam.
