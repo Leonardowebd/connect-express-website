@@ -56,6 +56,40 @@
   backdrop-filter: blur(10px);
 }
 
+/*
+  Safari do iPhone (iOS 26): a barra de endereço flutua sobre a página e o
+  navegador não deixa nenhuma camada fixa pintar atrás dela. A faixa de
+  desfoque terminava em um corte, com conteúdo nítido logo abaixo. Como não há
+  como levar o desfoque até lá, a faixa fixa sai no iPhone e no iPad.
+  (-webkit-touch-callout só existe no Safari do iOS.)
+*/
+@supports (-webkit-touch-callout: none) {
+  .desfoqueFixo {
+    display: none;
+  }
+}
+
+/*
+  Enquanto a marca da abertura está na tela, o resto da página fica oculto.
+  Sem isso, no iPhone a página aparecia atrás da barra de endereço, por baixo
+  da tela branca. A página volta quando os blocos começam a se desfazer.
+*/
+.surgir ~ * {
+  animation: surgir-pagina 250ms linear 800ms backwards;
+}
+
+@keyframes surgir-pagina {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .surgir ~ * {
+    animation: none;
+  }
+}
+
 /* Navegadores sem backdrop-filter recebem um véu simples. */
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .camadaDeDesfoque {

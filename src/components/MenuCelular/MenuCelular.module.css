@@ -84,20 +84,23 @@
   color: var(--cor-tinta);
   overflow-y: auto;
   overscroll-behavior: contain;
+  /* Abre e fecha só com opacidade e um deslize curto: o recorte animado falhava ao fechar no celular. */
   visibility: hidden;
   opacity: 0;
-  clip-path: inset(-10rem 0 calc(100% + 10rem) 0);
+  transform: translateY(-0.75rem);
+  pointer-events: none;
   transition:
-    opacity 380ms var(--curva-suave),
-    clip-path 520ms var(--curva-suave),
-    visibility 0s linear 520ms;
+    opacity 300ms var(--curva-suave),
+    transform 380ms var(--curva-suave),
+    visibility 0s linear 380ms;
   --curva-suave: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .painel[data-aberto='true'] {
   visibility: visible;
   opacity: 1;
-  clip-path: inset(-10rem 0);
+  transform: none;
+  pointer-events: auto;
   transition-delay: 0s;
 }
 
@@ -106,15 +109,15 @@
 .painel .acoes {
   opacity: 0;
   transform: translateY(0.75rem);
-  transition:
-    opacity 420ms var(--curva-suave),
-    transform 520ms var(--curva-suave);
 }
 
 .painel[data-aberto='true'] li,
 .painel[data-aberto='true'] .acoes {
   opacity: 1;
   transform: none;
+  transition:
+    opacity 420ms var(--curva-suave),
+    transform 520ms var(--curva-suave);
   transition-delay: calc(120ms + var(--ordem, 0) * 45ms);
 }
 

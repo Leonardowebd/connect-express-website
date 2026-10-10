@@ -272,7 +272,9 @@ textarea {
   transform: translateY(-200%);
 }
 
-.pular:focus {
+/* Só aparece para quem navega pelo teclado. No toque, o foco devolvido por um menu
+   ou por uma âncora não pode fazer o atalho surgir na tela. */
+.pular:focus-visible {
   transform: none;
 }
 

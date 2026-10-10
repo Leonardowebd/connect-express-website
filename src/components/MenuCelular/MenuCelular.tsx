@@ -8,7 +8,7 @@ type Item = { rotulo: string; href: string; externo?: boolean };
 
 type Props = { itens: Item[]; atalhos: Item[]; cotacao: string; whatsapp: string; marca: string };
 
-/** Menu do celular: painel verde em tela cheia, com fechar próprio, Esc e foco devolvido ao botão. */
+/** Menu do celular: painel branco em tela cheia, com fechar próprio, Esc e foco devolvido ao botão. */
 export function MenuCelular({ itens, atalhos, cotacao, whatsapp, marca }: Props) {
   const [aberto, setAberto] = useState(false);
   const abrir = useRef<HTMLButtonElement>(null);
@@ -23,12 +23,13 @@ export function MenuCelular({ itens, atalhos, cotacao, whatsapp, marca }: Props)
     document.addEventListener('keydown', aoTeclar);
     desktop.addEventListener('change', sair);
     document.body.style.overflow = 'hidden';
-    fechar.current?.focus();
+    fechar.current?.focus({ preventScroll: true });
     return () => {
       document.removeEventListener('keydown', aoTeclar);
       desktop.removeEventListener('change', sair);
       document.body.style.overflow = '';
-      botao?.focus();
+      // Sem rolar a página: o foco só volta ao botão para quem usa teclado ou leitor de tela.
+      botao?.focus({ preventScroll: true });
     };
   }, [aberto]);
 
