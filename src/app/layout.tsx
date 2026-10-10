@@ -35,6 +35,9 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
+  // No Safari do iPhone a página aparece por trás da barra de endereço: as camadas
+  // fixas precisam poder se estender até a borda física da tela.
+  viewportFit: 'cover',
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

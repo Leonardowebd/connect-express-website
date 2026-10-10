@@ -77,12 +77,16 @@
   gap: var(--espaco-4);
   padding: var(--espaco-4) var(--espaco-6) calc(var(--espaco-6) + env(safe-area-inset-bottom));
   background: var(--cor-branco);
+  /* Pinta 10 rem além do painel, acima e abaixo: no Safari do iPhone a página não aparece atrás das barras. */
+  box-shadow:
+    0 10rem 0 var(--cor-branco),
+    0 -10rem 0 var(--cor-branco);
   color: var(--cor-tinta);
   overflow-y: auto;
   overscroll-behavior: contain;
   visibility: hidden;
   opacity: 0;
-  clip-path: inset(0 0 100% 0);
+  clip-path: inset(-10rem 0 calc(100% + 10rem) 0);
   transition:
     opacity 380ms var(--curva-suave),
     clip-path 520ms var(--curva-suave),
@@ -93,7 +97,7 @@
 .painel[data-aberto='true'] {
   visibility: visible;
   opacity: 1;
-  clip-path: inset(0);
+  clip-path: inset(-10rem 0);
   transition-delay: 0s;
 }
 

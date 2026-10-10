@@ -39,6 +39,22 @@
   transform: translateZ(0);
 }
 
+/*
+  Safari do iPhone: a página continua visível por trás da barra de endereço,
+  abaixo do fim da área fixa. Esta extensão leva o desfoque até lá, para a
+  faixa não terminar em um corte com conteúdo nítido embaixo.
+*/
+.desfoqueFixo::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  height: 9rem;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
 /* Navegadores sem backdrop-filter recebem um véu simples. */
 @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
   .camadaDeDesfoque {
@@ -237,9 +253,9 @@
 
 .surgir {
   position: fixed;
-  inset: 0 0 auto;
-  /* Altura da tela com a barra do navegador recolhida: cobre tudo no celular. */
-  height: 100lvh;
+  /* Sobra de 9 rem acima e abaixo: cobre também a área atrás das barras do Safari no iPhone. */
+  inset: -9rem 0 auto;
+  height: calc(100lvh + 18rem);
   z-index: 100;
   pointer-events: none;
 }
@@ -269,7 +285,9 @@
 
 .surgirMarca {
   position: absolute;
-  inset: 0;
+  /* Centralizada na área visível, não na tela estendida. */
+  inset: 9rem 0 auto;
+  height: 100svh;
   display: grid;
   place-items: center;
   animation: surgir-marca 350ms var(--curva) both;
