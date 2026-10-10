@@ -232,63 +232,60 @@
 }
 
 /*
-  Números em linha do tempo: uma linha com um ponto por número.
-  No celular a linha desce pela esquerda; a partir do tablet, corre no alto
-  com os cinco números lado a lado.
+  Números. No celular: mosaico de cartões, com o primeiro em destaque na
+  largura toda e os outros quatro em duas colunas (cinco itens sem sobra).
+  A partir do tablet: linha do tempo, com os cinco lado a lado.
 */
 .fatosNumeros {
   position: relative;
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: var(--espaco-3);
   margin: 0;
-  padding-left: var(--espaco-6);
 }
 
-.fatosNumeros::before {
-  content: '';
-  position: absolute;
-  top: 0.75rem;
-  bottom: 0.75rem;
-  left: 0.3125rem;
-  width: 1px;
-  background: var(--cor-borda);
-}
-
-/* No celular, número e legenda dividem a linha: cinco linhas curtas em vez de cinco blocos altos. */
 .fatosNumeros div {
   position: relative;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  align-items: baseline;
-  gap: var(--espaco-3);
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  gap: var(--espaco-6);
+  padding: var(--espaco-4);
+  border-radius: var(--raio-cartao);
+  background: var(--cor-superficie);
 }
 
-.fatosNumeros div::before {
-  content: '';
-  position: absolute;
-  top: 0.8125rem;
-  left: calc(-1 * var(--espaco-6));
-  width: 0.6875rem;
-  height: 0.6875rem;
-  border-radius: 50%;
-  background: var(--cor-marca);
-  box-shadow: 0 0 0 0.3125rem var(--cor-fundo);
+.fatosNumeros div:first-child {
+  grid-column: 1 / -1;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  padding: var(--espaco-6) var(--espaco-4);
+  background: var(--cor-fundo-escuro);
+  color: var(--cor-texto-inverso);
 }
 
 .fatosNumeros dd {
   font-family: var(--fonte-titulo);
-  min-width: 4.75rem;
-  font-size: clamp(2rem, 1.5rem + 1.8vw, 3.25rem);
+  font-size: clamp(2.25rem, 1.6rem + 2.4vw, 3.25rem);
   font-weight: 500;
   line-height: 1;
   letter-spacing: -0.03em;
   font-variant-numeric: tabular-nums;
 }
 
+.fatosNumeros div:first-child dd {
+  font-size: 3.5rem;
+}
+
 .fatosNumeros dt {
   font-size: var(--tam-pequeno);
   color: var(--cor-texto-suave);
+}
+
+.fatosNumeros div:first-child dt {
+  max-width: 9ch;
+  color: var(--cor-texto-inverso-suave);
+  text-align: right;
 }
 
 @media (min-width: 768px) {
@@ -300,28 +297,48 @@
   }
 
   .fatosNumeros::before {
+    content: '';
+    position: absolute;
     top: 0.3125rem;
     right: 10%;
-    bottom: auto;
     left: 10%;
-    width: auto;
     height: 1px;
+    background: var(--cor-borda);
   }
 
-  .fatosNumeros div {
+  .fatosNumeros div,
+  .fatosNumeros div:first-child {
+    grid-column: auto;
     flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: center;
     gap: var(--espaco-1);
-  }
-
-  .fatosNumeros dd {
-    min-width: 0;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    color: inherit;
   }
 
   .fatosNumeros div::before {
+    content: '';
+    position: absolute;
     top: calc(-1 * var(--espaco-12));
     left: calc(50% - 0.34375rem);
+    width: 0.6875rem;
+    height: 0.6875rem;
+    border-radius: 50%;
+    background: var(--cor-marca);
+    box-shadow: 0 0 0 0.3125rem var(--cor-fundo);
+  }
+
+  .fatosNumeros div:first-child dd {
+    font-size: clamp(2.25rem, 1.6rem + 2.4vw, 3.25rem);
+  }
+
+  .fatosNumeros div:first-child dt {
+    max-width: none;
+    color: var(--cor-texto-suave);
+    text-align: center;
   }
 }
 
