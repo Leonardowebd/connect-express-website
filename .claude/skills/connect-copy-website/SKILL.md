@@ -49,7 +49,7 @@ Use só o que está nesta tabela. Regra definida pelo dono do projeto em 2026-10
 | Comercial | (11) 95595-4684, comercial@connectexpresslog.com.br | Site atual | Publicado |
 | SAC | (11) 5028-0388, sac@connectexpresslog.com.br | Site atual | Publicado |
 | CNPJ | 23.039.490/0001-35 (Mcs Translog Logistica e Servicos de Transporte LTDA) | Site atual | Publicado |
-| Clientes | Decathlon, Drogaria Pacheco, Drogaria Rosário, Drogaria São Paulo, Extrafarma, Magazine Luiza, Pague Menos, Salvador Medical | Site atual | Publicado |
+| Clientes | Decathlon, Drogaria Pacheco, Drogaria Rosário, Drogaria São Paulo, Extrafarma, Magazine Luiza, Pague Menos, Salvador Medical, Mastermed | Site atual | Publicado |
 | Redes sociais | linkedin.com/in/connect-expresslog, instagram.com/connectexpresslog | Site atual | Publicado |
 
 **Regra dura:** não inventar número, certificação, prazo, depoimento, cliente ou case. Faltou dado, vira pergunta em aberto na especificação. Depoimento só com autorização registrada.

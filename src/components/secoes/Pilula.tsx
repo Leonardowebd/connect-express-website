@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import styles from './b.module.css';
+import styles from './secoes.module.css';
 
 type Props = { href: string; children: ReactNode; externo?: boolean; clara?: boolean };
 
@@ -10,9 +10,7 @@ export function Pilula({ href, children, externo = false, clara = false }: Props
   const conteudo = (
     <>
       <span>{children}</span>
-      <span className={styles.pilulaSeta} aria-hidden="true">
-        ↗
-      </span>
+      <span className={styles.pilulaSeta} aria-hidden="true" />
     </>
   );
   return externo ? (

@@ -29,6 +29,7 @@ A especificação fica em `.spec/features/connect-express-website/spec.md`.
 | Para mudar | Arquivo |
 |---|---|
 | Telefones, endereços, estados, números, clientes | `src/data/empresa.ts` |
+| Logotipos dos clientes | `public/clientes/` |
 | Textos das soluções e suas perguntas frequentes | `src/data/servicos.ts` |
 | Textos da página inicial | `src/data/inicio.ts` |
 | Textos de Trabalhe Conosco | `src/data/vagas.ts` |
@@ -54,13 +55,9 @@ O projeto está ligado à Vercel e ao repositório do GitHub: cada envio para `m
 
 Enquanto a variável `SITE_NO_AR` não for `sim` na Vercel, o site responde com `X-Robots-Tag: noindex` e fica fora dos buscadores. Defina essa variável só no lançamento, junto com o domínio oficial.
 
-## Versões A e B
+## Layout
 
-- Versão A: `/`, layout editorial (referência CargoKite).
-- Versão B: `/b/`, só a página inicial, layout em cartões arredondados (referência Cargomaxis, nó 1-10 do Figma).
-- Versão C: `/c/`, só a página inicial, títulos em caixa alta e letreiro (referência SwiftMove, nó 1-8 do Figma).
-
-As três usam os mesmos dados de `src/data/`. Depois da escolha, as versões descartadas saem do código.
+O layout segue a referência Cargomaxis (nó 1-10 do Figma): cartões arredondados, navegação e botões em pílula, rodapé com letreiro. As versões A e C, usadas na comparação, foram removidas em 2026-10-10.
 
 ## Pendências antes de ir ao ar
 

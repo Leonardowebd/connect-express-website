@@ -85,15 +85,17 @@ export const numeros = [
   { valor: 15, prefixo: '+', sufixo: '', legenda: 'anos de logística' },
 ] as const;
 
+// Logotipos extraídos do site antigo (wp-content/uploads), em PNG de 500 por 500 px.
 export const clientes = [
-  'Drogaria São Paulo',
-  'Drogaria Pacheco',
-  'Pague Menos',
-  'Extrafarma',
-  'Drogaria Rosário',
-  'Magazine Luiza',
-  'Decathlon',
-  'Salvador Medical',
+  { nome: 'Drogaria São Paulo', logo: '/clientes/drogaria-sao-paulo.png' },
+  { nome: 'Drogaria Pacheco', logo: '/clientes/drogaria-pacheco.png' },
+  { nome: 'Pague Menos', logo: '/clientes/pague-menos.png' },
+  { nome: 'Extrafarma', logo: '/clientes/extrafarma.png' },
+  { nome: 'Drogaria Rosário', logo: '/clientes/drogaria-rosario.png' },
+  { nome: 'Magazine Luiza', logo: '/clientes/magazine-luiza.png' },
+  { nome: 'Decathlon', logo: '/clientes/decathlon.png' },
+  { nome: 'Salvador Medical', logo: '/clientes/salvador-medical.png' },
+  { nome: 'Mastermed', logo: '/clientes/mastermed.png' },
 ] as const;
 
 export const navegacao = [

@@ -52,7 +52,7 @@ test('@spec:AC-018 botões e links são fáceis de tocar', () => {
   assert.match(css, /\.botao\{[^}]*min-height:var\(--toque-minimo\)/, 'todo botão respeita o alvo mínimo');
   for (const [rota, h] of paginas()) {
     const acoes = links(h).filter((l) => ['Pedir cotação', 'Falar no WhatsApp', 'Conhecer as soluções'].includes(l.texto));
-    const soltas = acoes.filter((l) => !/class="[^"]*(botao|ladrilho)/.test(l.tag) && l.texto !== 'Conhecer as soluções');
+    const soltas = acoes.filter((l) => !/class="[^"]*(botao|pilula)/.test(l.tag) && l.texto !== 'Conhecer as soluções');
     assert.deepEqual(soltas.map((l) => l.texto), [], `${rota}: toda ação principal usa o componente de botão`);
   }
 });

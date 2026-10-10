@@ -29,7 +29,7 @@ O diagnóstico do projeto (`Dados/Sobre Connect/Connecte_Express_Projeto_.pptx`)
 2. **Verde domina.** Fundo branco e cinza claro como base, blocos fortes em verde, laranja para ação e para a palavra destacada do título, azul para links e detalhes. Sem bloco preto.
 3. **Espaço é sinal de confiança.** Seções respiram. Coluna de texto estreita, margens generosas.
 4. **Texto é texto.** Nenhuma informação fica presa dentro de imagem.
-5. **Cantos retos ou quase.** A referência principal usa blocos de canto reto. Raio pequeno e único.
+5. **Cantos arredondados.** Blocos em cartões de raio grande e botões em pílula, como na referência adotada.
 6. **Funciona sem foto.** As fotos chegam depois; o layout precisa ficar de pé com os substitutos.
 
 ## O que tirar de cada referência
@@ -98,16 +98,27 @@ Servem pelo método (tokens semânticos, estados obrigatórios de componente, po
 11. Contato, com formulário e localização.
 12. Rodapé com cartão de cotação.
 
-## Versões A e B
+## Layout adotado
 
-Enquanto o cliente não escolhe, existem duas direções para a página inicial, com o mesmo conteúdo e a mesma paleta:
+Depois de comparar três versões da página inicial, o dono do projeto escolheu em 2026-10-10 a que segue a referência **Cargomaxis** (nó `1-10` do Figma). Ela vale para o site inteiro. As tabelas acima, sobre CargoKite e SwiftMove, ficam como registro do que foi testado e descartado.
 
-- **Versão A**, em `/`: a tradução da referência CargoKite descrita acima. Cantos retos, mosaico, tipografia grande.
-- **Versão B**, em `/b/`: a referência Cargomaxis (nó `1-10` do Figma). Blocos em cartões bem arredondados, navegação em pílulas sobre a foto do herói, caixa de vidro com o título, fatos rápidos com os números à direita, faixa de clientes, soluções em linhas com botão em pílula, bloco arredondado de diferenciais, cobertura em foto e cartões, chamada sobre foto e rodapé com letreiro. Componentes em `src/components/b/`.
+Marcas do layout:
 
-- **Versão C**, em `/c/`: a referência SwiftMove (nó `1-8` do Figma). Cabeçalho dentro do cartão do herói, texto centralizado, letreiro "Connect" atrás do herói e no rodapé, números ligados por pontos, títulos em caixa alta e peso forte, solução em destaque com três blocos de foto, painel claro com cartão de métrica, cartões de solução com etiqueta, setores atendidos sobre foto, clientes em cartões. Componentes em `src/components/c/`.
+- Blocos em cartões bem arredondados, com margem pequena em relação à borda da tela.
+- Navegação em pílulas: sobre a foto do herói na página inicial, sobre fundo claro nas páginas internas.
+- Herói em cartão de foto, com o título em uma caixa de vidro no canto inferior esquerdo.
+- Fatos rápidos: título à esquerda, números à direita, faixa clara com os logotipos dos clientes.
+- Soluções em linhas, cada uma com botão em pílula e seta em círculo.
+- Bloco verde arredondado para diferenciais, com selo numerado laranja e linha tracejada.
+- Cobertura em foto e cartões.
+- Chamada sobre foto.
+- Perguntas frequentes em cartões.
+- Cotação em painel: cartão verde com os contatos ao lado do formulário.
+- Rodapé verde com o letreiro "Connect Express".
 
-As versões B e C ficam fora dos buscadores. Depois da escolha, as outras saem do código.
+Ordem das seções da página inicial: herói, fatos rápidos, soluções, por que a Connect, quem somos e valores, cobertura, chamada, perguntas frequentes, cotação.
+
+Componentes em `src/components/secoes/`.
 
 ## Movimento
 

@@ -1,28 +1,22 @@
-import Link from 'next/link';
 import { Revelar } from '@/animacoes/Revelar';
 import { operacao } from '@/data/inicio';
 import styles from './secoes.module.css';
 
 export function Operacao() {
   return (
-    <section className="secao" aria-labelledby="titulo-operacao">
-      <div className={`conteudo ${styles.operacao}`}>
-        <div className={styles.operacaoCabeca}>
-          <p className="rotulo">{operacao.rotulo}</p>
-          <h2 id="titulo-operacao" className="titulo">
-            Uma operação feita para a <span className="destaque">última milha</span> da saúde
-          </h2>
-          <Link href="/#contato" className="botao botao-acao">
-            Pedir cotação
-          </Link>
-        </div>
-        <Revelar emSequencia className={styles.escada}>
+    <section className={styles.moldura} aria-labelledby="titulo-operacao">
+      <div className={`${styles.bloco} secao-escura`}>
+        <p className={styles.rotulo}>{operacao.rotulo}</p>
+        <h2 id="titulo-operacao" className={styles.titulo}>
+          {operacao.titulo}
+        </h2>
+        <Revelar emSequencia className={styles.pilares}>
           {operacao.itens.map((item, i) => (
-            <article key={item.titulo} className={styles.degrau}>
-              <p className={styles.degrauNumero} aria-hidden="true">
+            <article key={item.titulo} className={styles.pilar}>
+              <p className={styles.selo} aria-hidden="true">
                 0{i + 1}
               </p>
-              <h3 className={styles.itemTitulo}>{item.titulo}</h3>
+              <h3>{item.titulo}</h3>
               <p className="texto-suave">{item.texto}</p>
             </article>
           ))}

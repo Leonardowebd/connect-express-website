@@ -4,6 +4,8 @@ import { Revelar } from '@/animacoes/Revelar';
 import { Imagem } from '@/components/Imagem/Imagem';
 import { JsonLd } from '@/components/JsonLd';
 import { Perguntas } from '@/components/secoes/Perguntas';
+import { Pilula } from '@/components/secoes/Pilula';
+import secoes from '@/components/secoes/secoes.module.css';
 import { TOTAL_ESTADOS, contatos, estados, linkWhatsApp } from '@/data/empresa';
 import { buscarServico, servicos } from '@/data/servicos';
 import { servico as servicoJsonLd, trilha } from '@/lib/jsonld';
@@ -54,9 +56,7 @@ export default async function PaginaDeSolucao({ params }: Props) {
                 {s.definicao}
               </p>
               <div className="botoes">
-                <Link href="/#contato" className="botao botao-acao">
-                  Pedir cotação
-                </Link>
+                <Pilula href="/#contato">Pedir cotação</Pilula>
                 <a href={linkWhatsApp} className="botao botao-contorno" target="_blank" rel="noopener noreferrer">
                   Falar no WhatsApp
                 </a>
@@ -93,21 +93,19 @@ export default async function PaginaDeSolucao({ params }: Props) {
         </div>
       </section>
 
-      <section className="secao secao-escura" aria-labelledby="titulo-motivos">
-        <div className="conteudo">
-          <div className="cabeca">
-            <p className="rotulo">Por que a Connect</p>
-            <h2 id="titulo-motivos" className="titulo">
-              Motivos para contratar
-            </h2>
-          </div>
-          <Revelar emSequencia className={styles.motivos}>
+      <section className={secoes.moldura} aria-labelledby="titulo-motivos">
+        <div className={`${secoes.bloco} secao-escura`}>
+          <p className={secoes.rotulo}>Por que a Connect</p>
+          <h2 id="titulo-motivos" className={secoes.titulo}>
+            Motivos para contratar
+          </h2>
+          <Revelar emSequencia className={`${secoes.pilares} ${styles.tresPilares}`}>
             {s.motivos.map((m, i) => (
-              <article key={m.titulo} className={styles.motivo} data-motivo="">
-                <p className={styles.motivoNumero} aria-hidden="true">
+              <article key={m.titulo} className={secoes.pilar} data-motivo="">
+                <p className={secoes.selo} aria-hidden="true">
                   0{i + 1}
                 </p>
-                <h3 className={styles.h3}>{m.titulo}</h3>
+                <h3>{m.titulo}</h3>
                 <p className="texto-suave">{m.texto}</p>
               </article>
             ))}
@@ -148,9 +146,7 @@ export default async function PaginaDeSolucao({ params }: Props) {
               </a>{' '}
               ou peça uma cotação pelo formulário.
             </p>
-            <Link href="/#contato" className="botao botao-acao">
-              Pedir cotação
-            </Link>
+            <Pilula href="/#contato">Pedir cotação</Pilula>
           </div>
           <div className={styles.outras}>
             <h3 className={styles.h3}>Outras soluções</h3>

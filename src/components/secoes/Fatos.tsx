@@ -1,17 +1,18 @@
+import Image from 'next/image';
 import { Contador } from '@/animacoes/Contador';
 import { Revelar } from '@/animacoes/Revelar';
 import { clientes, numeros } from '@/data/empresa';
 import { quemSomos } from '@/data/inicio';
-import styles from './b.module.css';
+import styles from './secoes.module.css';
 
-export function FatosB() {
+export function Fatos() {
   return (
-    <section className="secao" aria-labelledby="titulo-fatos-b">
+    <section className="secao" aria-labelledby="titulo-fatos">
       <div className="conteudo">
         <div className={styles.fatos}>
           <div className={styles.fatosTexto}>
             <p className={styles.rotulo}>Fatos rápidos</p>
-            <h2 id="titulo-fatos-b" className={styles.titulo}>
+            <h2 id="titulo-fatos" className={styles.titulo}>
               A confiança de mais de 100 farmácias, todos os dias
             </h2>
             <p className="texto-suave">{quemSomos.paragrafos[0]}</p>
@@ -31,10 +32,12 @@ export function FatosB() {
         </div>
 
         <div className={styles.faixa}>
-          <p className="so-leitor">Clientes atendidos</p>
+          <h3 className="so-leitor">Clientes atendidos</h3>
           <ul data-clientes="">
-            {clientes.map((nome) => (
-              <li key={nome}>{nome}</li>
+            {clientes.map((c) => (
+              <li key={c.nome}>
+                <Image src={c.logo} alt={c.nome} width={500} height={500} sizes="112px" />
+              </li>
             ))}
           </ul>
         </div>

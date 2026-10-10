@@ -12,8 +12,8 @@ export function Perguntas({ perguntas, titulo = 'Respostas rápidas para as dúv
     <section className="secao" aria-labelledby="titulo-perguntas" data-perguntas="">
       <div className={`conteudo ${styles.perguntas}`}>
         <div className={styles.perguntasCabeca}>
-          <p className="rotulo">Perguntas frequentes</p>
-          <h2 id="titulo-perguntas" className="titulo">
+          <p className={styles.rotulo}>Perguntas frequentes</p>
+          <h2 id="titulo-perguntas" className={styles.titulo}>
             {titulo}
           </h2>
           <p className="texto-suave">

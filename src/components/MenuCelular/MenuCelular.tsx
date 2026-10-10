@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import styles from './Cabecalho.module.css';
+import styles from './MenuCelular.module.css';
 
 type Item = { rotulo: string; href: string; externo?: boolean };
 

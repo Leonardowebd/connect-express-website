@@ -308,29 +308,6 @@ Como equipe do projeto, quero publicar o site sem as fotos definitivas e trocá-
 - **Quando** coloco o arquivo final com o nome previsto na pasta de imagens
 - **Então** o site passa a usar a imagem final sem alteração de layout ou de código de página
 
-### US-014 - Comparar duas direções de layout
-
-Como dono do projeto, quero ver a página inicial em um segundo layout, com o mesmo conteúdo, para que eu escolha com o cliente qual direção seguir.
-
-#### AC-040 - A versão B mostra o mesmo conteúdo em outro layout
-
-- **Dado** o endereço `/b/`
-- **Quando** abro a página
-- **Então** vejo a página inicial no layout da referência Cargomaxis, com um único título principal, os números da operação, as quatro soluções com link, a cobertura com os estados, as perguntas frequentes e o formulário de cotação
-
-#### AC-041 - A versão B não concorre com a oficial nos buscadores
-
-- **Dado** a versão B publicada
-- **Quando** um buscador a encontra
-- **Então** ela pede para não ser indexada, aponta a página inicial como endereço oficial e não aparece no mapa de páginas
-
-#### AC-042 - A versão C mostra o mesmo conteúdo em um terceiro layout
-
-- **Dado** o endereço `/c/`
-- **Quando** abro a página
-- **Então** vejo a página inicial no layout da referência SwiftMove, com um único título principal, os números da operação, as quatro soluções com link, a cobertura com os estados, os clientes, as perguntas frequentes e o formulário de cotação
-- **E** ela pede para não ser indexada, aponta a página inicial como endereço oficial e não aparece no mapa de páginas
-
 ## Fora de escopo
 
 - Blog (no site atual o link aponta para `#`).
@@ -351,14 +328,15 @@ Como dono do projeto, quero ver a página inicial em um segundo layout, com o me
 | ASM-004 | Os endereços das páginas de serviço e de Trabalhe Conosco são preservados para não perder posicionamento no Google. | aberta | - |
 | ASM-005 | O domínio continua `www.connectexpresslog.com.br`. | aberta | - |
 | ASM-006 | Contatos, endereços, CNPJ e redes sociais do site atual continuam válidos. | aberta | - |
-| ASM-007 | A lista de clientes exibida no site atual (Decathlon, Drogaria Pacheco, Drogaria Rosário, Drogaria São Paulo, Extrafarma, Magazine Luiza, Pague Menos, Salvador Medical) pode ser mantida. | aberta | - |
+| ASM-007 | A lista de clientes exibida no site atual (Decathlon, Drogaria Pacheco, Drogaria Rosário, Drogaria São Paulo, Extrafarma, Magazine Luiza, Pague Menos, Salvador Medical e Mastermed, com os logotipos extraídos do site atual) pode ser mantida. | aberta | - |
 | ASM-008 | `Dados/SKILL.md` e `Dados/DESIGN.md` descrevem outra marca (Terminal Yard Operating System, terminal-industries.com). Servem como referência de método e de estilo, não como tokens da Connect Express. | aberta | - |
 | ASM-009 | O layout final, as fontes e a paleta completa vêm dos três nós do Figma. | invalidada | Figma lido em 2026-10-10: ele só tem a identidade (logotipo, três cores, fontes Geologica e Poppins) e páginas de referência de outros sites. Não há layout pronto. Ver ASM-012. |
 | ASM-012 | O layout é desenhado a partir das referências do Figma (CargoKite como principal), com a identidade da marca. Neutros, escala tipográfica, espaçamentos e variações escuras das cores são decisão de projeto, registrada nas skills `connect-id-visual` e `connect-ui-design`. | aberta | - |
 | ASM-010 | O site é só em português do Brasil. | aberta | - |
 | ASM-013 | Paleta "verde domina": os blocos fortes usam o verde da marca, o laranja fica para botões e destaques, o azul para links e detalhes, e o preto só para texto. | confirmada | Escolha do dono do projeto em 2026-10-10. |
-| ASM-014 | A versão B cobre só a página inicial, em `/b/`, com o layout do nó 1-10 do Figma (Cargomaxis) e as cores da marca. As páginas internas continuam no layout A até a escolha. | confirmada | Escolha do dono do projeto em 2026-10-10. |
-| ASM-015 | A versão C cobre só a página inicial, em `/c/`, com o layout do nó 1-8 do Figma (SwiftMove) e as cores da marca. Depoimentos da referência foram trocados por cartões de clientes, porque não há depoimentos autorizados. | aberta | - |
+| ASM-014 | A versão B cobre só a página inicial, em `/b/`, com o layout do nó 1-10 do Figma (Cargomaxis) e as cores da marca. As páginas internas continuam no layout A até a escolha. | confirmada | Versão B escolhida e promovida a site principal em 2026-10-10. Ver ASM-016. |
+| ASM-015 | A versão C cobre só a página inicial, em `/c/`, com o layout do nó 1-8 do Figma (SwiftMove) e as cores da marca. | invalidada | Versão C descartada pelo dono do projeto em 2026-10-10. |
+| ASM-016 | O layout do site é o da versão B (referência Cargomaxis, nó 1-10 do Figma), em todas as páginas. As versões A e C saíram do código. | confirmada | Escolha do dono do projeto em 2026-10-10. |
 
 ## Perguntas em aberto
 

@@ -35,32 +35,32 @@
 ## T-005 - Cabeçalho, menu, rodapé e botão de WhatsApp [concluida]
 
 - Refs: US-001, AC-003, AC-012, AC-014, AC-017, AC-037, US-011, AC-033, AC-035, AC-030
-- Arquivos: src/components/Cabecalho/Cabecalho.tsx, src/components/Cabecalho/Cabecalho.module.css, src/components/Cabecalho/MenuCelular.tsx, src/components/Rodape/Rodape.tsx, src/components/Rodape/Rodape.module.css, src/components/BotaoWhatsApp.tsx, src/components/BotaoWhatsApp.module.css, public/logos/logo-connect-express-log.png, public/logos/logo-connect-express-log-claro.png
-- Notas: Skills connect-ui-design, connect-ux, connect-responsive, connect-security. Menu do celular com aria-expanded, Esc e foco. Rodapé com cartão escuro de cotação.
+- Arquivos: src/components/secoes/Cabecalho.tsx, src/components/secoes/Rodape.tsx, src/components/secoes/Pilula.tsx, src/components/MenuCelular/MenuCelular.tsx, src/components/MenuCelular/MenuCelular.module.css, src/components/BotaoWhatsApp.tsx, src/components/BotaoWhatsApp.module.css, public/logos/logo-connect-express-log.png, public/logos/logo-connect-express-log-claro.png, src/app/(inicio)/layout.tsx, src/app/(site)/layout.tsx
+- Notas: Skills connect-ui-design, connect-ux, connect-responsive, connect-security. Navegação em pílulas: sobre a foto na página inicial, sobre fundo claro nas internas. Menu do celular com aria-expanded, Esc e foco. Rodapé verde com letreiro.
 
-## T-006 - Seções da página inicial: herói, números, quem somos, desafio e valores [concluida]
+## T-006 - Seções da página inicial: herói, fatos e quem somos [concluida]
 
 - Refs: AC-001, AC-002, AC-007
-- Arquivos: src/components/secoes/Heroi.tsx, src/components/secoes/Numeros.tsx, src/components/secoes/QuemSomos.tsx, src/components/secoes/Desafio.tsx, src/components/secoes/Valores.tsx, src/components/secoes/secoes.module.css
-- Notas: Skills connect-design-concept, connect-ui-design, connect-responsive. Tradução da referência CargoKite. Sem animação de entrada no título do herói.
+- Arquivos: src/components/secoes/Heroi.tsx, src/components/secoes/Fatos.tsx, src/components/secoes/Sobre.tsx, src/components/secoes/secoes.module.css
+- Notas: Skills connect-design-concept, connect-ui-design, connect-responsive. Herói em cartão arredondado com caixa de vidro. Fatos com os números e a faixa de logotipos dos clientes. Quem somos com os seis valores.
 
-## T-007 - Seções da página inicial: soluções, operação, cobertura e clientes [concluida]
+## T-007 - Seções da página inicial: soluções, operação, cobertura e chamada [concluida]
 
 - Refs: AC-004, AC-008, AC-009
-- Arquivos: src/components/secoes/Solucoes.tsx, src/components/secoes/Operacao.tsx, src/components/secoes/Cobertura.tsx, src/components/secoes/Clientes.tsx
-- Notas: Skills connect-design-concept, connect-ui-design. Soluções em mosaico escuro. Cobertura com os estados em texto.
+- Arquivos: src/components/secoes/Solucoes.tsx, src/components/secoes/Operacao.tsx, src/components/secoes/Cobertura.tsx, src/components/secoes/Chamada.tsx, public/clientes/decathlon.png, public/clientes/drogaria-pacheco.png, public/clientes/drogaria-rosario.png, public/clientes/drogaria-sao-paulo.png, public/clientes/extrafarma.png, public/clientes/magazine-luiza.png, public/clientes/pague-menos.png, public/clientes/salvador-medical.png, public/clientes/mastermed.png
+- Notas: Skills connect-design-concept, connect-ui-design. Soluções em linhas com botão em pílula. Cobertura em foto e cartões, com os estados em texto. Logotipos dos clientes extraídos do site antigo.
 
 ## T-008 - Perguntas frequentes, contato e envio do formulário [concluida]
 
 - Refs: US-004, AC-010, AC-011, AC-031, AC-006
 - Arquivos: src/components/secoes/Perguntas.tsx, src/components/secoes/Contato.tsx, src/components/Formulario/Formulario.tsx, src/components/Formulario/Formulario.module.css, src/lib/validacao.ts, src/lib/envio.ts, src/app/api/contato/route.ts
-- Notas: Skills connect-ux, connect-security, connect-geo. O destino do envio depende da pergunta em aberto Q-002: fica atrás da variável FORMULARIO_WEBHOOK_URL. Sem ela, o formulário mostra os contatos diretos.
+- Notas: Skills connect-ux, connect-security, connect-geo. Cotação em painel arredondado: cartão verde com os contatos diretos ao lado do formulário, campos grandes de canto arredondado e envio em pílula. O destino do envio depende da pergunta em aberto Q-002: fica atrás da variável FORMULARIO_WEBHOOK_URL.
 
 ## T-009 - Montagem da página inicial [concluida]
 
 - Refs: US-001, US-003, AC-001, AC-002, AC-004, AC-007, AC-008, AC-009
-- Arquivos: tests/us-001-005-conteudo.test.mjs
-- Notas: Ordem das seções da skill connect-design-concept. Âncoras sobre, servicos e contato do site antigo mantidas.
+- Arquivos: src/app/(inicio)/page.tsx, tests/us-001-005-conteudo.test.mjs
+- Notas: Ordem das seções da skill connect-design-concept. Âncoras sobre, servicos, cobertura e contato.
 
 ## T-010 - Páginas de solução [concluida]
 
@@ -116,14 +116,8 @@
 - Arquivos: src/styles/tokens.css, src/styles/base.css
 - Notas: Skill connect-id-visual. Blocos fortes em verde, laranja em botões e destaques, azul em links e detalhes. Sobre verde, destaques e links ficam brancos por contraste.
 
-## T-019 - Versão B da página inicial em /b/ [concluida]
+## T-019 - Layout da versão B adotado em todo o site [concluida]
 
-- Refs: US-014, AC-040, AC-041
-- Arquivos: src/app/b/page.tsx, src/app/b/layout.tsx, src/app/(site)/layout.tsx, src/app/(site)/page.tsx, src/app/(site)/paginas.module.css, src/app/(site)/servicos/[slug]/page.tsx, src/app/(site)/servicos/[slug]/pagina.module.css, src/app/(site)/trabalhe-conosco/page.tsx, src/app/(site)/politica-de-privacidade/page.tsx, src/components/b/b.module.css, src/components/b/Pilula.tsx, src/components/b/CabecalhoB.tsx, src/components/b/HeroiB.tsx, src/components/b/FatosB.tsx, src/components/b/SolucoesB.tsx, src/components/b/OperacaoB.tsx, src/components/b/CoberturaB.tsx, src/components/b/ChamadaB.tsx, src/components/b/RodapeB.tsx, tests/us-014-versao-b.test.mjs
-- Notas: Skills connect-design-concept, connect-ui-design. Layout da referência Cargomaxis (nó 1-10 do Figma): cartões arredondados, navegação em pílulas sobre a foto, soluções em linhas, rodapé com letreiro. As rotas da versão A foram para o grupo (site), sem mudar de endereço.
-
-## T-020 - Versão C da página inicial em /c/ [concluida]
-
-- Refs: US-014, AC-042
-- Arquivos: src/app/c/page.tsx, src/app/c/layout.tsx, src/components/c/c.module.css, src/components/c/Botao.tsx, src/components/c/HeroiC.tsx, src/components/c/NumerosC.tsx, src/components/c/DestaqueC.tsx, src/components/c/SobMedidaC.tsx, src/components/c/SolucoesC.tsx, src/components/c/SetoresC.tsx, src/components/c/ClientesC.tsx, src/components/c/ChamadaC.tsx, src/components/c/RodapeC.tsx
-- Notas: Skills connect-design-concept, connect-ui-design. Layout da referência SwiftMove (nó 1-8 do Figma): cabeçalho dentro do cartão do herói, letreiro atrás do herói e no rodapé, números ligados por pontos, solução em destaque com três blocos de foto, painel claro com métrica, cartões de solução com etiqueta, setores sobre foto.
+- Refs: US-012, US-002, AC-005
+- Arquivos: src/app/(site)/paginas.module.css, src/app/(site)/servicos/[slug]/page.tsx, src/app/(site)/servicos/[slug]/pagina.module.css, src/app/(site)/trabalhe-conosco/page.tsx, src/app/(site)/politica-de-privacidade/page.tsx
+- Notas: Skills connect-design-concept, connect-ui-design. O dono do projeto escolheu a versão B (referência Cargomaxis, nó 1-10 do Figma) em 2026-10-10. As versões A e C saíram do código. Páginas internas com o mesmo cabeçalho, rodapé, pílulas e cartões arredondados.

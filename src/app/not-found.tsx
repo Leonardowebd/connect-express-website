@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { Cabecalho } from '@/components/Cabecalho/Cabecalho';
-import { Rodape } from '@/components/Rodape/Rodape';
+import { Cabecalho } from '@/components/secoes/Cabecalho';
+import { Rodape } from '@/components/secoes/Rodape';
 import styles from './(site)/paginas.module.css';
 
 export const metadata = { title: 'Página não encontrada | Connect Express Log' };

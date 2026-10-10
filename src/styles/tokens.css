@@ -89,14 +89,11 @@
   --altura-cabecalho: 4.5rem;
 
   /* Forma */
-  --raio-controle: 2px;
-  --raio-cartao: 4px;
-  /* Versão B: cartões bem arredondados e botões em pílula */
   --raio-b: 1.75rem;
   --raio-pilula: 999px;
-  /* Versão C: cartões e botões de canto médio */
-  --raio-c: 1.25rem;
-  --raio-c-controle: 0.5rem;
+  --raio-cartao: 1.25rem;
+  --raio-campo: 0.875rem;
+  --raio-controle: var(--raio-pilula);
   --toque-minimo: 2.75rem;
 
   /* Movimento */

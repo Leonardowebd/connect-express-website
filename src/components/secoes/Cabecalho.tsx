@@ -1,17 +1,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { MenuCelular } from '@/components/Cabecalho/MenuCelular';
+import { MenuCelular } from '@/components/MenuCelular/MenuCelular';
 import { empresa } from '@/data/empresa';
 import { Pilula } from './Pilula';
-import styles from './b.module.css';
+import styles from './secoes.module.css';
 
-// Na versão B a navegação fica sobre a foto do herói, em pílulas.
+// Navegação em pílulas. Na página inicial fica sobre a foto do herói;
+// nas páginas internas, sobre fundo claro.
 const itens = [
-  { rotulo: 'Início', href: '/b/' },
+  { rotulo: 'Início', href: '/' },
   { rotulo: 'Quem Somos', href: '/#sobre' },
-  { rotulo: 'Soluções', href: '/b/#servicos' },
-  { rotulo: 'Cobertura', href: '/b/#cobertura' },
-  { rotulo: 'Contato', href: '/b/#contato' },
+  { rotulo: 'Soluções', href: '/#servicos' },
+  { rotulo: 'Cobertura', href: '/#cobertura' },
+  { rotulo: 'Contato', href: '/#contato' },
 ];
 
 const atalhos = [
@@ -19,9 +20,10 @@ const atalhos = [
   { rotulo: 'Trabalhe conosco', href: '/trabalhe-conosco/' },
 ];
 
-export function CabecalhoB() {
+export function Cabecalho({ sobreFoto = false }: { sobreFoto?: boolean }) {
+  const logo = sobreFoto ? '/logos/logo-connect-express-log-claro.png' : '/logos/logo-connect-express-log.png';
   return (
-    <header className={`${styles.topo} sobre-escuro`}>
+    <header className={sobreFoto ? `${styles.topo} sobre-escuro` : `${styles.topo} ${styles.topoSolido}`}>
       <nav className={styles.topoNav} aria-label="Principal">
         <ul>
           {itens.map((item) => (
@@ -34,9 +36,9 @@ export function CabecalhoB() {
         </ul>
       </nav>
 
-      <Link href="/b/" className={styles.topoLogo} aria-label={`${empresa.nome}, página inicial`}>
+      <Link href="/" className={styles.topoLogo} aria-label={`${empresa.nome}, página inicial`}>
         <Image
-          src="/logos/logo-connect-express-log-claro.png"
+          src={logo}
           alt={empresa.nome}
           width={900}
           height={486}
@@ -58,12 +60,12 @@ export function CabecalhoB() {
           </li>
         ))}
         <li>
-          <Pilula href="/b/#contato">Pedir cotação</Pilula>
+          <Pilula href="/#contato">Pedir cotação</Pilula>
         </li>
       </ul>
 
       <div className={styles.topoMenu}>
-        <MenuCelular itens={[...itens, ...atalhos]} cotacao="/b/#contato" />
+        <MenuCelular itens={[...itens, ...atalhos]} cotacao="/#contato" />
       </div>
     </header>
   );

@@ -41,22 +41,18 @@ export const desafio = {
     {
       titulo: 'O paciente não pode esperar',
       texto: 'Remédio comprado agora é remédio que precisa chegar hoje. Prazo de dias úteis não serve para a saúde.',
-      imagem: 'desafio-prazo',
     },
     {
       titulo: 'A carga exige cuidado',
       texto: 'Produto sensível à temperatura, medicamento controlado e amostra biológica pedem procedimento próprio, do manuseio à embalagem.',
-      imagem: 'desafio-cuidado',
     },
     {
       titulo: 'A norma não é opcional',
       texto: 'O transporte de produtos de saúde segue regras da ANVISA e da ANTT. Quem não conhece expõe a farmácia a risco.',
-      imagem: 'desafio-norma',
     },
     {
       titulo: 'O volume muda de um dia para o outro',
       texto: 'Uma campanha ou um pico de demanda dobra os pedidos. A operação precisa ter gente para absorver sem atrasar.',
-      imagem: 'desafio-volume',
     },
   ],
 };

@@ -81,7 +81,7 @@ test('@spec:AC-007 a seção Quem Somos conta a história e os valores', () => {
   const valores = blocos(inicio, 'article', 'data-valor');
   assert.equal(valores.length, 6, 'seis valores');
   for (const v of valores) {
-    assert.ok(texto(blocos(v, 'h3')[0] ?? '').length > 5);
+    assert.ok(texto((v.match(/<h[2-6][^>]*>([\s\S]*?)<\/h[2-6]>/) ?? [])[1] ?? '').length > 5, 'valor tem título');
     assert.ok(texto(blocos(v, 'p')[0] ?? '').length > 15);
   }
 });
@@ -93,13 +93,17 @@ test('@spec:AC-008 a cobertura lista os estados atendidos', () => {
   for (const nome of ['Bahia', 'São Paulo', 'Rio de Janeiro', 'Espírito Santo', 'Distrito Federal', 'Mato Grosso', 'Paraná', 'Minas Gerais', 'Pernambuco']) {
     assert.ok(estados.includes(nome), `estado ${nome} em texto`);
   }
-  assert.match(texto(secao), /Matriz: Lauro de Freitas \(BA\)/);
-  assert.match(texto(secao), /Filial: São Paulo \(SP\)/);
+  assert.match(texto(secao), /Matriz[\s\S]{0,120}Lauro de Freitas \(BA\)/);
+  assert.match(texto(secao), /Filial[\s\S]{0,120}São Paulo \(SP\)/);
 });
 
 test('@spec:AC-009 os clientes aparecem como prova social', () => {
-  const nomes = blocos(blocos(inicio, 'ul', 'data-clientes')[0] ?? '', 'li').map(texto);
+  // Cada cliente é identificado pelo texto visível ou pelo texto alternativo do logotipo.
+  const nomes = blocos(blocos(inicio, 'ul', 'data-clientes')[0] ?? '', 'li').map(
+    (li) => texto(li) || attr(tags(li, 'img')[0] ?? '', 'alt') || '',
+  );
   assert.ok(nomes.length >= 6, 'pelo menos seis clientes');
+  assert.ok(nomes.every((n) => n.length > 2), 'todo cliente tem nome');
   for (const nome of ['Drogaria São Paulo', 'Pague Menos', 'Extrafarma']) assert.ok(nomes.includes(nome), nome);
 });
 

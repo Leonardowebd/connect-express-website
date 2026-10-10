@@ -125,7 +125,7 @@ export function Formulario({ campos, destino, textoBotao, sucesso, alternativa }
       </div>
 
       <div className={styles.rodape}>
-        <button type="submit" className="botao botao-acao" disabled={estado === 'enviando'}>
+        <button type="submit" className={styles.enviar} disabled={estado === 'enviando'}>
           {estado === 'enviando' ? 'Enviando...' : textoBotao}
         </button>
         <p className={styles.aviso}>

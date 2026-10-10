@@ -161,13 +161,6 @@ textarea {
   text-decoration-thickness: 1px;
 }
 
-/* Link sozinho em uma linha: ganha área de toque. */
-p > .link:only-child {
-  display: inline-flex;
-  align-items: center;
-  min-height: var(--toque-minimo);
-}
-
 .link:hover {
   text-decoration-thickness: 2px;
 }

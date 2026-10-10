@@ -14,8 +14,9 @@ O Figma do projeto não tem layout pronto da Connect Express: tem a identidade e
 - **Grade:** 12 colunas, conteúdo com largura máxima de 1200 px, calha de 24 px. Margem lateral de 16 px no celular, 32 px no tablet, 48 px no desktop.
 - **Espaçamento:** escala de 4 px: 4, 8, 12, 16, 24, 32, 48, 64, 96, 128. Nada fora da escala.
 - **Ritmo vertical de seção:** 64 px no celular, 96 px no tablet, 128 px no desktop.
-- **Raios:** cantos retos ou quase, como na referência principal. `--raio-controle: 2px`, `--raio-cartao: 4px`. Sem cantos muito arredondados.
-- **Superfícies:** branco, cinza claro (`--cor-nevoa`) e um bloco preto (`--cor-tinta`) por página. Sem sombra em cartões; a separação é por fundo e por linha fina.
+- **Raios:** blocos grandes com `--raio-b` (1,75 rem), cartões com `--raio-cartao` (1,25 rem), campos de formulário com `--raio-campo` (0,875 rem), botões em pílula (`--raio-pilula`).
+- **Superfícies:** branco, cinza claro (`--cor-papel`) e blocos verdes. Sem bloco preto. Sem sombra em cartões; a separação é por fundo e por linha fina.
+- **Formulário:** rótulo acima do campo, campo branco de 52 px de altura com borda de contraste 3:1, foco com contorno verde, envio em pílula laranja com seta em círculo, aviso de privacidade ao lado do botão.
 - **Tipografia:** Geologica nos títulos, peso 500, entrelinha de 1,05 a 1,15 e espaçamento entre letras levemente negativo. Poppins no texto, peso 400, entrelinha 1,6. Escala fluida com `clamp()`: título do herói de 40 a 88 px, título de seção de 32 a 56 px, subtítulo de 20 a 28 px, texto 16 a 18 px, rótulo 14 px. Texto corrido nunca abaixo de 16 px. Linha de texto com no máximo 70 caracteres.
 - **Rótulo de seção:** texto pequeno em `--cor-tinta-suave`, à esquerda do título no desktop e acima dele no celular.
 - **Destaque em título:** uma palavra ou expressão em `--cor-laranja`. No máximo uma por título.

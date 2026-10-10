@@ -82,7 +82,9 @@ test('@spec:AC-038 cada espaço de imagem tem nome, proporção e substituto', a
     }
     for (const img of tags(h, 'img')) assert.ok((attr(img, 'src') ?? '').length > 0, `${rota}: nenhuma imagem sem arquivo`);
   }
-  assert.ok(espacos >= 10, `espaços de imagem preenchidos nas páginas (achei ${espacos})`);
+  assert.ok(espacos >= ids.size, `espaços de imagem preenchidos nas páginas (achei ${espacos})`);
+  const usados = new Set(paginas().flatMap(([, h]) => [...h.matchAll(/data-espaco="([^"]+)"/g)].map((m) => m[1])));
+  for (const id of ids) assert.ok(usados.has(id), `espaço "${id}" do manifesto aparece em alguma página`);
   for (const i of imagens) {
     assert.ok(i.largura > 0 && i.altura > 0 && i.alt.length > 5 && i.pedido.length > 10, `${i.id}: proporção, descrição e pedido de foto`);
   }

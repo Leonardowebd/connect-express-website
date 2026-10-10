@@ -6,39 +6,50 @@ import styles from './secoes.module.css';
 
 export function Cobertura() {
   return (
-    <section id="cobertura" className="secao secao-alt" aria-labelledby="titulo-cobertura">
+    <section id="cobertura" className="secao" aria-labelledby="titulo-cobertura">
       <div className="conteudo">
-        <div className="cabeca">
-          <p className="rotulo">{cobertura.rotulo}</p>
-          <h2 id="titulo-cobertura" className="titulo">
-            {cobertura.titulo}
-          </h2>
-        </div>
-        <Revelar className={styles.cobertura}>
-          <div className={styles.coberturaTexto}>
-            <p className="texto-g">{cobertura.texto}</p>
-            <h3 className={styles.itemTitulo}>Estados atendidos</h3>
-            <ul className={styles.estados} data-estados="">
-              {estados.map((e) => (
-                <li key={e.uf}>
-                  <abbr title={e.nome}>{e.uf}</abbr>
-                  <span>{e.nome}</span>
-                </li>
-              ))}
-            </ul>
-            <h3 className={styles.itemTitulo}>Bases</h3>
-            <ul className={styles.bases}>
-              {enderecos.map((e) => (
-                <li key={e.tipo}>
-                  <strong>{e.tipo}:</strong> {e.cidade} ({e.uf})
-                </li>
-              ))}
-              <li>
-                <strong>Centros de distribuição:</strong> {centrosDeDistribuicao.join(' e ')}
-              </li>
-            </ul>
+        <div className={styles.cabecaDupla}>
+          <div>
+            <p className={styles.rotulo}>{cobertura.rotulo}</p>
+            <h2 id="titulo-cobertura" className={styles.titulo}>
+              {cobertura.titulo}
+            </h2>
           </div>
-          <Imagem id="cobertura" sizes="(min-width: 1024px) 40vw, 100vw" />
+          <p className="texto-g">{cobertura.texto}</p>
+        </div>
+        <Revelar className={styles.mural}>
+          <div className={styles.muralFoto}>
+            <Imagem id="cobertura" sizes="(min-width: 1024px) 30vw, 100vw" />
+          </div>
+          <div className={styles.cartoes}>
+            {enderecos.map((e) => (
+              <article key={e.tipo} className={styles.cartao}>
+                <h3>{e.tipo}</h3>
+                <address>
+                  {e.rua}
+                  <br />
+                  {e.bairro}, {e.cidade} ({e.uf})
+                  <br />
+                  CEP {e.cep}
+                </address>
+              </article>
+            ))}
+            <article className={styles.cartao}>
+              <h3>Centros de distribuição</h3>
+              <p>{centrosDeDistribuicao.join(' e ')}</p>
+            </article>
+            <article className={styles.cartao}>
+              <h3>Estados atendidos</h3>
+              <ul className={styles.estados} data-estados="">
+                {estados.map((e) => (
+                  <li key={e.uf}>
+                    <abbr title={e.nome}>{e.uf}</abbr>
+                    <span className="so-leitor"> {e.nome}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          </div>
         </Revelar>
       </div>
     </section>

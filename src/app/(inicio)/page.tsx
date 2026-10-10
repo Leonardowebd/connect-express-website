@@ -1,15 +1,13 @@
 import { JsonLd } from '@/components/JsonLd';
-import { Clientes } from '@/components/secoes/Clientes';
+import { Chamada } from '@/components/secoes/Chamada';
 import { Cobertura } from '@/components/secoes/Cobertura';
 import { Contato } from '@/components/secoes/Contato';
-import { Desafio } from '@/components/secoes/Desafio';
+import { Fatos } from '@/components/secoes/Fatos';
 import { Heroi } from '@/components/secoes/Heroi';
-import { Numeros } from '@/components/secoes/Numeros';
 import { Operacao } from '@/components/secoes/Operacao';
 import { Perguntas } from '@/components/secoes/Perguntas';
-import { QuemSomos } from '@/components/secoes/QuemSomos';
+import { Sobre } from '@/components/secoes/Sobre';
 import { Solucoes } from '@/components/secoes/Solucoes';
-import { Valores } from '@/components/secoes/Valores';
 import { metaInicio, perguntasGerais } from '@/data/inicio';
 import { site } from '@/lib/jsonld';
 import { metadados } from '@/lib/metadados';
@@ -21,14 +19,12 @@ export default function Inicio() {
   return (
     <>
       <Heroi />
-      <Numeros />
-      <QuemSomos />
-      <Desafio />
+      <Fatos />
       <Solucoes />
       <Operacao />
+      <Sobre />
       <Cobertura />
-      <Valores />
-      <Clientes />
+      <Chamada />
       <Perguntas perguntas={perguntasGerais} />
       <Contato />
       <JsonLd dados={site()} />

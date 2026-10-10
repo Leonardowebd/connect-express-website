@@ -2,9 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { contatos, empresa, enderecos, redes } from '@/data/empresa';
 import { servicos } from '@/data/servicos';
-import styles from './c.module.css';
+import styles from './secoes.module.css';
 
-export function RodapeC() {
+export function Rodape() {
   return (
     <footer className={styles.moldura}>
       <div className={`${styles.rodape} secao-escura`}>
@@ -18,17 +18,9 @@ export function RodapeC() {
               sizes="140px"
             />
             <p className="texto-suave">{empresa.resumo}</p>
-            <ul>
-              <li>
-                <a href={`tel:${contatos.comercial.telefoneLink}`}>{contatos.comercial.telefone}</a>
-              </li>
-              <li>
-                <a href={`mailto:${contatos.comercial.email}`}>{contatos.comercial.email}</a>
-              </li>
-              <li className={styles.rodapeLinha}>
-                {enderecos[0].rua}, {enderecos[0].cidade} ({enderecos[0].uf})
-              </li>
-            </ul>
+            <p className="texto-suave">
+              © {new Date().getFullYear()} {empresa.nome}. CNPJ {empresa.cnpj}.
+            </p>
           </div>
 
           <div>
@@ -36,17 +28,19 @@ export function RodapeC() {
             <ul>
               {servicos.map((s) => (
                 <li key={s.slug}>
-                  <Link href={`/servicos/${s.slug}/`}>{s.nomeCurto}</Link>
+                  <Link href={`/servicos/${s.slug}/`}>{s.nome}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h2>Empresa</h2>
+            <h2>Links úteis</h2>
             <ul>
               <li>
-                <Link href="/#sobre">Quem Somos</Link>
+                <a href={empresa.urlRastreio} target="_blank" rel="noopener noreferrer">
+                  Rastreie seu pedido
+                </a>
               </li>
               <li>
                 <Link href="/trabalhe-conosco/">Trabalhe conosco</Link>
@@ -65,30 +59,28 @@ export function RodapeC() {
           </div>
 
           <div>
-            <h2>Atendimento</h2>
+            <h2>Fale conosco</h2>
             <ul>
+              {[contatos.comercial, contatos.sac].map((c) => (
+                <li key={c.rotulo}>
+                  <a href={`tel:${c.telefoneLink}`}>
+                    {c.rotulo}: {c.telefone}
+                  </a>
+                </li>
+              ))}
               <li>
-                <a href={empresa.urlRastreio} target="_blank" rel="noopener noreferrer">
-                  Rastreie seu pedido
-                </a>
+                <a href={`mailto:${contatos.comercial.email}`}>{contatos.comercial.email}</a>
               </li>
-              <li>
-                <Link href="/c/#contato">Pedir cotação</Link>
-              </li>
-              <li>
-                <a href={`tel:${contatos.sac.telefoneLink}`}>SAC: {contatos.sac.telefone}</a>
-              </li>
-              <li>
-                <a href={`mailto:${contatos.sac.email}`}>{contatos.sac.email}</a>
-              </li>
+              {enderecos.map((e) => (
+                <li key={e.tipo} className={styles.rodapeEndereco}>
+                  {e.tipo}: {e.cidade} ({e.uf})
+                </li>
+              ))}
             </ul>
           </div>
         </div>
         <p className={styles.letreiro} aria-hidden="true">
           Connect Express
-        </p>
-        <p className={styles.legal}>
-          © {new Date().getFullYear()} {empresa.nome}. CNPJ {empresa.cnpj} ({empresa.razaoSocial}).
         </p>
       </div>
     </footer>

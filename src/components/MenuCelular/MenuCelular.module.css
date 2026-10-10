@@ -1,64 +1,4 @@
-.cabecalho {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: var(--cor-fundo);
-  border-bottom: 1px solid var(--cor-borda);
-}
-
-.linha {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--espaco-6);
-  min-height: var(--altura-cabecalho);
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  flex: none;
-  min-height: var(--toque-minimo);
-}
-
-.logo img {
-  width: 7.5rem;
-  height: auto;
-}
-
-.nav,
-.atalhos {
-  display: none;
-}
-
-.lista,
-.atalhos {
-  align-items: center;
-  gap: var(--espaco-6);
-  font-family: var(--fonte-titulo);
-  font-size: 0.9375rem;
-}
-
-.lista {
-  display: flex;
-}
-
-.lista a,
-.atalhos a:not(:global(.botao)) {
-  display: inline-flex;
-  align-items: center;
-  min-height: var(--toque-minimo);
-  border-bottom: 2px solid transparent;
-}
-
-.lista a:hover,
-.atalhos a:not(:global(.botao)):hover {
-  border-bottom-color: var(--cor-marca);
-}
-
-.atalhos a:not(:global(.botao)) {
-  color: var(--cor-texto-suave);
-}
+/* Botão e painel do menu no celular. */
 
 .botaoMenu {
   display: grid;
@@ -138,26 +78,4 @@
   align-items: center;
   min-height: 3.5rem;
   border-bottom: 1px solid var(--cor-borda);
-}
-
-@media (min-width: 1024px) {
-  .nav {
-    display: block;
-  }
-
-  .atalhos {
-    display: flex;
-  }
-
-  .celular {
-    display: none;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .lista,
-  .atalhos {
-    gap: var(--espaco-4);
-    font-size: 0.875rem;
-  }
 }

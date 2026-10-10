@@ -74,6 +74,7 @@
   gap: var(--espaco-4);
   align-content: start;
   padding: var(--espaco-6);
+  border-radius: var(--raio-cartao);
   background: var(--cor-fundo);
 }
 
@@ -81,28 +82,6 @@
   display: grid;
   gap: var(--espaco-2);
   color: var(--cor-texto-suave);
-}
-
-.motivos {
-  display: grid;
-  gap: 1px;
-  background: var(--cor-borda-inversa);
-  border: 1px solid var(--cor-borda-inversa);
-}
-
-.motivo {
-  display: grid;
-  gap: var(--espaco-3);
-  align-content: start;
-  padding: var(--espaco-6);
-  background: var(--cor-fundo-escuro-2);
-}
-
-.motivoNumero {
-  margin-bottom: var(--espaco-8);
-  font-family: var(--fonte-titulo);
-  font-size: 1.5rem;
-  color: var(--cor-destaque-inverso);
 }
 
 .estados {
@@ -158,12 +137,8 @@
     align-items: start;
   }
 
-  .motivos {
+  .tresPilares {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .motivo {
-    padding: var(--espaco-8);
   }
 
   .finalGrade {

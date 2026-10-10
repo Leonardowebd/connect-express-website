@@ -1,39 +1,31 @@
-import Link from 'next/link';
 import { Revelar } from '@/animacoes/Revelar';
 import { solucoes } from '@/data/inicio';
 import { servicos } from '@/data/servicos';
+import { Pilula } from './Pilula';
 import styles from './secoes.module.css';
 
 export function Solucoes() {
   return (
-    <section id="servicos" className="secao secao-escura" aria-labelledby="titulo-solucoes">
+    <section id="servicos" className="secao" aria-labelledby="titulo-solucoes">
       <div className="conteudo">
-        <Revelar emSequencia className={styles.mosaico}>
-          <div className={`${styles.ladrilho} ${styles.ladrilhoAcao}`}>
-            <p className={styles.ladrilhoRotulo}>{solucoes.rotulo}</p>
-            <h2 id="titulo-solucoes" className={styles.ladrilhoTitulo}>
-              {solucoes.titulo}
-            </h2>
-          </div>
-
+        <div className={styles.cabeca}>
+          <p className={styles.rotulo}>{solucoes.rotulo}</p>
+          <h2 id="titulo-solucoes" className={styles.titulo}>
+            {solucoes.titulo}
+          </h2>
+        </div>
+        <Revelar emSequencia className={styles.linhas}>
           {servicos.map((s) => (
-            <article key={s.slug} className={styles.ladrilho} data-solucao={s.slug}>
-              <p className={styles.etiqueta}>{s.etiqueta}</p>
-              <h3 className={styles.ladrilhoNome}>{s.nome}</h3>
-              <p className={styles.ladrilhoTexto}>{s.resumo}</p>
-              <Link href={`/servicos/${s.slug}/`} className={styles.ladrilhoLink}>
+            <article key={s.slug} className={styles.linha} data-solucao={s.slug}>
+              <div>
+                <h3>{s.nome}</h3>
+                <p className="texto-suave">{s.resumo}</p>
+              </div>
+              <Pilula href={`/servicos/${s.slug}/`}>
                 Ver solução<span className="so-leitor">: {s.nome}</span>
-                <span aria-hidden="true"> ↗</span>
-              </Link>
+              </Pilula>
             </article>
           ))}
-
-          <Link href="/#contato" className={`${styles.ladrilho} ${styles.ladrilhoAcao} ${styles.ladrilhoChamada}`}>
-            <span className={styles.ladrilhoTitulo}>{solucoes.chamada}</span>
-            <span aria-hidden="true" className={styles.seta}>
-              ↗
-            </span>
-          </Link>
         </Revelar>
       </div>
     </section>
