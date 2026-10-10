@@ -66,12 +66,13 @@
   height: 2.25rem;
   border-radius: 50%;
   background: var(--cor-branco);
-  color: var(--cor-tinta);
+  /* Seta verde na bola branca; o branco fica só no texto do botão. */
+  color: var(--cor-fundo-escuro);
   transition: transform var(--duracao-rapida) var(--curva);
 }
 
-.pilulaSeta::before {
-  content: '↗';
+.pilulaSeta svg {
+  display: block;
 }
 
 .pilula:hover .pilulaSeta {

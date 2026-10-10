@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ArrowUpRight } from '@phosphor-icons/react/dist/ssr';
 import type { ReactNode } from 'react';
 import styles from './secoes.module.css';
 
@@ -10,7 +11,9 @@ export function Pilula({ href, children, externo = false, clara = false }: Props
   const conteudo = (
     <>
       <span>{children}</span>
-      <span className={styles.pilulaSeta} aria-hidden="true" />
+      <span className={styles.pilulaSeta}>
+        <ArrowUpRight aria-hidden="true" weight="bold" size={16} />
+      </span>
     </>
   );
   return externo ? (
