@@ -50,7 +50,8 @@
   top: 100%;
   right: 0;
   left: 0;
-  height: 9rem;
+  /* Cobre a barra do navegador (até uns 7 rem) com folga. */
+  height: 12rem;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }

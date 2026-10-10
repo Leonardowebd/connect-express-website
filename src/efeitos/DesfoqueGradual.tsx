@@ -47,9 +47,16 @@ export function DesfoqueGradual({
   const passo = 100 / camadas;
   const vertical = posicao === 'top' || posicao === 'bottom';
 
-  const caixa: CSSProperties = vertical
-    ? { [posicao]: 0, left: 0, right: 0, height: tamanho }
-    : { [posicao]: 0, top: 0, bottom: 0, width: tamanho };
+  // A faixa fixa da base é presa pelo topo, na altura dinâmica da tela (dvh), e não por
+  // "bottom: 0". No celular, a barra do navegador some e volta com a rolagem, e no Safari
+  // do iPhone ela é translúcida: presa pelo topo, a faixa acompanha a borda visível e a
+  // extensão dela (no CSS) continua por trás da barra, sem deixar área nítida embaixo.
+  const caixa: CSSProperties =
+    fixo && posicao === 'bottom'
+      ? { top: `calc(100dvh - ${tamanho})`, left: 0, right: 0, height: tamanho }
+      : vertical
+        ? { [posicao]: 0, left: 0, right: 0, height: tamanho }
+        : { [posicao]: 0, top: 0, bottom: 0, width: tamanho };
 
   const itens = Array.from({ length: camadas }, (_, indice) => {
     const i = indice + 1;
