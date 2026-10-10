@@ -1,7 +1,9 @@
-Dados
-Referencias
-ID Visual
-.spec
-.claude
-tests
-.playwright-mcp
+# Só as pastas da raiz: sem a barra, "Dados" também tiraria public/dados do ar.
+/Dados
+/Referencias
+/ID Visual
+/.spec
+/.claude
+/tests
+/.playwright-mcp
+/scripts
