@@ -269,13 +269,20 @@ textarea {
   padding: var(--espaco-3) var(--espaco-4);
   background: var(--cor-tinta);
   color: var(--cor-branco);
-  transform: translateY(-200%);
 }
 
-/* Só aparece para quem navega pelo teclado. No toque, o foco devolvido por um menu
-   ou por uma âncora não pode fazer o atalho surgir na tela. */
-.pular:focus-visible {
-  transform: none;
+/*
+  Fora do foco de teclado, o atalho é recortado até sumir (e não só empurrado
+  para cima da página): no iPhone, puxar a página para baixo mostrava o que
+  estava escondido acima do topo.
+*/
+.pular:not(:focus-visible) {
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 @media (min-width: 768px) {
