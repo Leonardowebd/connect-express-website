@@ -211,19 +211,49 @@
   will-change: opacity, transform;
 }
 
-/* Surgir em pixels (abertura do herói) */
+/* Surgir em pixels (abertura do site): tela branca, marca ao centro, blocos que se desfazem */
 
 .surgir {
-  position: absolute;
+  position: fixed;
   inset: 0;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  z-index: 100;
   pointer-events: none;
 }
 
-.surgir i {
-  background: var(--cor-noite);
+/* 80 blocos: em pé no celular, deitados no computador, para ficarem perto de quadrados. */
+.surgirGrade {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+}
+
+@media (min-width: 768px) {
+  .surgirGrade {
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
+}
+
+.surgirGrade i {
+  /* Um fio a mais em cada bloco, para não aparecer fresta entre eles. */
+  margin: -0.5px;
+  background: var(--cor-branco);
   animation: surgir-bloco 450ms var(--curva) both;
+}
+
+.surgirMarca {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  animation: surgir-marca 350ms var(--curva) both;
+}
+
+.surgirMarca img {
+  width: min(13rem, 56vw);
+  height: auto;
 }
 
 @keyframes surgir-bloco {
@@ -233,9 +263,10 @@
   }
 }
 
-@media (min-width: 768px) {
-  .surgir {
-    grid-template-columns: repeat(10, 1fr);
+@keyframes surgir-marca {
+  to {
+    opacity: 0;
+    transform: scale(0.96);
   }
 }
 

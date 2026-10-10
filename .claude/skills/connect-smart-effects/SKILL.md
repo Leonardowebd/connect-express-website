@@ -24,7 +24,7 @@ Responda antes de escrever código. Um "não" em qualquer linha barra o efeito o
 
 ## 2. Onde colocar
 
-- **Nunca no elemento que define o LCP**: título e foto do herói não recebem animação de entrada. A exceção é o surgir em pixels, que anima uma grade por cima da foto, não a foto: ela já está pintada por baixo, e o título e os botões ficam acima da grade.
+- **Nunca no elemento que define o LCP**: título e foto do herói não recebem animação de entrada. A exceção é a abertura em pixels: uma tela por cima da página, que não anima a foto nem o título, não recebe cliques e some em menos de 2,5 s.
 - **Um efeito forte por tela.** Dois efeitos disputando atenção na mesma dobra se anulam.
 - **Um efeito que prende a rolagem por página**, no máximo, e nunca antes do primeiro botão de cotação.
 - **Efeito pesado vai abaixo da primeira tela**, onde pode esperar o script carregar.
@@ -85,7 +85,7 @@ Os efeitos ficam em `src/efeitos/`. As entradas simples de seção (`Revelar`, `
 | Desfoque gradual | `DesfoqueGradual.tsx` | Faixa fixa na base da tela, no site inteiro; base da foto do herói | Fazer o conteúdo sair da tela com suavidade durante toda a rolagem | Três camadas em vez de quatro | Mantido (não é movimento); some com transparência reduzida |
 | Troca por pixels | `TrocaPixel.tsx` | Foto de Quem Somos, que troca pelos números | Convidar a tocar e entregar prova | Toque; até 40 pixels em vez de 96 | Troca imediata |
 | Expansão na rolagem | `ExpansaoNaRolagem.tsx` | Abertura de Quem Somos, que aberta mostra a apresentação da empresa e um botão | Dar palco à apresentação da empresa | Moldura inicial mais larga; não remede com a barra do navegador | Estado final, sem prender a rolagem |
-| Surgir em pixels | `SurgirEmPixels.tsx` | Foto do herói, ao abrir a página | Dar entrada à primeira tela sem atrasar a foto | Grade de 8 colunas em vez de 10 | Sem a grade: foto direta |
+| Surgir em pixels | `SurgirEmPixels.tsx` | Abertura do site (no `layout.tsx`): tela branca com a marca colorida ao centro, que se desfaz em blocos e mostra o herói | Dar entrada ao site com a marca | 80 blocos, igual | Sem a tela: página direta |
 | Prévia das soluções | `ObservaPrevias.tsx` e CSS em `secoes.module.css` | Lista de soluções | Mostrar a operação por trás de cada solução | Imagem dentro da linha, revelada pela rolagem | Imagem visível, sem transição |
 | Mapa de cobertura | `MapaCobertura.tsx` e `mapa/motor.ts` | Seção Cobertura, dentro da grade: globo fixo sobre o Brasil, visto em ângulo | Responder "vocês atendem a minha região?" | Toque no estado ou nos botões; cartão abaixo do mapa | Mapa parado, sem caminhões em movimento |
 

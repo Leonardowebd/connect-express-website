@@ -3,6 +3,7 @@ import { Geologica, Poppins } from 'next/font/google';
 import { BotaoWhatsApp } from '@/components/BotaoWhatsApp';
 import { JsonLd } from '@/components/JsonLd';
 import { DesfoqueGradual } from '@/efeitos/DesfoqueGradual';
+import { SurgirEmPixels } from '@/efeitos/SurgirEmPixels';
 import { empresa } from '@/data/empresa';
 import { organizacao } from '@/lib/jsonld';
 import { metadataBase } from '@/lib/metadados';
@@ -40,6 +41,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" className={`${geologica.variable} ${poppins.variable}`}>
       <body>
+        <SurgirEmPixels>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logos/logo-connect-express-log.png" alt="" width={900} height={486} decoding="sync" />
+        </SurgirEmPixels>
         <a className="pular" href="#conteudo">
           Pular para o conteúdo
         </a>
