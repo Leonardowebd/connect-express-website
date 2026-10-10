@@ -82,7 +82,7 @@ Os efeitos ficam em `src/efeitos/`. As entradas simples de seção (`Revelar`, `
 | Efeito | Arquivo | Onde está | Trabalho | No celular | Movimento reduzido |
 |---|---|---|---|---|---|
 | Texto revelado | `TextoRevelado.tsx` | Declaração em Quem Somos | Dar peso à frase que resume a empresa | Só opacidade, sem desfoque | Texto inteiro, parado |
-| Desfoque gradual | `DesfoqueGradual.tsx` | Faixa fixa na base da tela, no site inteiro; base da foto do herói | Fazer o conteúdo sair da tela com suavidade durante toda a rolagem | Três camadas em vez de quatro | Mantido (não é movimento); some com transparência reduzida |
+| Desfoque gradual | `DesfoqueGradual.tsx` | Faixa fixa na base da tela, só no computador (1024 px ou mais, fora do iOS); topo e base da foto do herói | Fazer o conteúdo sair da tela com suavidade durante toda a rolagem | Três camadas em vez de quatro | Mantido (não é movimento); some com transparência reduzida |
 | Troca por pixels | `TrocaPixel.tsx` | Foto de Quem Somos, que troca pelos números | Convidar a tocar e entregar prova | Toque; até 40 pixels em vez de 96 | Troca imediata |
 | Expansão na rolagem | `ExpansaoNaRolagem.tsx` | Abertura de Quem Somos, que aberta mostra a apresentação da empresa e um botão | Dar palco à apresentação da empresa | Moldura inicial mais larga; não remede com a barra do navegador | Estado final, sem prender a rolagem |
 | Surgir em pixels | `SurgirEmPixels.tsx` | Abertura do site (no `layout.tsx`): tela branca com a marca colorida ao centro, que se desfaz em blocos e mostra o herói | Dar entrada ao site com a marca | 80 blocos, igual | Sem a tela: página direta |

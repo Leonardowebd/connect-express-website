@@ -13,7 +13,6 @@
   border: 1px solid var(--cor-borda);
   border-radius: var(--raio-pilula);
   background: var(--cor-branco);
-  box-shadow: 0 0.5rem 1.5rem var(--cor-sombra-suave);
   color: var(--cor-tinta);
   font-family: var(--fonte-titulo);
   font-size: 0.9375rem;

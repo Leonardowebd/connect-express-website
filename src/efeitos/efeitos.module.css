@@ -69,6 +69,13 @@
   }
 }
 
+/* Celular e tablet: sem a faixa fixa de desfoque (decisão do dono do projeto). */
+@media (max-width: 1023px) {
+  .desfoqueFixo {
+    display: none;
+  }
+}
+
 /*
   Enquanto a marca da abertura está na tela, o resto da página fica oculto.
   Sem isso, no iPhone a página aparecia atrás da barra de endereço, por baixo
