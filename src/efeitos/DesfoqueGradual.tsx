@@ -19,6 +19,8 @@ type Props = {
   exponencial?: boolean;
   curva?: Curva;
   opacidade?: number;
+  /** Preso à borda da tela, acompanhando a rolagem do site inteiro. */
+  fixo?: boolean;
   className?: string;
 };
 
@@ -39,6 +41,7 @@ export function DesfoqueGradual({
   exponencial = false,
   curva = 'suave',
   opacidade = 1,
+  fixo = false,
   className = '',
 }: Props) {
   const passo = 100 / camadas;
@@ -73,7 +76,7 @@ export function DesfoqueGradual({
   });
 
   return (
-    <div aria-hidden="true" data-efeito="desfoque-gradual" className={`${styles.desfoqueGradual} ${className}`.trim()} style={caixa}>
+    <div aria-hidden="true" data-efeito="desfoque-gradual" className={`${styles.desfoqueGradual} ${fixo ? styles.desfoqueFixo : ''} ${className}`.trim()} style={caixa}>
       {itens}
     </div>
   );

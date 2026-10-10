@@ -32,14 +32,6 @@ export const imagens: EspacoDeImagem[] = [
     pedido: 'Foto horizontal da equipe ou da base, com uniforme da marca.',
   },
   {
-    id: 'cobertura',
-    arquivo: 'cobertura.webp',
-    largura: 1200,
-    altura: 1200,
-    alt: 'Mapa do Brasil com os estados atendidos pela Connect Express Log',
-    pedido: 'Mapa do Brasil em traço simples com os estados atendidos marcados em laranja. Sem texto dentro da imagem.',
-  },
-  {
     id: 'solucao-medicamentos',
     arquivo: 'solucao-medicamentos.webp',
     largura: 1600,
@@ -78,6 +70,22 @@ export const imagens: EspacoDeImagem[] = [
     altura: 900,
     alt: 'Motos da Connect Express Log saindo para rota ao amanhecer',
     pedido: 'Foto panorâmica, escura o bastante para texto branco por cima, com a frota ou a base em atividade.',
+  },
+  {
+    id: 'operacao',
+    arquivo: 'operacao.webp',
+    largura: 1600,
+    altura: 1000,
+    alt: 'Base de operação da Connect Express Log com pedidos em separação',
+    pedido: 'Foto horizontal da base em atividade: separação, conferência ou saída das motos.',
+  },
+  {
+    id: 'operacao-detalhe',
+    arquivo: 'operacao-detalhe.webp',
+    largura: 1000,
+    altura: 1000,
+    alt: 'Motoboy da Connect Express Log conferindo um pedido no celular',
+    pedido: 'Foto quadrada de detalhe: aplicativo de rastreio, leitura de código ou entrega na porta.',
   },
 ];
 

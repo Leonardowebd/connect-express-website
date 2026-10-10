@@ -1,7 +1,7 @@
 import { Revelar } from '@/animacoes/Revelar';
-import { Imagem } from '@/components/Imagem/Imagem';
-import { centrosDeDistribuicao, enderecos, estados } from '@/data/empresa';
+import { TOTAL_ESTADOS, centrosDeDistribuicao, enderecos, estados } from '@/data/empresa';
 import { cobertura } from '@/data/inicio';
+import { MapaCobertura } from '@/efeitos/MapaCobertura';
 import styles from './secoes.module.css';
 
 export function Cobertura() {
@@ -17,39 +17,26 @@ export function Cobertura() {
           </div>
           <p className="texto-g">{cobertura.texto}</p>
         </div>
-        <Revelar className={styles.mural}>
-          <div className={styles.muralFoto}>
-            <Imagem id="cobertura" sizes="(min-width: 1024px) 30vw, 100vw" />
-          </div>
-          <div className={styles.cartoes}>
-            {enderecos.map((e) => (
-              <article key={e.tipo} className={styles.cartao}>
-                <h3>{e.tipo}</h3>
-                <address>
-                  {e.rua}
-                  <br />
-                  {e.bairro}, {e.cidade} ({e.uf})
-                  <br />
-                  CEP {e.cep}
-                </address>
-              </article>
-            ))}
-            <article className={styles.cartao}>
-              <h3>Centros de distribuição</h3>
-              <p>{centrosDeDistribuicao.join(' e ')}</p>
+
+        <MapaCobertura modo="plano" estados={[...estados]} total={TOTAL_ESTADOS} />
+
+        <Revelar emSequencia className={styles.basesGrade}>
+          {enderecos.map((e) => (
+            <article key={e.tipo} className={styles.cartao}>
+              <h3>{e.tipo}</h3>
+              <address>
+                {e.rua}
+                <br />
+                {e.bairro}, {e.cidade} ({e.uf})
+                <br />
+                CEP {e.cep}
+              </address>
             </article>
-            <article className={styles.cartao}>
-              <h3>Estados atendidos</h3>
-              <ul className={styles.estados} data-estados="">
-                {estados.map((e) => (
-                  <li key={e.uf}>
-                    <abbr title={e.nome}>{e.uf}</abbr>
-                    <span className="so-leitor"> {e.nome}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          </div>
+          ))}
+          <article className={styles.cartao}>
+            <h3>Centros de distribuição</h3>
+            <p>{centrosDeDistribuicao.join(' e ')}</p>
+          </article>
         </Revelar>
       </div>
     </section>

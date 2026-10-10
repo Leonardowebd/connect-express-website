@@ -16,7 +16,6 @@ export function Sobre() {
               {quemSomos.titulo}
             </h2>
           </div>
-          <p className="texto-g">{quemSomos.chamada}</p>
         </div>
 
         <TextoRevelado className={styles.declaracao}>{quemSomos.declaracao}</TextoRevelado>
@@ -43,7 +42,7 @@ export function Sobre() {
             <p className={styles.dica}>Toque na imagem para ver os números.</p>
           </div>
           <div className="prosa texto-suave">
-            {quemSomos.paragrafos.slice(1).map((p) => (
+            {quemSomos.paragrafos.slice(0, 1).map((p) => (
               <p key={p}>{p}</p>
             ))}
           </div>

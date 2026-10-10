@@ -1,11 +1,11 @@
 {
   "feature": "connect-express-website",
-  "timestamp": "2026-10-10T19:46:52.129Z",
-  "gitRev": "3fe9db0",
+  "timestamp": "2026-10-10T20:05:26.065Z",
+  "gitRev": "35bda50",
   "command": "npm run build --silent 1>&2 && node --test --test-reporter=tap tests/*.test.mjs",
   "reporter": "tap",
   "exitCode": 0,
-  "testsParsed": 44,
+  "testsParsed": 47,
   "results": {
     "AC-001": {
       "status": "pass",
@@ -225,6 +225,21 @@
     "AC-047": {
       "status": "pass",
       "testName": "@spec:AC-047 os efeitos respeitam quem pede menos movimento",
+      "method": "tap"
+    },
+    "AC-048": {
+      "status": "pass",
+      "testName": "@spec:AC-048 o mapa de cobertura responde ao mouse, ao toque e ao teclado",
+      "method": "tap"
+    },
+    "AC-049": {
+      "status": "pass",
+      "testName": "@spec:AC-049 o mapa é leve e não esconde informação",
+      "method": "tap"
+    },
+    "AC-050": {
+      "status": "pass",
+      "testName": "@spec:AC-050 a versão em globo mostra a mesma cobertura em seção inteira",
       "method": "tap"
     }
   },

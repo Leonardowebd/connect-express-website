@@ -134,3 +134,9 @@
 - Arquivos: src/efeitos/ObservaPrevias.tsx
 - Notas: Skill connect-smart-effects. Com mouse, a imagem flutua inclinada sobre a linha em foco, só com CSS. Em toque, fica dentro da linha e aparece com a rolagem.
 
+## T-023 - Mapa interativo de cobertura, em bloco e em globo [concluida]
+
+- Refs: US-016, AC-048, AC-049, AC-050
+- Arquivos: scripts/gerar-mapas.mjs, public/dados/brasil-ufs.json, public/dados/terra.json, src/data/mapa.ts, src/efeitos/MapaCobertura.tsx, src/efeitos/mapa/motor.ts, src/efeitos/mapa/mapa.module.css, src/components/secoes/CoberturaImersiva.tsx, src/app/(inicio)/globo/page.tsx, tests/us-016-mapa.test.mjs
+- Notas: Skill connect-smart-effects. Canvas 2D sem dependências. Contornos do IBGE e do Natural Earth, simplificados pelo script. Versão em bloco na seção Cobertura da página inicial; versão em globo em /globo/ para comparação.
+

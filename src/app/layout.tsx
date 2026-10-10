@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Geologica, Poppins } from 'next/font/google';
 import { BotaoWhatsApp } from '@/components/BotaoWhatsApp';
 import { JsonLd } from '@/components/JsonLd';
+import { DesfoqueGradual } from '@/efeitos/DesfoqueGradual';
 import { empresa } from '@/data/empresa';
 import { organizacao } from '@/lib/jsonld';
 import { metadataBase } from '@/lib/metadados';
@@ -43,6 +44,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           Pular para o conteúdo
         </a>
         {children}
+        <DesfoqueGradual fixo posicao="bottom" tamanho="5.5rem" forca={1.6} camadas={4} curva="suave" />
         <BotaoWhatsApp />
         <JsonLd dados={organizacao()} />
       </body>

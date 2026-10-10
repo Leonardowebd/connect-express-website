@@ -15,7 +15,7 @@ export function Fatos() {
             <h2 id="titulo-fatos" className={styles.titulo}>
               A confiança de mais de 100 farmácias, todos os dias
             </h2>
-            <p className="texto-suave">{quemSomos.paragrafos[0]}</p>
+            <p className="texto-suave">{quemSomos.chamada}</p>
           </div>
           <Revelar emSequencia>
             <dl className={styles.fatosNumeros} data-numeros="">

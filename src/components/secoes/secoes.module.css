@@ -78,7 +78,7 @@
   top: var(--espaco-6);
   left: var(--espaco-6);
   right: var(--espaco-6);
-  z-index: 10;
+  z-index: 60;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -978,5 +978,167 @@
   .linha:hover,
   .linha:focus-within {
     z-index: 1;
+  }
+}
+
+/* Cobertura: cartões das bases abaixo do mapa */
+
+.basesGrade {
+  display: grid;
+  gap: var(--espaco-4);
+  margin-top: var(--espaco-4);
+}
+
+@media (min-width: 768px) {
+  .basesGrade {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Chamada final: números e ações dentro da foto aberta */
+
+.chamadaFatos {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: var(--espaco-4) var(--espaco-8);
+  margin: 0;
+  padding-block: var(--espaco-4);
+  border-block: 1px dashed var(--cor-borda-inversa);
+}
+
+.chamadaFatos div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--espaco-1);
+}
+
+.chamadaFatos dd {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.75rem, 1.2rem + 2.6vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.chamadaFatos dt {
+  font-size: 0.8125rem;
+  color: var(--cor-texto-inverso-suave);
+}
+
+.chamadaSubtitulo {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tam-subtitulo);
+  font-weight: 500;
+  line-height: 1.15;
+  max-width: 22ch;
+  text-wrap: balance;
+}
+
+.chamadaContato {
+  font-size: var(--tam-pequeno);
+  color: var(--cor-texto-inverso-suave);
+}
+
+/* Por que a Connect: painel claro, tópicos em cartões numerados, colagem com métrica */
+
+.painelClaro {
+  display: grid;
+  gap: var(--espaco-8);
+  padding: var(--espaco-8) var(--espaco-4);
+  border-radius: var(--raio-b);
+  background: var(--cor-superficie);
+}
+
+.painelTexto {
+  display: grid;
+  gap: var(--espaco-6);
+  justify-items: start;
+  align-content: start;
+}
+
+.painelTexto .rotulo {
+  margin-bottom: 0;
+}
+
+.topicos {
+  display: grid;
+  gap: var(--espaco-3);
+  width: 100%;
+}
+
+.topico {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--espaco-3);
+  padding: var(--espaco-4);
+  border-radius: var(--raio-campo);
+  background: var(--cor-branco);
+  font-size: var(--tam-pequeno);
+}
+
+.topico h3 {
+  margin-bottom: var(--espaco-1);
+  font-family: var(--fonte-titulo);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.topicoSelo {
+  display: grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: var(--cor-fundo-escuro);
+  color: var(--cor-texto-inverso);
+  font-family: var(--fonte-titulo);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.colagem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--espaco-4);
+  align-content: start;
+}
+
+.colagemGrande {
+  grid-column: 1 / -1;
+}
+
+.metrica {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--espaco-4);
+  padding: var(--espaco-4);
+  border-radius: var(--raio-cartao);
+  background: var(--cor-fundo-escuro);
+  color: var(--cor-texto-inverso);
+  font-size: var(--tam-pequeno);
+}
+
+.metricaValor {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(2.5rem, 2rem + 2.4vw, 4rem);
+  font-weight: 600;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .painelClaro {
+    padding: var(--espaco-12);
+  }
+
+  .topicos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .painelClaro {
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--espaco-12);
+    align-items: start;
   }
 }

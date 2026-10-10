@@ -30,6 +30,20 @@
   --cor-veu: rgb(23 66 10 / 0.62);
   --cor-erro: #b42318;
 
+  /* Mapa de cobertura: verdes muito escuros, como um mapa noturno */
+  --mapa-fundo: #0a1710;
+  --mapa-oceano: #0d2118;
+  --mapa-oceano-luz: #17382a;
+  --mapa-terra: #1c3326;
+  --mapa-terra-lado: #08120c;
+  --mapa-uf: #264534;
+  --mapa-atendido: var(--cor-verde);
+  --mapa-atendido-lado: var(--cor-verde-profundo);
+  --mapa-ativo: #7ed957;
+  --mapa-realce: var(--cor-laranja);
+  --mapa-linha: #ffffff;
+  --mapa-vidro: rgb(10 23 16 / 0.55);
+
   /* Papéis: componentes usam só estes */
   --cor-fundo: var(--cor-branco);
   --cor-fundo-alt: var(--cor-nevoa);

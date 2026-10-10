@@ -343,6 +343,30 @@ Como visitante, quero que os efeitos visuais do site funcionem no meu aparelho e
 - **Quando** abre o site
 - **Então** nenhum efeito anima nem prende a rolagem, e o conteúdo aparece no estado final
 
+### US-016 - Explorar a cobertura em um mapa
+
+Como decisor, quero ver no mapa onde a Connect Express atende e consultar cada estado, para que eu saiba rápido se a minha região está coberta.
+
+#### AC-048 - O mapa de cobertura responde ao mouse, ao toque e ao teclado
+
+- **Dado** a seção de cobertura
+- **Quando** aponto, toco ou foco um estado atendido
+- **Então** o estado ganha destaque e um cartão mostra o nome dele e a base que existe ali
+- **E** cada estado atendido também é um botão com nome, para quem não usa o mapa
+
+#### AC-049 - O mapa é leve e não esconde informação
+
+- **Dado** a página inicial
+- **Quando** ela carrega
+- **Então** os contornos do mapa só são baixados quando a seção se aproxima da tela, pesam menos de 15 KB comprimidos cada, e a lista de estados aparece em texto mesmo que o mapa não carregue
+
+#### AC-050 - A versão em globo mostra a mesma cobertura em seção inteira
+
+- **Dado** o endereço `/globo/`
+- **Quando** abro a página
+- **Então** vejo um globo fixo sobre o Brasil com os mesmos estados, botões e cartão, em uma seção de tela inteira
+- **E** a página pede para não ser indexada e fica fora do mapa de páginas
+
 ## Fora de escopo
 
 - Blog (no site atual o link aponta para `#`).
@@ -373,6 +397,8 @@ Como visitante, quero que os efeitos visuais do site funcionem no meu aparelho e
 | ASM-015 | A versão C cobre só a página inicial, em `/c/`, com o layout do nó 1-8 do Figma (SwiftMove) e as cores da marca. | invalidada | Versão C descartada pelo dono do projeto em 2026-10-10. |
 | ASM-016 | O layout do site é o da versão B (referência Cargomaxis, nó 1-10 do Figma), em todas as páginas. As versões A e C saíram do código. | confirmada | Escolha do dono do projeto em 2026-10-10. |
 | ASM-017 | Os quatro efeitos pedidos pelo dono do projeto vêm do React Bits e foram adaptados. A licença da biblioteca precisa ser conferida antes da entrega ao cliente. | aberta | - |
+| ASM-018 | As rotas desenhadas no mapa são ilustrativas: ligam as bases aos estados atendidos para dar ideia de movimento e não representam o trajeto real das cargas. A legenda diz isso. | aberta | - |
+| ASM-019 | O mapa destaca os nove estados com nome confirmado; o número da seção continua 10, até a resposta da pergunta Q-008. | aberta | - |
 
 ## Perguntas em aberto
 

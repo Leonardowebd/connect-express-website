@@ -1,0 +1,240 @@
+/*
+  Mapa de cobertura. Clima de mapa noturno: verdes muito escuros, rotas
+  tracejadas claras e cartão de vidro. Só tokens de cor.
+*/
+
+.mapa {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  overflow: hidden;
+  background: var(--mapa-fundo);
+  color: var(--cor-texto-inverso);
+  font-family: var(--fonte-titulo);
+  isolation: isolate;
+}
+
+.tela {
+  display: block;
+  width: 100%;
+  touch-action: pan-y;
+}
+
+/* Enquanto os contornos não chegam, um brilho suave marca o lugar do mapa. */
+.mapa:not([data-pronto]) .tela {
+  background: radial-gradient(closest-side, var(--mapa-oceano-luz), transparent);
+}
+
+.painel {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: var(--espaco-4);
+  align-content: end;
+  padding: var(--espaco-4);
+}
+
+/* Cartão de vidro */
+
+.cartao {
+  display: grid;
+  gap: var(--espaco-1);
+  min-height: 9.5rem;
+  align-content: center;
+  padding: var(--espaco-6);
+  border: 1px solid var(--cor-borda-inversa);
+  border-radius: var(--raio-cartao);
+  background: var(--mapa-vidro);
+  backdrop-filter: blur(14px);
+}
+
+.cartaoRotulo {
+  font-family: var(--fonte-texto);
+  font-size: 0.8125rem;
+  color: var(--cor-texto-inverso-suave);
+}
+
+.cartaoNome {
+  font-size: var(--tam-subtitulo);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.cartaoNumero {
+  font-size: clamp(2.5rem, 2rem + 2.4vw, 4rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.cartaoTexto,
+.cartaoDica {
+  font-family: var(--fonte-texto);
+  font-size: var(--tam-pequeno);
+}
+
+.cartaoDica {
+  margin-top: var(--espaco-2);
+  color: var(--cor-texto-inverso-suave);
+}
+
+/* Estados como botões: o mesmo que apontar no mapa, com teclado e toque */
+
+.estados {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-2);
+}
+
+.estados button {
+  display: grid;
+  place-items: center;
+  min-width: var(--toque-minimo);
+  min-height: var(--toque-minimo);
+  padding-inline: var(--espaco-3);
+  border: 1px solid var(--cor-borda-inversa);
+  border-radius: var(--raio-pilula);
+  background: var(--mapa-vidro);
+  color: inherit;
+  font: inherit;
+  font-size: var(--tam-pequeno);
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color var(--duracao-rapida) var(--curva),
+    color var(--duracao-rapida) var(--curva);
+}
+
+.estados button:hover,
+.estados button[data-ativo],
+.estados button[aria-pressed='true'] {
+  background: var(--mapa-ativo);
+  border-color: var(--mapa-ativo);
+  color: var(--cor-tinta);
+}
+
+.estados abbr {
+  text-decoration: none;
+}
+
+.legenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-2) var(--espaco-4);
+  font-family: var(--fonte-texto);
+  font-size: 0.75rem;
+  color: var(--cor-texto-inverso-suave);
+}
+
+.legenda li {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-2);
+}
+
+.legenda i {
+  flex: none;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+}
+
+.marcaMatriz {
+  background: var(--mapa-realce);
+  box-shadow: 0 0 0 2px var(--mapa-linha);
+}
+
+.marcaBase {
+  background: var(--mapa-linha);
+  box-shadow: 0 0 0 2px var(--mapa-atendido-lado);
+}
+
+.legenda .marcaRota {
+  width: 1.25rem;
+  height: 0;
+  border-top: 2px dashed var(--mapa-linha);
+  border-radius: 0;
+}
+
+/* Modo plano: bloco arredondado dentro da seção */
+
+.plano {
+  border-radius: var(--raio-b);
+}
+
+.plano .tela {
+  aspect-ratio: 1;
+}
+
+/* Modo globo: seção inteira */
+
+.globo {
+  min-height: 100svh;
+  align-content: start;
+}
+
+.globo .tela {
+  height: 58svh;
+}
+
+.cabecalho {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: var(--espaco-4);
+  padding: 7rem var(--margem-lateral) 0;
+}
+
+.globo .painel {
+  padding-inline: var(--margem-lateral);
+  padding-bottom: var(--espaco-8);
+}
+
+@media (min-width: 900px) {
+  .plano {
+    grid-template-columns: 19rem minmax(0, 1fr);
+    min-height: 36rem;
+  }
+
+  .plano .tela {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 36rem;
+  }
+
+  .plano .painel {
+    order: -1;
+    padding: var(--espaco-8) 0 var(--espaco-8) var(--espaco-8);
+  }
+
+  .globo .tela {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+  }
+
+  .globo {
+    grid-template-rows: 1fr auto;
+  }
+
+  .cabecalho,
+  .globo .painel {
+    max-width: 30rem;
+    padding-left: var(--espaco-12);
+    pointer-events: none;
+  }
+
+  .cabecalho {
+    padding-top: 9rem;
+  }
+
+  .globo .painel {
+    max-width: 26rem;
+    padding-bottom: var(--espaco-12);
+  }
+
+  .cabecalho > *,
+  .globo .painel > * {
+    pointer-events: auto;
+  }
+}
