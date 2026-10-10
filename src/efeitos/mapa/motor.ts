@@ -56,7 +56,10 @@ export type Caminhao = { rota: number; s: number; sentido: 1 | -1; ritmo: number
 const RAD = Math.PI / 180;
 const GIRO = -12 * RAD;
 const INCLINACAO = 0.72;
-const CENTRO_DO_GLOBO: Ponto = [-53, -15];
+// O globo é visto em ângulo: o olhar parte do sul, com uma leve rotação,
+// de modo que o Brasil aparece em perspectiva e o horizonte curva no alto.
+const CENTRO_DO_GLOBO: Ponto = [-51, -31];
+const ROLO = -9 * RAD;
 
 const mercator = ([lon, lat]: Ponto): Ponto => [lon * RAD, -Math.log(Math.tan(Math.PI / 4 + (lat * RAD) / 2))];
 
@@ -77,7 +80,8 @@ function ortografica([lon, lat]: Ponto): [number, number, boolean] {
     x /= n;
     y /= n;
   }
-  return [x, -y, z >= 0];
+  const sy = -y;
+  return [x * Math.cos(ROLO) - sy * Math.sin(ROLO), x * Math.sin(ROLO) + sy * Math.cos(ROLO), z >= 0];
 }
 
 function centroide(anel: Anel): Ponto {
@@ -119,9 +123,14 @@ export function montarCena(e: Entrada): Cena {
       return [x * escala + dx, y * escala + dy];
     };
   } else {
-    // Globo maior que a área: o Brasil ocupa o centro e a curvatura aparece nas bordas.
-    raio = Math.min(altura * 0.9, largura * 1.25);
-    centro = [largura >= 900 ? largura * 0.62 : largura / 2, altura * (largura >= 900 ? 0.54 : 0.5)];
+    // Encaixe: o Brasil ocupa a parte de baixo do painel e sobra espaço no
+    // alto para o horizonte do globo aparecer.
+    const unidade = Object.values(e.ufs).flat(2).map((p) => ortografica(p));
+    const xs = unidade.map((p) => p[0]);
+    const ys = unidade.map((p) => p[1]);
+    const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
+    raio = Math.min((altura * 0.66) / (y1 - y0), (largura * 0.9) / (x1 - x0));
+    centro = [largura / 2 - ((x0 + x1) / 2) * raio, altura * 0.95 - y1 * raio];
     escala = raio;
     projetar = (p) => {
       const [x, y] = ortografica(p);

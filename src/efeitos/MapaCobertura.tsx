@@ -1,12 +1,13 @@
 'use client';
 
-// Mapa interativo de cobertura. Dois modos: "plano" (Brasil em bloco
-// inclinado) e "globo" (globo fixo sobre o Brasil).
+// Mapa interativo de cobertura, dentro do painel da seção. Dois modos, que o
+// visitante alterna: "globo" (globo fixo sobre o Brasil, visto em ângulo) e
+// "plano" (Brasil em bloco inclinado).
 // O canvas é decorativo para leitores de tela: a lista de botões dos estados
 // e o cartão dão o mesmo conteúdo em texto, com teclado e com toque.
 // Os contornos só são baixados quando o mapa chega perto da tela.
 
-import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { NOMES_UF, basesDoMapa, pontosDosEstados, rotasDoMapa } from '@/data/mapa';
 import {
   criarCaminhoes,
@@ -23,12 +24,10 @@ import {
 import styles from './mapa/mapa.module.css';
 
 type Props = {
-  modo: Modo;
+  modoInicial?: Modo;
   estados: { uf: string; nome: string }[];
   total: number;
   className?: string;
-  /** Título e texto mostrados junto do mapa (usado na versão imersiva). */
-  children?: ReactNode;
 };
 
 type Dados = { ufs: Record<string, Anel[]>; terra: Anel[] };
@@ -47,7 +46,13 @@ const TOKENS: Record<keyof Cores, string> = {
   linha: '--mapa-linha',
 };
 
-export function MapaCobertura({ modo, estados, total, className = '', children }: Props) {
+const MODOS: { modo: Modo; rotulo: string }[] = [
+  { modo: 'globo', rotulo: 'Globo' },
+  { modo: 'plano', rotulo: 'Mapa' },
+];
+
+export function MapaCobertura({ modoInicial = 'globo', estados, total, className = '' }: Props) {
+  const [modo, setModo] = useState<Modo>(modoInicial);
   const raiz = useRef<HTMLDivElement>(null);
   const tela = useRef<HTMLCanvasElement>(null);
   const [apontado, setApontado] = useState<string | null>(null);
@@ -233,11 +238,18 @@ export function MapaCobertura({ modo, estados, total, className = '', children }
     .join(', ')}. Rotas ilustrativas ligam as bases aos estados.`;
 
   return (
-    <div ref={raiz} data-efeito={`mapa-${modo}`} className={`${styles.mapa} ${styles[modo]} ${className}`.trim()}>
-      {children ? <div className={styles.cabecalho}>{children}</div> : null}
+    <div ref={raiz} data-efeito={`mapa-${modo}`} className={`${styles.mapa} ${className}`.trim()}>
       <canvas ref={tela} className={styles.tela} role="img" aria-label={descricao} />
 
       <div className={styles.painel}>
+        <div className={styles.modos} role="group" aria-label="Forma de ver a cobertura">
+          {MODOS.map((m) => (
+            <button key={m.modo} type="button" aria-pressed={modo === m.modo} onClick={() => setModo(m.modo)}>
+              {m.rotulo}
+            </button>
+          ))}
+        </div>
+
         <div className={styles.cartao} aria-live="polite">
           {ativo ? (
             <>

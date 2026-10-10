@@ -3,11 +3,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import zlib from 'node:zlib';
 import { test } from 'node:test';
-import { RAIZ, arquivoGerado, attr, blocos, html, meta, semScripts, tags, temAttr, texto } from './apoio.mjs';
+import { RAIZ, attr, blocos, html, semScripts, tags, temAttr, texto } from './apoio.mjs';
 
 const ESTADOS = ['Bahia', 'São Paulo', 'Rio de Janeiro', 'Espírito Santo', 'Distrito Federal', 'Mato Grosso', 'Paraná', 'Minas Gerais', 'Pernambuco'];
 const inicio = html('/');
-const globo = fs.readFileSync(path.join(RAIZ, '.next/server/app/globo.html'), 'utf8');
 const fonte = (arquivo) => fs.readFileSync(path.join(RAIZ, 'src/efeitos', arquivo), 'utf8');
 
 function conferirMapa(pagina, modo) {
@@ -25,8 +24,8 @@ function conferirMapa(pagina, modo) {
 }
 
 test('@spec:AC-048 o mapa de cobertura responde ao mouse, ao toque e ao teclado', () => {
-  conferirMapa(inicio, 'plano');
-  assert.ok(blocos(inicio, 'section', 'id="cobertura"')[0].includes('data-efeito="mapa-plano"'), 'fica na seção de cobertura');
+  conferirMapa(inicio, 'globo');
+  assert.ok(blocos(inicio, 'section', 'id="cobertura"')[0].includes('data-efeito="mapa-globo"'), 'fica na seção de cobertura');
   const componente = fonte('MapaCobertura.tsx');
   for (const evento of ['pointermove', 'pointerup', 'onFocus', 'onClick']) {
     assert.ok(componente.includes(evento), `o mapa trata ${evento}`);
@@ -50,13 +49,16 @@ test('@spec:AC-049 o mapa é leve e não esconde informação', () => {
   assert.ok(blocos(blocos(inicio, 'ul', 'data-estados')[0], 'li').length >= 9);
 });
 
-test('@spec:AC-050 a versão em globo mostra a mesma cobertura em seção inteira', () => {
-  conferirMapa(globo, 'globo');
-  assert.equal(blocos(globo, 'h1').length, 1, 'um título principal');
-  assert.match(meta(globo, 'robots') ?? '', /noindex/);
-  const canonico = tags(globo, 'link').find((t) => attr(t, 'rel') === 'canonical');
-  assert.equal(canonico && attr(canonico, 'href'), 'https://www.connectexpresslog.com.br/');
-  assert.doesNotMatch(arquivoGerado('sitemap.xml'), /globo/, 'fora do mapa de páginas');
+test('@spec:AC-050 o globo fica dentro da seção e alterna com o mapa', () => {
+  const secao = blocos(inicio, 'section', 'id="cobertura"')[0];
+  assert.ok(secao.includes('data-efeito="mapa-globo"'), 'o globo é o modo inicial, dentro da seção de cobertura');
+  const controle = (secao.match(/<div[^>]*role="group"[^>]*>([\s\S]*?)<\/div>/) ?? [])[0] ?? '';
+  const botoes = [...controle.matchAll(/<button([^>]*)>([^<]*)<\/button>/g)].map((m) => [m[2], attr(`<button${m[1]}>`, 'aria-pressed')]);
+  assert.deepEqual(botoes, [['Globo', 'true'], ['Mapa', 'false']], 'controle com nome e estado para trocar de modo');
+  assert.ok(!fs.existsSync(path.join(RAIZ, '.next/server/app/globo.html')), 'não existe página própria para o globo');
   const estilos = fs.readFileSync(path.join(RAIZ, 'src/efeitos/mapa/mapa.module.css'), 'utf8');
-  assert.match(estilos, /\.globo \{[^}]*min-height: 100svh/, 'ocupa a tela inteira');
+  assert.doesNotMatch(estilos, /100svh|100dvh|100vh/, 'o painel não ocupa a tela inteira');
+  assert.match(estilos, /\.mapa \{[^}]*border-radius: var\(--raio-b\)/, 'painel arredondado, dentro da grade');
+  const motor = fonte('mapa/motor.ts');
+  assert.match(motor, /const ROLO = /, 'o globo é desenhado em ângulo');
 });

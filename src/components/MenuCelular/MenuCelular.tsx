@@ -1,69 +1,92 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import styles from './MenuCelular.module.css';
 
 type Item = { rotulo: string; href: string; externo?: boolean };
 
-export function MenuCelular({ itens, cotacao }: { itens: Item[]; cotacao: string }) {
+type Props = { itens: Item[]; atalhos: Item[]; cotacao: string; whatsapp: string; marca: string };
+
+/** Menu do celular: painel verde em tela cheia, com fechar próprio, Esc e foco devolvido ao botão. */
+export function MenuCelular({ itens, atalhos, cotacao, whatsapp, marca }: Props) {
   const [aberto, setAberto] = useState(false);
-  const botao = useRef<HTMLButtonElement>(null);
-  const painel = useRef<HTMLDivElement>(null);
+  const abrir = useRef<HTMLButtonElement>(null);
+  const fechar = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     if (!aberto) return;
-    const fechar = () => setAberto(false);
-    const aoTeclar = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        fechar();
-        botao.current?.focus();
-      }
-    };
+    const sair = () => setAberto(false);
+    const aoTeclar = (e: KeyboardEvent) => e.key === 'Escape' && sair();
     const desktop = window.matchMedia('(min-width: 1024px)');
+    const botao = abrir.current;
     document.addEventListener('keydown', aoTeclar);
-    desktop.addEventListener('change', fechar);
+    desktop.addEventListener('change', sair);
     document.body.style.overflow = 'hidden';
-    painel.current?.querySelector<HTMLElement>('a')?.focus();
+    fechar.current?.focus();
     return () => {
       document.removeEventListener('keydown', aoTeclar);
-      desktop.removeEventListener('change', fechar);
+      desktop.removeEventListener('change', sair);
       document.body.style.overflow = '';
+      botao?.focus();
     };
   }, [aberto]);
 
+  const link = (item: Item) => (
+    <a
+      href={item.href}
+      onClick={() => setAberto(false)}
+      {...(item.externo ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+    >
+      {item.rotulo}
+    </a>
+  );
+
   return (
-    <div className={styles.celular}>
+    <>
       <button
-        ref={botao}
+        ref={abrir}
         type="button"
         className={styles.botaoMenu}
         aria-expanded={aberto}
         aria-controls="menu-celular"
-        aria-label={aberto ? 'Fechar menu' : 'Abrir menu'}
-        onClick={() => setAberto((a) => !a)}
+        aria-label="Abrir menu"
+        onClick={() => setAberto(true)}
       >
-        <span className={styles.barras} data-aberto={aberto} aria-hidden="true" />
+        <span className={styles.barras} aria-hidden="true" />
       </button>
-      <div ref={painel} id="menu-celular" className={styles.painel} hidden={!aberto}>
+
+      <div id="menu-celular" className={styles.painel} data-aberto={aberto} inert={!aberto}>
+        <div className={styles.topo}>
+          <Image src="/logos/logo-connect-express-log-claro.png" alt={marca} width={900} height={486} sizes="120px" />
+          <button ref={fechar} type="button" className={styles.botaoFechar} aria-label="Fechar menu" onClick={() => setAberto(false)}>
+            <span aria-hidden="true" />
+          </button>
+        </div>
+
         <nav aria-label="Menu principal">
-          <ul className={styles.listaPainel}>
+          <ul className={styles.lista}>
             {itens.map((item) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
-                  onClick={() => setAberto(false)}
-                  {...(item.externo ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                >
-                  {item.rotulo}
-                </a>
-              </li>
+              <li key={item.rotulo}>{link(item)}</li>
             ))}
           </ul>
         </nav>
-        <a className="botao botao-acao" href={cotacao} onClick={() => setAberto(false)}>
-          Pedir cotação
-        </a>
+
+        <ul className={styles.atalhos}>
+          {atalhos.map((item) => (
+            <li key={item.rotulo}>{link(item)}</li>
+          ))}
+        </ul>
+
+        <div className={styles.acoes}>
+          <a className="botao botao-acao" href={cotacao} onClick={() => setAberto(false)}>
+            Pedir cotação
+          </a>
+          <a className="botao botao-contorno" href={whatsapp} target="_blank" rel="noopener noreferrer">
+            Falar no WhatsApp
+          </a>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

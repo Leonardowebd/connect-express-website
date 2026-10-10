@@ -360,12 +360,12 @@ Como decisor, quero ver no mapa onde a Connect Express atende e consultar cada e
 - **Quando** ela carrega
 - **Então** os contornos do mapa só são baixados quando a seção se aproxima da tela, pesam menos de 15 KB comprimidos cada, e a lista de estados aparece em texto mesmo que o mapa não carregue
 
-#### AC-050 - A versão em globo mostra a mesma cobertura em seção inteira
+#### AC-050 - O globo fica dentro da seção e alterna com o mapa
 
-- **Dado** o endereço `/globo/`
-- **Quando** abro a página
-- **Então** vejo um globo fixo sobre o Brasil com os mesmos estados, botões e cartão, em uma seção de tela inteira
-- **E** a página pede para não ser indexada e fica fora do mapa de páginas
+- **Dado** a seção de cobertura
+- **Quando** olho o painel do mapa
+- **Então** vejo um globo fixo sobre o Brasil, em ângulo, dentro da grade da seção (não em página própria nem em tela inteira)
+- **E** um controle com nome e estado troca entre o globo e o mapa em bloco, com os mesmos estados, botões e cartão
 
 ## Fora de escopo
 

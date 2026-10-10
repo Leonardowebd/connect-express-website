@@ -851,10 +851,10 @@
       "codigo": "TASK_CONCLUIDA_SEM_PROVA",
       "feature": "connect-express-website",
       "ref": "T-016",
-      "ocorrencias": 1,
+      "ocorrencias": 2,
       "primeiraVez": "2026-10-10T18:31:48.616Z",
-      "ultimaVez": "2026-10-10T18:31:48.617Z",
-      "gitRev": "3a86a82"
+      "ultimaVez": "2026-10-10T20:19:18.892Z",
+      "gitRev": "d3547f0"
     },
     "AC_SEM_PROVA::connect-express-website::AC-026": {
       "codigo": "AC_SEM_PROVA",
@@ -864,6 +864,33 @@
       "primeiraVez": "2026-10-10T18:31:48.617Z",
       "ultimaVez": "2026-10-10T18:31:48.617Z",
       "gitRev": "3a86a82"
+    },
+    "VERIFY_FALHOU::connect-express-website::AC-028": {
+      "codigo": "VERIFY_FALHOU",
+      "feature": "connect-express-website",
+      "ref": "AC-028",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-10T20:19:18.567Z",
+      "ultimaVez": "2026-10-10T20:19:18.567Z",
+      "gitRev": "d3547f0"
+    },
+    "TASK_CONCLUIDA_SEM_PROVA::connect-express-website::T-003": {
+      "codigo": "TASK_CONCLUIDA_SEM_PROVA",
+      "feature": "connect-express-website",
+      "ref": "T-003",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-10T20:19:18.890Z",
+      "ultimaVez": "2026-10-10T20:19:18.892Z",
+      "gitRev": "d3547f0"
+    },
+    "AC_SEM_PROVA::connect-express-website::AC-028": {
+      "codigo": "AC_SEM_PROVA",
+      "feature": "connect-express-website",
+      "ref": "AC-028",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-10-10T20:19:18.892Z",
+      "ultimaVez": "2026-10-10T20:19:18.892Z",
+      "gitRev": "d3547f0"
     }
   }
 }

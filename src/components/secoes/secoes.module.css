@@ -125,13 +125,9 @@
   height: auto;
 }
 
-/* O painel do menu tem fundo claro, mesmo com o cabeçalho sobre a foto. */
-.topoMenu {
-  color: var(--cor-texto);
-}
-
-.topoMenu > div > button {
-  background: var(--cor-branco);
+/* No cabeçalho claro, o botão do menu precisa de contorno para aparecer. */
+.topoSolido .topoMenu > button {
+  box-shadow: 0 0 0 1px var(--cor-borda);
 }
 
 /* Cabeçalho das páginas internas: mesma navegação, sobre fundo claro. */
@@ -238,27 +234,63 @@
 }
 
 .faixa {
+  position: relative;
   margin-top: var(--espaco-12);
-  padding: var(--espaco-4) var(--espaco-6);
   border: 1px solid var(--cor-borda);
   border-radius: var(--raio-cartao);
   background: var(--cor-branco);
+  overflow: hidden;
 }
 
-.faixa ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.faixaTrilho {
+  display: flex;
+  width: max-content;
+  animation: faixa-rolar 38s linear infinite;
+}
+
+.faixa:hover .faixaTrilho,
+.faixa:focus-within .faixaTrilho {
+  animation-play-state: paused;
+}
+
+.faixaTrilho ul {
+  display: flex;
   align-items: center;
-  justify-items: center;
-  gap: var(--espaco-2) var(--espaco-4);
+  flex: none;
+}
+
+.faixaTrilho li {
+  flex: none;
+  width: clamp(6.5rem, 22vw, 9rem);
+  padding: var(--espaco-3) var(--espaco-4);
 }
 
 .faixa img {
   width: 100%;
-  max-width: 7rem;
   height: auto;
   aspect-ratio: 1;
   object-fit: contain;
+}
+
+@keyframes faixa-rolar {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Movimento reduzido: a faixa para e passa a rolar com o dedo. */
+@media (prefers-reduced-motion: reduce) {
+  .faixa {
+    overflow-x: auto;
+  }
+
+  .faixaTrilho {
+    animation: none;
+  }
+
+  .faixaTrilho ul[aria-hidden] {
+    display: none;
+  }
 }
 
 /* Soluções em linhas */
@@ -499,9 +531,6 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .faixa ul {
-    grid-template-columns: repeat(5, 1fr);
-  }
 
   .linha {
     grid-template-columns: 1fr auto;
@@ -554,9 +583,6 @@
     column-gap: var(--espaco-16);
   }
 
-  .faixa ul {
-    grid-template-columns: repeat(9, 1fr);
-  }
 
   .fatosNumeros {
     grid-template-columns: 1fr 1fr;

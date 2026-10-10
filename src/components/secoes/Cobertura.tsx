@@ -18,7 +18,7 @@ export function Cobertura() {
           <p className="texto-g">{cobertura.texto}</p>
         </div>
 
-        <MapaCobertura modo="plano" estados={[...estados]} total={TOTAL_ESTADOS} />
+        <MapaCobertura estados={[...estados]} total={TOTAL_ESTADOS} />
 
         <Revelar emSequencia className={styles.basesGrade}>
           {enderecos.map((e) => (

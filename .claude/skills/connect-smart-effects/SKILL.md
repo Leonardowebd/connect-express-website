@@ -86,7 +86,7 @@ Os efeitos ficam em `src/efeitos/`. As entradas simples de seção (`Revelar`, `
 | Troca por pixels | `TrocaPixel.tsx` | Foto de Quem Somos, que troca pelos números | Convidar a tocar e entregar prova | Toque; até 40 pixels em vez de 96 | Troca imediata |
 | Expansão na rolagem | `ExpansaoNaRolagem.tsx` | Chamada final de cotação, que aberta mostra números, frase, texto e dois botões | Dar palco ao último convite, com informação suficiente para decidir | Moldura inicial mais larga; não remede com a barra do navegador | Estado final, sem prender a rolagem |
 | Prévia das soluções | `ObservaPrevias.tsx` e CSS em `secoes.module.css` | Lista de soluções | Mostrar a operação por trás de cada solução | Imagem dentro da linha, revelada pela rolagem | Imagem visível, sem transição |
-| Mapa de cobertura | `MapaCobertura.tsx` e `mapa/motor.ts` | Seção Cobertura (modo plano); `/globo/` (modo globo, em comparação) | Responder "vocês atendem a minha região?" | Toque no estado ou nos botões; cartão abaixo do mapa | Mapa parado, sem caminhões em movimento |
+| Mapa de cobertura | `MapaCobertura.tsx` e `mapa/motor.ts` | Seção Cobertura, dentro da grade: globo em ângulo (padrão) e mapa em bloco, alternados por um controle | Responder "vocês atendem a minha região?" | Toque no estado ou nos botões; cartão abaixo do mapa | Mapa parado, sem caminhões em movimento |
 
 Parâmetros em uso (mude aqui e no código juntos):
 

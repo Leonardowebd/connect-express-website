@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { MenuCelular } from '@/components/MenuCelular/MenuCelular';
-import { empresa } from '@/data/empresa';
+import { empresa, linkWhatsApp } from '@/data/empresa';
 import { Pilula } from './Pilula';
 import styles from './secoes.module.css';
 
@@ -65,7 +65,7 @@ export function Cabecalho({ sobreFoto = false }: { sobreFoto?: boolean }) {
       </ul>
 
       <div className={styles.topoMenu}>
-        <MenuCelular itens={[...itens, ...atalhos]} cotacao="/#contato" />
+        <MenuCelular itens={itens} atalhos={atalhos} cotacao="/#contato" whatsapp={linkWhatsApp} marca={empresa.nome} />
       </div>
     </header>
   );

@@ -172,8 +172,18 @@ test('@spec:AC-028 as imagens não empurram o conteúdo', () => {
       assert.ok(attr(img, 'width') && attr(img, 'height'), `${rota}: imagem com largura e altura: ${img.slice(0, 80)}`);
     }
     const principal = blocos(h, 'main')[0];
-    const semPressa = tags(principal, 'img').filter((t) => attr(t, 'fetchpriority') !== 'high');
-    assert.ok(semPressa.every((t) => attr(t, 'loading') === 'lazy'), `${rota}: imagens do conteúdo carregam sob demanda`);
+    // Só a imagem prioritária (a do herói) pode carregar de imediato, e ela
+    // precisa estar pré-carregada no cabeçalho. Todas as outras são sob demanda.
+    const precarregadas = tags(h, 'link')
+      .filter((t) => attr(t, 'rel') === 'preload' && attr(t, 'as') === 'image')
+      .map((t) => `${attr(t, 'imagesrcset') ?? ''} ${attr(t, 'href') ?? ''}`)
+      .join(' ');
+    const imediatas = tags(principal, 'img').filter((t) => attr(t, 'loading') !== 'lazy');
+    assert.ok(imediatas.length <= 1, `${rota}: no máximo uma imagem carrega de imediato (achei ${imediatas.length})`);
+    for (const img of imediatas) {
+      const arquivo = encodeURIComponent(`/imagens/${attr(img, 'data-espaco')}.webp`);
+      assert.ok(attr(img, 'fetchpriority') === 'high' || precarregadas.includes(arquivo), `${rota}: a imagem imediata está pré-carregada`);
+    }
     for (const s of tags(h, 'div').filter((t) => temAttr(t, 'data-substituto'))) {
       const reservaEspaco = /aspect-ratio/.test(attr(s, 'style') ?? '') || /preencher/.test(attr(s, 'class') ?? '');
       assert.ok(reservaEspaco, `${rota}: substituto reserva o espaço da imagem`);

@@ -36,14 +36,11 @@ A especificação fica em `.spec/features/connect-express-website/spec.md`.
 | Cores, fontes e medidas | `src/styles/tokens.css` |
 | Cabeçalhos de segurança | `next.config.mjs` |
 
-## Trocar um substituto por uma foto
+## Fotos
 
-As fotos finais ainda não existem. Cada espaço de imagem está descrito em `src/data/imagens.ts`, com nome de arquivo, proporção e o que a foto precisa mostrar.
+As fotos de `Dados/Imagens Novo site/` foram convertidas para WebP e estão em `public/imagens/`, com o nome de cada espaço. O manifesto `src/data/imagens.ts` diz de qual arquivo cada uma veio. São seis fotos para nove espaços, então três se repetem; o campo `pedido` do manifesto indica quais.
 
-1. Salve a foto em `public/imagens/` com o nome que está no campo `arquivo` (por exemplo, `heroi-inicio.webp`).
-2. Gere o site de novo.
-
-Nenhuma página precisa ser alterada.
+Para trocar uma foto, salve o novo arquivo em `public/imagens/` com o mesmo nome (WebP, na largura do manifesto) e gere o site de novo. Exemplo de conversão: `cwebp -q 76 -resize 1280 0 foto.png -o public/imagens/operacao.webp`. Sem o arquivo, o site mostra um substituto da marca na mesma proporção.
 
 ## Formulários
 
@@ -64,7 +61,7 @@ O layout segue a referência Cargomaxis (nó 1-10 do Figma): cartões arredondad
 - Confirmar o décimo estado atendido (o site lista nove nomes e fala em dez).
 - Definir o destino dos formulários.
 - Revisar o texto da Política de Privacidade com o cliente.
-- Receber o logotipo em SVG e as fotos.
+- Receber o logotipo em SVG e três fotos para os espaços que hoje repetem imagem.
 - Confirmar a lista de clientes exibida.
 
 ## Skills do projeto
