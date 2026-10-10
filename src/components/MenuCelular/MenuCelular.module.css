@@ -1,4 +1,4 @@
-/* Menu do celular: botão redondo e painel verde em tela cheia. */
+/* Menu do celular: botão redondo e painel branco em tela cheia. */
 
 .botaoMenu,
 .botaoFechar {
@@ -19,10 +19,11 @@
   backdrop-filter: blur(10px);
 }
 
-/* O botão de fechar fica sobre o painel verde: círculo branco, X escuro. */
+/* O botão de fechar fica sobre o painel branco: círculo escuro, X branco. */
 .botaoFechar {
-  background: var(--cor-branco);
-  color: var(--cor-tinta);
+  border-color: var(--cor-tinta);
+  background: var(--cor-tinta);
+  color: var(--cor-branco);
 }
 
 .barras,
@@ -73,8 +74,8 @@
   grid-template-rows: auto 1fr auto auto;
   gap: var(--espaco-6);
   padding: var(--espaco-6) var(--espaco-6) calc(var(--espaco-8) + env(safe-area-inset-bottom));
-  background: var(--cor-fundo-escuro-2);
-  color: var(--cor-texto-inverso);
+  background: var(--cor-branco);
+  color: var(--cor-tinta);
   overflow-y: auto;
   overscroll-behavior: contain;
   visibility: hidden;
@@ -146,13 +147,13 @@
   align-items: center;
   justify-content: space-between;
   min-height: 3.75rem;
-  border-bottom: 1px solid var(--cor-borda-inversa);
+  border-bottom: 1px solid var(--cor-borda);
 }
 
 .lista a::after {
   content: '↗';
   font-size: 1.25rem;
-  color: var(--cor-texto-inverso-suave);
+  color: var(--cor-marca);
 }
 
 .atalhos {
@@ -160,7 +161,7 @@
   flex-wrap: wrap;
   gap: var(--espaco-2) var(--espaco-6);
   font-size: var(--tam-pequeno);
-  color: var(--cor-texto-inverso-suave);
+  color: var(--cor-texto-suave);
 }
 
 .atalhos a {
@@ -178,4 +179,12 @@
 
 .acoes a {
   min-height: 3.25rem;
+}
+
+/* O painel é claro mesmo quando o cabeçalho está sobre a foto. */
+.acoes a:global(.botao-contorno),
+.acoes a:global(.botao-contorno):hover {
+  border-color: var(--cor-tinta);
+  background: transparent;
+  color: var(--cor-tinta);
 }

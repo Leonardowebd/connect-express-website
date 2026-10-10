@@ -58,7 +58,7 @@ export function MenuCelular({ itens, atalhos, cotacao, whatsapp, marca }: Props)
 
       <div id="menu-celular" className={styles.painel} data-aberto={aberto} inert={!aberto}>
         <div className={styles.topo}>
-          <Image src="/logos/logo-connect-express-log-claro.png" alt={marca} width={900} height={486} sizes="120px" />
+          <Image src="/logos/logo-connect-express-log.png" alt={marca} width={900} height={486} sizes="120px" />
           <button ref={fechar} type="button" className={styles.botaoFechar} aria-label="Fechar menu" onClick={() => setAberto(false)}>
             <span aria-hidden="true" />
           </button>

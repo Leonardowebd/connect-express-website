@@ -144,6 +144,15 @@
   transform-origin: center;
 }
 
+.expansaoMidia::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* Escurece a foto o tempo todo, para o título branco ter leitura mesmo sobre áreas claras. */
+  background: var(--cor-sombra);
+  pointer-events: none;
+}
+
 .expansaoVeu {
   position: absolute;
   inset: 0;
@@ -193,7 +202,16 @@
   will-change: transform;
 }
 
-.expansao[data-pronto] .expansaoVeu {
+.expansao[data-pronto] .expansaoMidia::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* Escurece a foto o tempo todo, para o título branco ter leitura mesmo sobre áreas claras. */
+  background: var(--cor-sombra);
+  pointer-events: none;
+}
+
+.expansaoVeu {
   opacity: 0;
 }
 

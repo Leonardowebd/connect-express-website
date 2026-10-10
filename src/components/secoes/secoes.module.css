@@ -1126,7 +1126,9 @@
 .chamadaSombra {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, var(--cor-sombra-forte), var(--cor-sombra) 55%, var(--cor-sombra-suave));
+  /* No celular o texto cobre a foto inteira: sombra densa e um desfoque leve. */
+  background: linear-gradient(to top, var(--cor-sombra-densa), var(--cor-sombra-forte));
+  backdrop-filter: blur(6px);
   pointer-events: none;
 }
 
@@ -1205,7 +1207,8 @@
 
   /* No computador o texto fica à direita: a sombra vem desse lado e a foto respira à esquerda. */
   .chamadaSombra {
-    background: linear-gradient(to left, var(--cor-sombra-forte), var(--cor-sombra) 45%, transparent 85%);
+    background: linear-gradient(to left, var(--cor-sombra-densa), var(--cor-sombra-forte) 45%, var(--cor-sombra-suave) 90%);
+    backdrop-filter: none;
   }
 }
 

@@ -30,6 +30,7 @@
   --cor-veu: rgb(23 66 10 / 0.62);
   /* Sombras neutras, para dar leitura a texto sobre foto sem tingir de verde */
   --cor-noite: #0e1311;
+  --cor-sombra-densa: rgb(10 14 12 / 0.8);
   --cor-sombra-forte: rgb(10 14 12 / 0.62);
   --cor-sombra: rgb(10 14 12 / 0.42);
   --cor-sombra-suave: rgb(10 14 12 / 0.18);
