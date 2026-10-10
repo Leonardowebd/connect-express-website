@@ -216,7 +216,7 @@
 
 .fatos {
   display: grid;
-  gap: var(--espaco-12);
+  gap: var(--espaco-8);
 }
 
 .fatosTexto {
@@ -239,9 +239,9 @@
 .fatosNumeros {
   position: relative;
   display: grid;
-  gap: var(--espaco-6);
+  gap: var(--espaco-3);
   margin: 0;
-  padding-left: var(--espaco-8);
+  padding-left: var(--espaco-6);
 }
 
 .fatosNumeros::before {
@@ -254,18 +254,21 @@
   background: var(--cor-borda);
 }
 
+/* No celular, número e legenda dividem a linha: cinco linhas curtas em vez de cinco blocos altos. */
 .fatosNumeros div {
   position: relative;
   display: flex;
-  flex-direction: column-reverse;
-  gap: var(--espaco-1);
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: var(--espaco-3);
 }
 
 .fatosNumeros div::before {
   content: '';
   position: absolute;
-  top: 0.875rem;
-  left: calc(-1 * var(--espaco-8));
+  top: 0.8125rem;
+  left: calc(-1 * var(--espaco-6));
   width: 0.6875rem;
   height: 0.6875rem;
   border-radius: 50%;
@@ -275,7 +278,8 @@
 
 .fatosNumeros dd {
   font-family: var(--fonte-titulo);
-  font-size: clamp(2.25rem, 1.6rem + 1.8vw, 3.25rem);
+  min-width: 4.75rem;
+  font-size: clamp(2rem, 1.5rem + 1.8vw, 3.25rem);
   font-weight: 500;
   line-height: 1;
   letter-spacing: -0.03em;
@@ -305,7 +309,14 @@
   }
 
   .fatosNumeros div {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
     align-items: center;
+    gap: var(--espaco-1);
+  }
+
+  .fatosNumeros dd {
+    min-width: 0;
   }
 
   .fatosNumeros div::before {
@@ -316,7 +327,7 @@
 
 /* Faixa de clientes: barra escura, logos brancos em laço contínuo que somem nas duas pontas. */
 .faixa {
-  margin-top: var(--espaco-16);
+  margin-top: var(--espaco-8);
   padding-block: var(--espaco-3);
   border-radius: var(--raio-b);
   background: var(--cor-noite);
@@ -732,7 +743,7 @@
 }
 
 .subtituloSecao {
-  margin-block: var(--espaco-16) var(--espaco-6);
+  margin-block: var(--espaco-12) var(--espaco-6);
   font-family: var(--fonte-titulo);
   font-size: var(--tam-subtitulo);
   font-weight: 500;
@@ -777,6 +788,36 @@
   padding-inline: var(--espaco-6);
   border-radius: var(--raio-cartao);
   background: var(--cor-superficie);
+}
+
+.pergunta {
+  transition: background-color var(--duracao-rapida) var(--curva);
+}
+
+/*
+  Abre e fecha com transição de altura e opacidade. Navegadores sem
+  ::details-content ou interpolate-size abrem na hora, como antes.
+*/
+.pergunta::details-content {
+  block-size: 0;
+  overflow: clip;
+  opacity: 0;
+  interpolate-size: allow-keywords;
+  transition:
+    block-size 360ms var(--curva),
+    opacity 280ms var(--curva),
+    content-visibility 360ms allow-discrete;
+}
+
+.pergunta[open]::details-content {
+  block-size: auto;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pergunta::details-content {
+    transition: none;
+  }
 }
 
 .pergunta summary {
@@ -1115,7 +1156,8 @@
   display: flex;
   align-items: flex-end;
   min-height: 36rem;
-  margin-block: var(--espaco-12);
+  /* As seções vizinhas já trazem o próprio respiro. */
+  margin-block: 0;
   padding: var(--espaco-8) var(--espaco-4) var(--espaco-6);
   border-radius: var(--raio-b);
   overflow: hidden;
@@ -1326,10 +1368,25 @@
   pointer-events: none;
 }
 
-/* No celular o herói é mais baixo: a foto precisa esticar menos e fica mais nítida. */
+/*
+  Herói no celular: mais alto, com a foto ocupando só a parte de cima.
+  Assim a foto encolhe, sobe, e os veículos aparecem acima da caixa de texto
+  em vez de ficarem escondidos atrás dela. A base escurece até o fundo.
+*/
 @media (max-width: 767px) {
   .heroi {
-    min-height: min(40rem, 82svh);
+    min-height: min(50rem, 96svh);
+    background: var(--cor-noite);
+  }
+
+  .heroi img {
+    height: 58% !important;
+  }
+
+  .heroiSombra {
+    background:
+      linear-gradient(to bottom, var(--cor-sombra-forte), var(--cor-sombra-suave) 24%, transparent 40%),
+      linear-gradient(to top, var(--cor-noite) 42%, transparent 62%);
   }
 }
 

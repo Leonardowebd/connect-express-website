@@ -35,6 +35,8 @@
 .desfoqueFixo {
   position: fixed;
   z-index: 30;
+  /* Camada própria: sem isso, o desfoque sobre elemento fixo falha em faixas no celular. */
+  transform: translateZ(0);
 }
 
 /* Navegadores sem backdrop-filter recebem um véu simples. */
@@ -190,7 +192,9 @@
 .expansao[data-pronto] .expansaoPalco {
   position: sticky;
   top: 0;
-  min-height: 0;
+  /* O script fixa a altura medida; no celular a tela cresce quando a barra do navegador
+     se recolhe, e a altura "grande" (lvh) cobre essa diferença sem deixar faixa embaixo. */
+  min-height: 100lvh;
   background: var(--cor-noite);
 }
 
@@ -233,7 +237,9 @@
 
 .surgir {
   position: fixed;
-  inset: 0;
+  inset: 0 0 auto;
+  /* Altura da tela com a barra do navegador recolhida: cobre tudo no celular. */
+  height: 100lvh;
   z-index: 100;
   pointer-events: none;
 }

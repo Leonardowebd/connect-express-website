@@ -31,9 +31,9 @@ export const imagens: EspacoDeImagem[] = [
     id: 'quem-somos',
     arquivo: 'quem-somos.webp',
     largura: 1280,
-    altura: 721,
-    alt: 'Carreta verde com a marca Connect Express Log',
-    origem: 'Caminhão verde da Connect ExpressLog.png',
+    altura: 720,
+    alt: 'Profissional de uniforme verde da Connect Express Log calçando luvas, com caminhões da frota ao fundo',
+    origem: 'Cuidado no preparo da carga biológica-3.png',
     pedido: 'Ideal: foto da equipe ou da base, com uniforme da marca.',
   },
   {
