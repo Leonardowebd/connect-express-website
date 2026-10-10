@@ -33,9 +33,8 @@
   --cor-sombra-forte: rgb(10 14 12 / 0.62);
   --cor-sombra: rgb(10 14 12 / 0.42);
   --cor-sombra-suave: rgb(10 14 12 / 0.18);
-  /* Grão fino, para as áreas escuras não ficarem chapadas. É um arquivo pronto:
-     ruído gerado por filtro SVG a cada pintura deixava a página lenta. */
-  --textura-grao: url('/texturas/grao.png');
+  /* Vidro neutro (sem tom de verde) para caixas de texto sobre foto */
+  --cor-vidro: rgb(26 30 28 / 0.4);
   --cor-erro: #b42318;
 
   /* Mapa de cobertura: verdes muito escuros, como um mapa noturno */

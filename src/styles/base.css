@@ -101,27 +101,21 @@ textarea {
 .rotulo {
   display: inline-flex;
   align-items: center;
-  gap: var(--espaco-2);
+  padding: 0.4375rem 0.875rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-pilula);
+  background: var(--cor-superficie);
   font-family: var(--fonte-titulo);
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 500;
-  letter-spacing: 0.12em;
   line-height: 1;
-  text-transform: uppercase;
-  color: var(--cor-texto-suave);
-}
-
-.rotulo::before {
-  content: '';
-  flex: none;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background: var(--cor-marca);
+  color: var(--cor-tinta);
 }
 
 .secao-escura .rotulo {
-  color: var(--cor-texto-inverso-suave);
+  border-color: var(--cor-borda-inversa);
+  background: var(--cor-borda-inversa);
+  color: var(--cor-texto-inverso);
 }
 
 .titulo {

@@ -891,6 +891,15 @@
       "primeiraVez": "2026-10-10T20:19:18.892Z",
       "ultimaVez": "2026-10-10T20:19:18.892Z",
       "gitRev": "d3547f0"
+    },
+    "ARQUIVO_ORFAO::—::src/efeitos/SurgirEmPixels.tsx": {
+      "codigo": "ARQUIVO_ORFAO",
+      "feature": "—",
+      "ref": "src/efeitos/SurgirEmPixels.tsx",
+      "ocorrencias": 2,
+      "primeiraVez": "2026-10-10T21:05:30.085Z",
+      "ultimaVez": "2026-10-10T21:05:34.976Z",
+      "gitRev": "8a16ca0"
     }
   }
 }

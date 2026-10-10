@@ -84,6 +84,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--espaco-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .estados button {
@@ -164,13 +167,15 @@
 
 /*
   Celular: o mapa ocupa a largura toda, o cartão fica compacto e os
-  estados rolam em uma linha.
+  estados quebram em linhas, todos à vista (a lista em rolagem lateral
+  alargava o painel e cortava o cartão e os botões).
 */
 .tela {
   aspect-ratio: 1 / 1.05;
 }
 
 .painel {
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--espaco-3);
   padding: 0 var(--espaco-4) var(--espaco-6);
 }
@@ -186,24 +191,6 @@
 
 .cartaoDica {
   margin-top: 0;
-}
-
-.estados {
-  flex-wrap: nowrap;
-  margin-inline: calc(-1 * var(--espaco-4));
-  padding-inline: var(--espaco-4);
-  overflow-x: auto;
-  scrollbar-width: none;
-  scroll-snap-type: x proximity;
-}
-
-.estados::-webkit-scrollbar {
-  display: none;
-}
-
-.estados li {
-  flex: none;
-  scroll-snap-align: start;
 }
 
 @media (min-width: 900px) {
@@ -237,10 +224,4 @@
     margin-top: var(--espaco-2);
   }
 
-  .estados {
-    flex-wrap: wrap;
-    margin-inline: 0;
-    padding-inline: 0;
-    overflow: visible;
-  }
 }

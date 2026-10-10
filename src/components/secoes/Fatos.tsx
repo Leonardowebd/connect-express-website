@@ -3,7 +3,6 @@ import { Contador } from '@/animacoes/Contador';
 import { Revelar } from '@/animacoes/Revelar';
 import { clientes, numeros } from '@/data/empresa';
 import { quemSomos } from '@/data/inicio';
-import { DesfoqueGradual } from '@/efeitos/DesfoqueGradual';
 import styles from './secoes.module.css';
 
 export function Fatos() {
@@ -35,26 +34,24 @@ export function Fatos() {
         <div className={styles.faixa}>
           <h3 className="so-leitor">Clientes atendidos</h3>
           {/* Uma linha só, em movimento contínuo. A segunda lista é cópia, só para o laço não ter emenda. */}
-          <div className={styles.faixaTrilho}>
-            <ul data-clientes="">
-              {clientes.map((c) => (
-                <li key={c.nome} className={styles.logo}>
-                  <Image src={c.logo} alt={c.nome} width={500} height={500} sizes="144px" />
-                  <Image src={c.logoVerde} alt="" width={500} height={500} sizes="144px" className={styles.logoVerde} />
-                </li>
-              ))}
-            </ul>
-            <ul aria-hidden="true">
-              {clientes.map((c) => (
-                <li key={c.nome} className={styles.logo}>
-                  <Image src={c.logo} alt="" width={500} height={500} sizes="144px" />
-                  <Image src={c.logoVerde} alt="" width={500} height={500} sizes="144px" className={styles.logoVerde} />
-                </li>
-              ))}
-            </ul>
+          <div className={styles.faixaJanela}>
+            <div className={styles.faixaTrilho}>
+              <ul data-clientes="">
+                {clientes.map((c) => (
+                  <li key={c.nome}>
+                    <Image src={c.logoClaro} alt={c.nome} width={500} height={500} sizes="144px" />
+                  </li>
+                ))}
+              </ul>
+              <ul aria-hidden="true">
+                {clientes.map((c) => (
+                  <li key={c.nome}>
+                    <Image src={c.logoClaro} alt="" width={500} height={500} sizes="144px" />
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <DesfoqueGradual posicao="left" tamanho="4.5rem" forca={1.4} camadas={4} />
-          <DesfoqueGradual posicao="right" tamanho="4.5rem" forca={1.4} camadas={4} />
         </div>
       </div>
     </section>

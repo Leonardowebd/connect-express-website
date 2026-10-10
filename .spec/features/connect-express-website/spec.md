@@ -324,12 +324,13 @@ Como visitante, quero que os efeitos visuais do site funcionem no meu aparelho e
 - **Quando** passo o mouse ou o foco sobre uma solução no computador, ou rolo até ela no celular
 - **Então** a imagem daquela solução aparece (com espaço reservado no celular, sem empurrar o conteúdo)
 
-#### AC-045 - A chamada final se abre com a rolagem e o botão nunca some
+#### AC-045 - A abertura de Quem Somos se expande com a rolagem e nada some
 
-- **Dado** a chamada final de cotação
+- **Dado** a seção Quem Somos
 - **Quando** rolo a página
-- **Então** a foto se abre até ocupar a tela e mostra o botão de cotação
+- **Então** a foto se abre até ocupar a tela e mostra o texto de apresentação
 - **E** sem o efeito, o título, o texto e o botão já aparecem
+- **E** a chamada final continua com o botão de cotação visível, sem depender de efeito
 
 #### AC-046 - A troca entre foto e números funciona por toque e por teclado
 

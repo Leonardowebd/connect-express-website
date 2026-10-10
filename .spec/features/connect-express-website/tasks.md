@@ -125,7 +125,7 @@
 ## T-021 - Skill de smart effects e os quatro efeitos [concluida]
 
 - Refs: US-015, AC-043, AC-045, AC-046, AC-047
-- Arquivos: .claude/skills/connect-smart-effects/SKILL.md, src/efeitos/TextoRevelado.tsx, src/efeitos/DesfoqueGradual.tsx, src/efeitos/TrocaPixel.tsx, src/efeitos/ExpansaoNaRolagem.tsx, src/efeitos/efeitos.module.css, src/components/secoes/Chamada.tsx, tests/us-015-efeitos.test.mjs
+- Arquivos: .claude/skills/connect-smart-effects/SKILL.md, src/efeitos/TextoRevelado.tsx, src/efeitos/DesfoqueGradual.tsx, src/efeitos/TrocaPixel.tsx, src/efeitos/ExpansaoNaRolagem.tsx, src/efeitos/efeitos.module.css, src/efeitos/SurgirEmPixels.tsx, src/components/secoes/Chamada.tsx, tests/us-015-efeitos.test.mjs
 - Notas: Skill connect-smart-effects. Efeitos do React Bits adaptados: texto revelado na declaração de Quem Somos, desfoque gradual no herói e no rodapé, troca por pixels na foto de Quem Somos, expansão na rolagem na chamada final.
 
 ## T-022 - Prévia de imagem das soluções, com mouse e com toque [concluida]

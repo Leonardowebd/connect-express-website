@@ -37,11 +37,16 @@ test('@spec:AC-044 cada solução mostra uma imagem, com mouse ou com toque', ()
   assert.match(css, /\[data-pronto\] [^{]*previa[^{]*:not\(\[data-visivel\]\)/, 'em toque, só fica escondida depois que o script liga a revelação');
 });
 
-test('@spec:AC-045 a chamada final se abre com a rolagem e o botão nunca some', () => {
+test('@spec:AC-045 a abertura de Quem Somos se expande com a rolagem e nada some', () => {
   bloco('expansao-na-rolagem');
-  const secao = blocos(inicio, 'section').find((s) => s.includes('data-efeito="expansao-na-rolagem"'));
-  assert.match(texto(blocos(secao, 'h2')[0] ?? ''), /entregar mais rápido/);
-  assert.ok(links(secao).some((l) => l.texto === 'Pedir cotação' && l.href === '/#contato'), 'botão de cotação no HTML');
+  const secao = blocos(inicio, 'section', 'id="sobre"')[0];
+  assert.ok(secao.includes('data-efeito="expansao-na-rolagem"'), 'o efeito fica em Quem Somos');
+  assert.match(texto(blocos(secao, 'h2')[0] ?? ''), /15 anos/);
+  assert.ok(links(secao).some((l) => l.texto === 'Conhecer as soluções'), 'botão no HTML');
+  const chamada = blocos(inicio, 'section', 'aria-labelledby="titulo-chamada"')[0];
+  assert.ok(!chamada.includes('data-efeito="expansao-na-rolagem"'), 'a chamada final não prende a rolagem');
+  assert.match(texto(blocos(chamada, 'h2')[0] ?? ''), /entregar mais rápido/);
+  assert.ok(links(chamada).some((l) => l.texto === 'Pedir cotação' && l.href === '/#contato'), 'botão de cotação na chamada final');
   // Sem o script, nada do conteúdo pode estar escondido pelo CSS.
   const estilos = fonte('efeitos.module.css');
   const regra = (seletor) => (estilos.match(new RegExp(`\\n${seletor.replace('.', '\\.')} \\{[^}]*\\}`)) ?? [''])[0];

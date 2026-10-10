@@ -149,9 +149,7 @@
   inset: 0;
   pointer-events: none;
   /* Escuro neutro e moderado: dá leitura ao texto sem esconder nem tingir a foto. */
-  background:
-    var(--textura-grao),
-    linear-gradient(to top, var(--cor-sombra-forte), var(--cor-sombra) 45%, var(--cor-sombra));
+  background: linear-gradient(to top, var(--cor-sombra-forte), var(--cor-sombra) 45%, var(--cor-sombra));
 }
 
 .expansaoConteudo {
@@ -184,7 +182,7 @@
   position: sticky;
   top: 0;
   min-height: 0;
-  background: var(--textura-grao), var(--cor-noite);
+  background: var(--cor-noite);
 }
 
 .expansao[data-pronto] .expansaoMoldura {
@@ -211,4 +209,38 @@
   inset: 0;
   align-items: center;
   will-change: opacity, transform;
+}
+
+/* Surgir em pixels (abertura do herói) */
+
+.surgir {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  pointer-events: none;
+}
+
+.surgir i {
+  background: var(--cor-noite);
+  animation: surgir-bloco 450ms var(--curva) both;
+}
+
+@keyframes surgir-bloco {
+  to {
+    opacity: 0;
+    transform: scale(0.35);
+  }
+}
+
+@media (min-width: 768px) {
+  .surgir {
+    grid-template-columns: repeat(10, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .surgir {
+    display: none;
+  }
 }

@@ -86,17 +86,17 @@ export const numeros = [
 ] as const;
 
 // Logotipos extraídos do site antigo (wp-content/uploads), em PNG de 500 por 500 px.
-// A versão verde é gerada por scripts/gerar-logos-verdes.mjs.
+// A versão clara (branca) é gerada por scripts/gerar-logos-claros.mjs.
 export const clientes = [
-  { nome: 'Drogaria São Paulo', logo: '/clientes/drogaria-sao-paulo.png', logoVerde: '/clientes/verde/drogaria-sao-paulo.png' },
-  { nome: 'Drogaria Pacheco', logo: '/clientes/drogaria-pacheco.png', logoVerde: '/clientes/verde/drogaria-pacheco.png' },
-  { nome: 'Pague Menos', logo: '/clientes/pague-menos.png', logoVerde: '/clientes/verde/pague-menos.png' },
-  { nome: 'Extrafarma', logo: '/clientes/extrafarma.png', logoVerde: '/clientes/verde/extrafarma.png' },
-  { nome: 'Drogaria Rosário', logo: '/clientes/drogaria-rosario.png', logoVerde: '/clientes/verde/drogaria-rosario.png' },
-  { nome: 'Magazine Luiza', logo: '/clientes/magazine-luiza.png', logoVerde: '/clientes/verde/magazine-luiza.png' },
-  { nome: 'Decathlon', logo: '/clientes/decathlon.png', logoVerde: '/clientes/verde/decathlon.png' },
-  { nome: 'Salvador Medical', logo: '/clientes/salvador-medical.png', logoVerde: '/clientes/verde/salvador-medical.png' },
-  { nome: 'Mastermed', logo: '/clientes/mastermed.png', logoVerde: '/clientes/verde/mastermed.png' },
+  { nome: 'Drogaria São Paulo', logo: '/clientes/drogaria-sao-paulo.png', logoClaro: '/clientes/claro/drogaria-sao-paulo.png' },
+  { nome: 'Drogaria Pacheco', logo: '/clientes/drogaria-pacheco.png', logoClaro: '/clientes/claro/drogaria-pacheco.png' },
+  { nome: 'Pague Menos', logo: '/clientes/pague-menos.png', logoClaro: '/clientes/claro/pague-menos.png' },
+  { nome: 'Extrafarma', logo: '/clientes/extrafarma.png', logoClaro: '/clientes/claro/extrafarma.png' },
+  { nome: 'Drogaria Rosário', logo: '/clientes/drogaria-rosario.png', logoClaro: '/clientes/claro/drogaria-rosario.png' },
+  { nome: 'Magazine Luiza', logo: '/clientes/magazine-luiza.png', logoClaro: '/clientes/claro/magazine-luiza.png' },
+  { nome: 'Decathlon', logo: '/clientes/decathlon.png', logoClaro: '/clientes/claro/decathlon.png' },
+  { nome: 'Salvador Medical', logo: '/clientes/salvador-medical.png', logoClaro: '/clientes/claro/salvador-medical.png' },
+  { nome: 'Mastermed', logo: '/clientes/mastermed.png', logoClaro: '/clientes/claro/mastermed.png' },
 ] as const;
 
 export const navegacao = [

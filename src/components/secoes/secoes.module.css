@@ -8,38 +8,27 @@
   padding-inline: var(--espaco-3);
 }
 
-/* Chapéu: o rótulo curto acima de cada título. Ponto da marca, caixa alta, sem sublinhado. */
+/* Chapéu: etiqueta em pílula, com borda fina, acima de cada título. */
 .rotulo {
   display: inline-flex;
   align-items: center;
-  gap: var(--espaco-2);
   margin-bottom: var(--espaco-4);
+  padding: 0.4375rem 0.875rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-pilula);
+  background: var(--cor-superficie);
   font-family: var(--fonte-titulo);
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 500;
-  letter-spacing: 0.12em;
   line-height: 1;
-  text-transform: uppercase;
-  color: var(--cor-texto-suave);
-}
-
-.rotulo::before {
-  content: '';
-  flex: none;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background: var(--cor-marca);
+  color: var(--cor-tinta);
 }
 
 :global(.secao-escura) .rotulo,
 :global(.sobre-escuro) .rotulo {
-  color: var(--cor-texto-inverso-suave);
-}
-
-:global(.secao-escura) .rotulo::before,
-:global(.sobre-escuro) .rotulo::before {
-  background: var(--cor-acao);
+  border-color: var(--cor-borda-inversa);
+  background: var(--cor-borda-inversa);
+  color: var(--cor-texto-inverso);
 }
 
 .titulo {
@@ -208,8 +197,9 @@
   padding: var(--espaco-6);
   border: 1px solid var(--cor-borda-inversa);
   border-radius: calc(var(--raio-b) - var(--espaco-2));
-  background: var(--cor-veu);
-  backdrop-filter: blur(14px);
+  /* Vidro fosco neutro: deixa a foto aparecer e dá leitura ao texto, sem tingir de verde. */
+  background: var(--cor-vidro);
+  backdrop-filter: blur(18px);
 }
 
 .heroiTitulo {
@@ -232,7 +222,7 @@
   display: grid;
   gap: var(--espaco-3);
   align-content: start;
-  max-width: 34rem;
+  max-width: 38rem;
 }
 
 .fatosTexto .rotulo {
@@ -240,22 +230,51 @@
   margin-bottom: 0;
 }
 
+/*
+  Números em linha do tempo: uma linha com um ponto por número.
+  No celular a linha desce pela esquerda; a partir do tablet, corre no alto
+  com os cinco números lado a lado.
+*/
 .fatosNumeros {
+  position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--espaco-8) var(--espaco-6);
+  gap: var(--espaco-6);
   margin: 0;
+  padding-left: var(--espaco-8);
+}
+
+.fatosNumeros::before {
+  content: '';
+  position: absolute;
+  top: 0.75rem;
+  bottom: 0.75rem;
+  left: 0.3125rem;
+  width: 1px;
+  background: var(--cor-borda);
 }
 
 .fatosNumeros div {
+  position: relative;
   display: flex;
   flex-direction: column-reverse;
   gap: var(--espaco-1);
 }
 
+.fatosNumeros div::before {
+  content: '';
+  position: absolute;
+  top: 0.875rem;
+  left: calc(-1 * var(--espaco-8));
+  width: 0.6875rem;
+  height: 0.6875rem;
+  border-radius: 50%;
+  background: var(--cor-marca);
+  box-shadow: 0 0 0 0.3125rem var(--cor-fundo);
+}
+
 .fatosNumeros dd {
   font-family: var(--fonte-titulo);
-  font-size: clamp(2.25rem, 1.7rem + 2.4vw, 3.5rem);
+  font-size: clamp(2.25rem, 1.6rem + 1.8vw, 3.25rem);
   font-weight: 500;
   line-height: 1;
   letter-spacing: -0.03em;
@@ -267,12 +286,46 @@
   color: var(--cor-texto-suave);
 }
 
-/* Faixa de clientes: sem caixa, um laço contínuo que se dissolve nas laterais. */
+@media (min-width: 768px) {
+  .fatosNumeros {
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--espaco-4);
+    padding: var(--espaco-12) 0 0;
+    text-align: center;
+  }
+
+  .fatosNumeros::before {
+    top: 0.3125rem;
+    right: 10%;
+    bottom: auto;
+    left: 10%;
+    width: auto;
+    height: 1px;
+  }
+
+  .fatosNumeros div {
+    align-items: center;
+  }
+
+  .fatosNumeros div::before {
+    top: calc(-1 * var(--espaco-12));
+    left: calc(50% - 0.34375rem);
+  }
+}
+
+/* Faixa de clientes: barra escura, logos brancos em laço contínuo que somem nas duas pontas. */
 .faixa {
-  position: relative;
-  margin-top: var(--espaco-12);
-  padding-block: var(--espaco-4);
+  margin-top: var(--espaco-16);
+  padding-block: var(--espaco-3);
+  border-radius: var(--raio-b);
+  background: var(--cor-noite);
   overflow: hidden;
+}
+
+/* A máscara apaga os logos perto das bordas, sem desfoque. */
+.faixaJanela {
+  -webkit-mask-image: linear-gradient(to right, transparent, var(--cor-tinta) 16%, var(--cor-tinta) 84%, transparent);
+  mask-image: linear-gradient(to right, transparent, var(--cor-tinta) 16%, var(--cor-tinta) 84%, transparent);
 }
 
 .faixaTrilho {
@@ -294,36 +347,23 @@
 
 .faixaTrilho li {
   flex: none;
-  width: clamp(6.5rem, 22vw, 9rem);
-  padding: var(--espaco-3) var(--espaco-4);
+  /* No celular, 10% maior que antes (7,15 rem em vez de 6,5). */
+  width: clamp(7.15rem, 24.2vw, 9rem);
+  padding: var(--espaco-2) var(--espaco-4);
 }
 
-/* Cada logo tem duas imagens empilhadas: a colorida embaixo e a verde por cima. */
-.logo {
-  position: relative;
-}
-
-.logo img {
+.faixaTrilho img {
   display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 1;
   object-fit: contain;
+  opacity: 0.78;
+  transition: opacity var(--duracao-rapida) var(--curva);
 }
 
-.logo .logoVerde {
-  position: absolute;
-  inset: var(--espaco-3) var(--espaco-4);
-  width: calc(100% - 2 * var(--espaco-4));
-  height: calc(100% - 2 * var(--espaco-3));
-  transition: opacity 320ms var(--curva);
-}
-
-/* Só onde existe mouse: no toque, a cor original ficaria presa depois do primeiro toque. */
-@media (hover: hover) {
-  .logo:hover .logoVerde {
-    opacity: 0;
-  }
+.faixaTrilho li:hover img {
+  opacity: 1;
 }
 
 @keyframes faixa-rolar {
@@ -334,7 +374,7 @@
 
 /* Movimento reduzido: a faixa para e passa a rolar com o dedo. */
 @media (prefers-reduced-motion: reduce) {
-  .faixa {
+  .faixaJanela {
     overflow-x: auto;
   }
 
@@ -490,9 +530,14 @@
   text-decoration: none;
 }
 
-/* Chamada final (o palco é do efeito de expansão) */
+/* Palco do efeito de expansão (Quem somos) */
 
-.chamadaTitulo {
+.palcoCabeca {
+  display: grid;
+  justify-items: center;
+}
+
+.palcoTitulo {
   font-family: var(--fonte-titulo);
   font-size: clamp(2rem, 1.2rem + 4vw, 5rem);
   font-weight: 500;
@@ -502,8 +547,8 @@
   text-wrap: balance;
 }
 
-.chamadaTexto {
-  max-width: 34rem;
+.palcoTexto {
+  max-width: 38rem;
   font-size: var(--tam-texto-g);
 }
 
@@ -581,10 +626,6 @@
     padding: 8rem var(--espaco-8) var(--espaco-8);
   }
 
-  .fatosNumeros {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
 
   .linha {
     grid-template-columns: 1fr auto;
@@ -632,15 +673,6 @@
     transform: translateX(-50%);
   }
 
-  .fatos {
-    grid-template-columns: 1fr 1fr;
-    column-gap: var(--espaco-16);
-  }
-
-
-  .fatosNumeros {
-    grid-template-columns: 1fr 1fr;
-  }
 
   .cabeca {
     grid-template-columns: 1fr 1fr;
@@ -1075,47 +1107,106 @@
   }
 }
 
-/* Chamada final: números e ações dentro da foto aberta */
+/* Chamada final: cartão com a foto ao fundo, o convite e os atalhos das soluções */
 
-.chamadaFatos {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  gap: var(--espaco-4) var(--espaco-8);
-  margin: 0;
-  padding-block: var(--espaco-4);
-  border-block: 1px dashed var(--cor-borda-inversa);
-}
-
-.chamadaFatos div {
+.chamada {
+  position: relative;
   display: flex;
-  flex-direction: column-reverse;
-  gap: var(--espaco-1);
+  align-items: flex-end;
+  min-height: 36rem;
+  margin-block: var(--espaco-12);
+  padding: var(--espaco-8) var(--espaco-4) var(--espaco-6);
+  border-radius: var(--raio-b);
+  overflow: hidden;
+  background: var(--cor-noite);
+  color: var(--cor-texto-inverso);
+  isolation: isolate;
 }
 
-.chamadaFatos dd {
+.chamadaSombra {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--cor-sombra-forte), var(--cor-sombra) 55%, var(--cor-sombra-suave));
+  pointer-events: none;
+}
+
+.chamadaCorpo {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: var(--espaco-4);
+  width: 100%;
+  max-width: 34rem;
+}
+
+.chamadaTitulo {
   font-family: var(--fonte-titulo);
-  font-size: clamp(1.75rem, 1.2rem + 2.6vw, 3.5rem);
+  font-size: clamp(2rem, 1.4rem + 2.6vw, 3.25rem);
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.05;
+  letter-spacing: var(--letras-titulo);
+  text-wrap: balance;
 }
 
-.chamadaFatos dt {
-  font-size: 0.8125rem;
+.chamadaTexto {
   color: var(--cor-texto-inverso-suave);
 }
 
-.chamadaSubtitulo {
-  font-family: var(--fonte-titulo);
-  font-size: var(--tam-subtitulo);
+.chamadaLista {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--cor-borda-inversa);
+  list-style: none;
+}
+
+.chamadaLista a {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-3);
+  min-height: 3rem;
+  padding-block: var(--espaco-2);
+  border-bottom: 1px solid var(--cor-borda-inversa);
+  color: inherit;
   font-weight: 500;
-  line-height: 1.15;
-  max-width: 22ch;
-  text-wrap: balance;
+  text-decoration: none;
+}
+
+.chamadaLista a::before {
+  content: '';
+  flex: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--cor-acao);
+}
+
+.chamadaLista svg {
+  flex: none;
+  margin-left: auto;
+  transition: transform var(--duracao-rapida) var(--curva);
+}
+
+.chamadaLista a:hover svg {
+  transform: translate(2px, -2px);
 }
 
 .chamadaContato {
   font-size: var(--tam-pequeno);
   color: var(--cor-texto-inverso-suave);
+}
+
+@media (min-width: 1024px) {
+  .chamada {
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 42rem;
+    padding: var(--espaco-12);
+  }
+
+  /* No computador o texto fica à direita: a sombra vem desse lado e a foto respira à esquerda. */
+  .chamadaSombra {
+    background: linear-gradient(to left, var(--cor-sombra-forte), var(--cor-sombra) 45%, transparent 85%);
+  }
 }
 
 /* Por que a Connect: painel claro, tópicos em cartões numerados, colagem com métrica */
@@ -1220,7 +1311,7 @@
   }
 }
 
-/* Herói: sombra no alto para a navegação, grão sobre a foto */
+/* Herói: sombra no alto para a navegação e na base para o texto */
 
 .heroiSombra {
   position: absolute;
@@ -1228,14 +1319,6 @@
   background:
     linear-gradient(to bottom, var(--cor-sombra-forte), var(--cor-sombra-suave) 32%, transparent 55%),
     linear-gradient(to top, var(--cor-sombra), transparent 45%);
-  pointer-events: none;
-}
-
-.grao {
-  position: absolute;
-  inset: 0;
-  background: var(--textura-grao);
-  opacity: 0.5;
   pointer-events: none;
 }
 

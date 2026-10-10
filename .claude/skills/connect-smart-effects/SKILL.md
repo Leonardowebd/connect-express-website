@@ -24,7 +24,7 @@ Responda antes de escrever código. Um "não" em qualquer linha barra o efeito o
 
 ## 2. Onde colocar
 
-- **Nunca no elemento que define o LCP**: título e foto do herói não recebem animação de entrada.
+- **Nunca no elemento que define o LCP**: título e foto do herói não recebem animação de entrada. A exceção é o surgir em pixels, que anima uma grade por cima da foto, não a foto: ela já está pintada por baixo, e o título e os botões ficam acima da grade.
 - **Um efeito forte por tela.** Dois efeitos disputando atenção na mesma dobra se anulam.
 - **Um efeito que prende a rolagem por página**, no máximo, e nunca antes do primeiro botão de cotação.
 - **Efeito pesado vai abaixo da primeira tela**, onde pode esperar o script carregar.
@@ -84,7 +84,8 @@ Os efeitos ficam em `src/efeitos/`. As entradas simples de seção (`Revelar`, `
 | Texto revelado | `TextoRevelado.tsx` | Declaração em Quem Somos | Dar peso à frase que resume a empresa | Só opacidade, sem desfoque | Texto inteiro, parado |
 | Desfoque gradual | `DesfoqueGradual.tsx` | Faixa fixa na base da tela, no site inteiro; base da foto do herói | Fazer o conteúdo sair da tela com suavidade durante toda a rolagem | Três camadas em vez de quatro | Mantido (não é movimento); some com transparência reduzida |
 | Troca por pixels | `TrocaPixel.tsx` | Foto de Quem Somos, que troca pelos números | Convidar a tocar e entregar prova | Toque; até 40 pixels em vez de 96 | Troca imediata |
-| Expansão na rolagem | `ExpansaoNaRolagem.tsx` | Chamada final de cotação, que aberta mostra números, frase, texto e dois botões | Dar palco ao último convite, com informação suficiente para decidir | Moldura inicial mais larga; não remede com a barra do navegador | Estado final, sem prender a rolagem |
+| Expansão na rolagem | `ExpansaoNaRolagem.tsx` | Abertura de Quem Somos, que aberta mostra a apresentação da empresa e um botão | Dar palco à apresentação da empresa | Moldura inicial mais larga; não remede com a barra do navegador | Estado final, sem prender a rolagem |
+| Surgir em pixels | `SurgirEmPixels.tsx` | Foto do herói, ao abrir a página | Dar entrada à primeira tela sem atrasar a foto | Grade de 8 colunas em vez de 10 | Sem a grade: foto direta |
 | Prévia das soluções | `ObservaPrevias.tsx` e CSS em `secoes.module.css` | Lista de soluções | Mostrar a operação por trás de cada solução | Imagem dentro da linha, revelada pela rolagem | Imagem visível, sem transição |
 | Mapa de cobertura | `MapaCobertura.tsx` e `mapa/motor.ts` | Seção Cobertura, dentro da grade: globo fixo sobre o Brasil, visto em ângulo | Responder "vocês atendem a minha região?" | Toque no estado ou nos botões; cartão abaixo do mapa | Mapa parado, sem caminhões em movimento |
 
@@ -94,7 +95,7 @@ Parâmetros em uso (mude aqui e no código juntos):
 - **Desfoque gradual**: faixa fixa de 5,5 rem, força 1,6, quatro camadas; herói com 9 rem, força 2, cinco camadas, curva exponencial.
 - **Mapa de cobertura**: canvas 2D com densidade máxima de 2; camada parada desenhada uma vez e reaproveitada a cada quadro; contornos baixados só perto da tela; anima só enquanto visível.
 - **Troca por pixels**: pixel de 56 px, duração de 1 s, padrão diagonal com 35% de aleatoriedade, gatilho por clique.
-- **Expansão na rolagem**: moldura inicial de 42% por 58% (84% por 52% no celular), zoom de 1,25, rolagem de 0,8 tela mais 0,15 de retenção.
+- **Expansão na rolagem**: moldura inicial de 42% por 58% (84% por 52% no celular), zoom de 1,15, rolagem de 0,8 tela mais 0,15 de retenção.
 - **Prévia das soluções**: 17 rem de largura, inclinada 6 graus, no modo de mouse.
 
 ## 7. Integrar um componente pronto

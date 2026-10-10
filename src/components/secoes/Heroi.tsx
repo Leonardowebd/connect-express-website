@@ -1,5 +1,6 @@
 import { Imagem } from '@/components/Imagem/Imagem';
 import { DesfoqueGradual } from '@/efeitos/DesfoqueGradual';
+import { SurgirEmPixels } from '@/efeitos/SurgirEmPixels';
 import { heroi } from '@/data/inicio';
 import { Pilula } from './Pilula';
 import styles from './secoes.module.css';
@@ -10,10 +11,10 @@ export function Heroi() {
       <div className={`${styles.heroi} sobre-escuro`}>
         {/* No celular a foto é cortada em pé e fica mais larga que a tela: "sizes" avisa o navegador. */}
         <Imagem id="heroi-inicio" tom="escuro" preencher qualidade={90} sizes="(max-width: 767px) 240vw, 100vw" />
+        <SurgirEmPixels />
         <div className={styles.heroiSombra} aria-hidden="true" />
         <DesfoqueGradual posicao="top" tamanho="8rem" forca={1.6} camadas={4} />
         <DesfoqueGradual posicao="bottom" tamanho="9rem" forca={2} camadas={5} exponencial />
-        <div className={styles.grao} aria-hidden="true" />
         <div className={styles.heroiCaixa}>
           <h1 id="titulo-heroi" className={styles.heroiTitulo}>
             {heroi.titulo.join(' ')}

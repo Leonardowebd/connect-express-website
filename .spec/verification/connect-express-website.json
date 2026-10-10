@@ -1,7 +1,7 @@
 {
   "feature": "connect-express-website",
-  "timestamp": "2026-10-10T20:50:45.048Z",
-  "gitRev": "3edc5ee",
+  "timestamp": "2026-10-10T21:07:15.013Z",
+  "gitRev": "8a16ca0",
   "command": "npm run build --silent 1>&2 && node --test --test-reporter=tap tests/*.test.mjs",
   "reporter": "tap",
   "exitCode": 0,
@@ -214,7 +214,7 @@
     },
     "AC-045": {
       "status": "pass",
-      "testName": "@spec:AC-045 a chamada final se abre com a rolagem e o botão nunca some",
+      "testName": "@spec:AC-045 a abertura de Quem Somos se expande com a rolagem e nada some",
       "method": "tap"
     },
     "AC-046": {

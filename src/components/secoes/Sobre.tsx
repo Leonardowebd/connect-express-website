@@ -2,25 +2,42 @@ import { Cpu, HandHeart, Handshake, Heartbeat, ShieldCheck, Timer } from '@phosp
 import { Revelar } from '@/animacoes/Revelar';
 import { Imagem } from '@/components/Imagem/Imagem';
 import { quemSomos, valores } from '@/data/inicio';
+import { ExpansaoNaRolagem } from '@/efeitos/ExpansaoNaRolagem';
 import { TextoRevelado } from '@/efeitos/TextoRevelado';
 import { TrocaPixel } from '@/efeitos/TrocaPixel';
+import { Pilula } from './Pilula';
 import styles from './secoes.module.css';
 
 const ICONES_DOS_VALORES = [Heartbeat, ShieldCheck, Timer, Cpu, Handshake, HandHeart];
 
 export function Sobre() {
   return (
-    <section id="sobre" className="secao" aria-labelledby="titulo-sobre">
-      <div className="conteudo">
-        <div className={styles.cabecaDupla}>
-          <div>
-            <p className={styles.rotulo}>{quemSomos.rotulo}</p>
-            <h2 id="titulo-sobre" className={styles.titulo}>
-              {quemSomos.titulo}
-            </h2>
+    <section id="sobre" aria-labelledby="titulo-sobre">
+      {/* A foto se abre com a rolagem e, aberta, apresenta a empresa. */}
+      <div className="sobre-escuro">
+        <ExpansaoNaRolagem
+          midia={<Imagem id="sobre-palco" tom="escuro" preencher qualidade={90} sizes="(max-width: 767px) 240vw, 100vw" />}
+          zoom={1.15}
+          titulo={
+            <div className={styles.palcoCabeca}>
+              <p className={styles.rotulo}>{quemSomos.rotulo}</p>
+              <h2 id="titulo-sobre" className={styles.palcoTitulo}>
+                {quemSomos.titulo}
+              </h2>
+            </div>
+          }
+        >
+          <p className={styles.palcoTexto}>{quemSomos.paragrafos[1]}</p>
+          <div className="botoes">
+            <Pilula href="/#servicos" clara>
+              Conhecer as soluções
+            </Pilula>
           </div>
-        </div>
+        </ExpansaoNaRolagem>
+      </div>
 
+      <div className="secao">
+      <div className="conteudo">
         <TextoRevelado className={styles.declaracao}>{quemSomos.declaracao}</TextoRevelado>
 
         <Revelar className={styles.sobre}>
@@ -64,6 +81,7 @@ export function Sobre() {
             );
           })}
         </Revelar>
+      </div>
       </div>
     </section>
   );

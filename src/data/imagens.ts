@@ -3,7 +3,7 @@
 // (WebP, na largura indicada) e gere o site de novo. Se o arquivo não existir,
 // o site mostra um substituto da marca na mesma proporção.
 // "origem" registra de qual arquivo de Dados/Imagens Novo site a foto veio.
-// Com seis fotos para nove espaços, três se repetem: ver "pedido".
+// Com seis fotos para dez espaços, quatro se repetem: ver "pedido".
 
 export type EspacoDeImagem = {
   id: string;
@@ -35,6 +35,15 @@ export const imagens: EspacoDeImagem[] = [
     alt: 'Carreta verde com a marca Connect Express Log',
     origem: 'Caminhão verde da Connect ExpressLog.png',
     pedido: 'Ideal: foto da equipe ou da base, com uniforme da marca.',
+  },
+  {
+    id: 'sobre-palco',
+    arquivo: 'sobre-palco.webp',
+    largura: 1672,
+    altura: 941,
+    alt: 'Carreta verde da Connect Express Log na estrada',
+    origem: 'Caminhão verde da Connect ExpressLog.png',
+    pedido: 'Foto horizontal em tela cheia, que aceite texto branco por cima. Ideal: a base ou a equipe em operação.',
   },
   {
     id: 'solucao-medicamentos',
