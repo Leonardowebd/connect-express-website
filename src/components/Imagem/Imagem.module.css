@@ -1,0 +1,48 @@
+.base {
+  display: block;
+  width: 100%;
+  border-radius: var(--raio-cartao);
+}
+
+.foto {
+  height: auto;
+  object-fit: cover;
+}
+
+/* Dois seletores para vencer o position: relative do substituto. */
+.base.preencher {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  border-radius: 0;
+}
+
+/* Substituto: trama diagonal discreta com um ponto da cor da marca. */
+.substituto {
+  position: relative;
+  overflow: hidden;
+  background:
+    repeating-linear-gradient(135deg, transparent 0 22px, var(--cor-branco-70) 22px 23px),
+    var(--cor-linha);
+}
+
+.substituto::after {
+  content: '';
+  position: absolute;
+  right: 8%;
+  bottom: 10%;
+  width: clamp(2rem, 12%, 5rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--cor-marca);
+}
+
+.escuro {
+  background:
+    repeating-linear-gradient(135deg, transparent 0 22px, var(--cor-borda-inversa) 22px 23px),
+    var(--cor-tinta-2);
+}
+
+.escuro::after {
+  background: var(--cor-acao);
+}

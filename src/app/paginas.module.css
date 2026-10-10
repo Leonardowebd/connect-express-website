@@ -1,0 +1,109 @@
+/* Páginas internas simples: vagas, política e não encontrada. */
+
+.abertura {
+  max-width: 62ch;
+}
+
+.h3 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.tres,
+.duas {
+  display: grid;
+  gap: var(--espaco-8);
+}
+
+.cartao {
+  display: grid;
+  gap: var(--espaco-3);
+  align-content: start;
+  padding: var(--espaco-6);
+  background: var(--cor-fundo);
+}
+
+.coluna {
+  display: grid;
+  gap: var(--espaco-6);
+  align-content: start;
+}
+
+.requisitos {
+  counter-reset: requisito;
+  border-top: 1px solid var(--cor-tinta);
+}
+
+.requisitos li {
+  counter-increment: requisito;
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  padding-block: var(--espaco-4);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.requisitos li::before {
+  content: '0' counter(requisito);
+  font-family: var(--fonte-titulo);
+  color: var(--cor-destaque-texto);
+}
+
+.painel {
+  display: grid;
+  gap: var(--espaco-6);
+  align-content: start;
+  padding: var(--espaco-6);
+  background: var(--cor-superficie);
+}
+
+.documento {
+  display: grid;
+  gap: var(--espaco-8);
+  max-width: 68ch;
+}
+
+.documento h2 {
+  margin-bottom: var(--espaco-3);
+  font-family: var(--fonte-titulo);
+  font-size: var(--tam-subtitulo);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.documento ul {
+  display: grid;
+  gap: var(--espaco-2);
+  padding-left: var(--espaco-6);
+  list-style: disc;
+}
+
+.documento p + p,
+.documento p + ul {
+  margin-top: var(--espaco-3);
+}
+
+.vazio {
+  display: grid;
+  gap: var(--espaco-6);
+  justify-items: start;
+}
+
+@media (min-width: 768px) {
+  .tres {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .painel {
+    padding: var(--espaco-8);
+  }
+}
+
+@media (min-width: 1024px) {
+  .duas {
+    grid-template-columns: 5fr 7fr;
+    column-gap: var(--espaco-16);
+    align-items: start;
+  }
+}

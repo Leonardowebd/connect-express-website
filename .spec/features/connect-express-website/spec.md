@@ -339,9 +339,10 @@ Como equipe do projeto, quero publicar o site sem as fotos definitivas e trocá-
 | ID | Pergunta | Status | Resposta |
 |---|---|---|---|
 | Q-001 | Onde o site será hospedado (Vercel, Netlify, hospedagem atual)? Define como os cabeçalhos de segurança e o envio do formulário são configurados. | respondida | Vercel, com o código em repositório privado no GitHub (resposta do dono do projeto em 2026-10-10). |
-| Q-002 | Para onde vai o formulário de contato: e-mail comercial, WhatsApp, CRM? | aberta | - |
-| Q-003 | Quais números são oficiais? O site atual diz 15 anos e 9 estados; a apresentação diz 10 estados, 100+ farmácias, cerca de 450 motoboys e entrega expressa em 3 horas. | aberta | - |
+| Q-002 | Para onde vai o formulário de contato: e-mail comercial, WhatsApp, CRM? | aberta | Adiada pelo dono do projeto em 2026-10-10. O envio fica preparado atrás de uma variável de ambiente e o destino é definido antes de publicar. |
+| Q-003 | Quais números são oficiais? O site atual diz 15 anos e 9 estados; a apresentação diz 10 estados, 100+ farmácias, cerca de 450 motoboys e entrega expressa em 3 horas. | respondida | Usar as duas fontes; quando divergem, vale o maior número: mais de 15 anos, 10 estados, mais de 100 farmácias, cerca de 450 motoboys, entrega expressa em 3 horas (dono do projeto, 2026-10-10). |
 | Q-004 | Existem depoimentos ou cases autorizados para publicação? As referências de layout têm seção de depoimentos. | aberta | - |
 | Q-005 | Haverá ferramentas de medição (Google Analytics, Tag Manager, pixel)? Afeta a política de conteúdo, o aviso de cookies e o peso das páginas. | aberta | - |
 | Q-006 | O texto atual da Política de Privacidade será reaproveitado ou reescrito? | aberta | - |
 | Q-007 | O Figma prevê página única ou páginas separadas para Quem Somos, Soluções e Contato? | respondida | O Figma não define estrutura de páginas. Adotado: página inicial com as seções, uma página por solução, Trabalhe Conosco e Política de Privacidade, como no site atual. |
+| Q-008 | Qual é o décimo estado atendido? O site atual lista nove (BA, SP, RJ, ES, DF, MT, PR, MG, PE) e a apresentação fala em dez. | aberta | - |

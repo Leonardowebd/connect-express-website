@@ -1,0 +1,207 @@
+{
+  "feature": "connect-express-website",
+  "timestamp": "2026-10-10T15:05:47.009Z",
+  "gitRev": "98df95a",
+  "command": "npm run build --silent 1>&2 && node --test --test-reporter=tap tests/*.test.mjs",
+  "reporter": "tap",
+  "exitCode": 0,
+  "testsParsed": 39,
+  "results": {
+    "AC-001": {
+      "status": "pass",
+      "testName": "@spec:AC-001 a primeira tela diz o que a empresa faz e oferece a cotação",
+      "method": "tap"
+    },
+    "AC-002": {
+      "status": "pass",
+      "testName": "@spec:AC-002 os números da operação aparecem como prova",
+      "method": "tap"
+    },
+    "AC-003": {
+      "status": "pass",
+      "testName": "@spec:AC-003 o menu leva a todas as seções e ações principais",
+      "method": "tap"
+    },
+    "AC-004": {
+      "status": "pass",
+      "testName": "@spec:AC-004 as quatro soluções aparecem na página inicial",
+      "method": "tap"
+    },
+    "AC-005": {
+      "status": "pass",
+      "testName": "@spec:AC-005 cada solução tem página própria no mesmo endereço do site antigo",
+      "method": "tap"
+    },
+    "AC-006": {
+      "status": "pass",
+      "testName": "@spec:AC-006 cada página de solução responde às dúvidas comuns",
+      "method": "tap"
+    },
+    "AC-007": {
+      "status": "pass",
+      "testName": "@spec:AC-007 a seção Quem Somos conta a história e os valores",
+      "method": "tap"
+    },
+    "AC-008": {
+      "status": "pass",
+      "testName": "@spec:AC-008 a cobertura lista os estados atendidos",
+      "method": "tap"
+    },
+    "AC-009": {
+      "status": "pass",
+      "testName": "@spec:AC-009 os clientes aparecem como prova social",
+      "method": "tap"
+    },
+    "AC-010": {
+      "status": "pass",
+      "testName": "@spec:AC-010 o formulário de contato pede só o necessário",
+      "method": "tap"
+    },
+    "AC-011": {
+      "status": "pass",
+      "testName": "@spec:AC-011 o formulário avisa o que falta antes de enviar",
+      "method": "tap"
+    },
+    "AC-012": {
+      "status": "pass",
+      "testName": "@spec:AC-012 o WhatsApp comercial está a um toque",
+      "method": "tap"
+    },
+    "AC-013": {
+      "status": "pass",
+      "testName": "@spec:AC-013 telefones, e-mails e endereços estão em texto",
+      "method": "tap"
+    },
+    "AC-014": {
+      "status": "pass",
+      "testName": "@spec:AC-014 o rastreio abre o portal oficial",
+      "method": "tap"
+    },
+    "AC-015": {
+      "status": "pass",
+      "testName": "@spec:AC-015 a página Trabalhe Conosco explica requisitos e recebe candidaturas",
+      "method": "tap"
+    },
+    "AC-016": {
+      "status": "pass",
+      "testName": "@spec:AC-016 o site se ajusta à largura do aparelho",
+      "method": "tap"
+    },
+    "AC-017": {
+      "status": "pass",
+      "testName": "@spec:AC-017 no celular o menu vira um botão acessível",
+      "method": "tap"
+    },
+    "AC-018": {
+      "status": "pass",
+      "testName": "@spec:AC-018 botões e links são fáceis de tocar",
+      "method": "tap"
+    },
+    "AC-019": {
+      "status": "pass",
+      "testName": "@spec:AC-019 cada página tem título e descrição próprios",
+      "method": "tap"
+    },
+    "AC-020": {
+      "status": "pass",
+      "testName": "@spec:AC-020 cada página declara seu endereço oficial e prévia de compartilhamento",
+      "method": "tap"
+    },
+    "AC-021": {
+      "status": "pass",
+      "testName": "@spec:AC-021 o site entrega mapa de páginas e regras para robôs",
+      "method": "tap"
+    },
+    "AC-022": {
+      "status": "pass",
+      "testName": "@spec:AC-022 a empresa é descrita em dados estruturados",
+      "method": "tap"
+    },
+    "AC-023": {
+      "status": "pass",
+      "testName": "@spec:AC-023 as perguntas frequentes são legíveis por máquina",
+      "method": "tap"
+    },
+    "AC-024": {
+      "status": "pass",
+      "testName": "@spec:AC-024 o site oferece um resumo para assistentes",
+      "method": "tap"
+    },
+    "AC-025": {
+      "status": "pass",
+      "testName": "@spec:AC-025 cada solução é descrita como serviço",
+      "method": "tap"
+    },
+    "AC-026": {
+      "status": "pass",
+      "testName": "@spec:AC-026 as páginas são leves",
+      "method": "tap"
+    },
+    "AC-027": {
+      "status": "pass",
+      "testName": "@spec:AC-027 nada bloqueia a primeira pintura",
+      "method": "tap"
+    },
+    "AC-028": {
+      "status": "pass",
+      "testName": "@spec:AC-028 as imagens não empurram o conteúdo",
+      "method": "tap"
+    },
+    "AC-029": {
+      "status": "pass",
+      "testName": "@spec:AC-029 o site declara as proteções de navegador",
+      "method": "tap"
+    },
+    "AC-030": {
+      "status": "pass",
+      "testName": "@spec:AC-030 links externos não dão controle da página a terceiros",
+      "method": "tap"
+    },
+    "AC-031": {
+      "status": "pass",
+      "testName": "@spec:AC-031 o formulário barra robôs e informa o uso dos dados",
+      "method": "tap"
+    },
+    "AC-032": {
+      "status": "pass",
+      "testName": "@spec:AC-032 a Política de Privacidade existe",
+      "method": "tap"
+    },
+    "AC-033": {
+      "status": "pass",
+      "testName": "@spec:AC-033 a estrutura da página é anunciada corretamente",
+      "method": "tap"
+    },
+    "AC-034": {
+      "status": "pass",
+      "testName": "@spec:AC-034 toda imagem informativa tem descrição",
+      "method": "tap"
+    },
+    "AC-035": {
+      "status": "pass",
+      "testName": "@spec:AC-035 o foco do teclado é sempre visível",
+      "method": "tap"
+    },
+    "AC-036": {
+      "status": "pass",
+      "testName": "@spec:AC-036 cores e fontes vêm de um único lugar",
+      "method": "tap"
+    },
+    "AC-037": {
+      "status": "pass",
+      "testName": "@spec:AC-037 o logotipo oficial aparece no cabeçalho e no rodapé",
+      "method": "tap"
+    },
+    "AC-038": {
+      "status": "pass",
+      "testName": "@spec:AC-038 cada espaço de imagem tem nome, proporção e substituto",
+      "method": "tap"
+    },
+    "AC-039": {
+      "status": "pass",
+      "testName": "@spec:AC-039 trocar uma imagem é trocar um arquivo",
+      "method": "tap"
+    }
+  },
+  "principles": {}
+}

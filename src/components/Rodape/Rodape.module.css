@@ -1,0 +1,135 @@
+.rodape {
+  background: var(--cor-fundo-alt);
+  padding-bottom: var(--espaco-12);
+  margin-top: var(--espaco-16);
+}
+
+.grade {
+  display: grid;
+  gap: var(--espaco-12);
+}
+
+.cartao {
+  display: grid;
+  gap: var(--espaco-4);
+  align-content: start;
+  margin-top: calc(-1 * var(--espaco-16));
+  padding: var(--espaco-8);
+  background: var(--cor-fundo-escuro);
+  color: var(--cor-texto-inverso);
+}
+
+.logo {
+  width: 8.75rem;
+  height: auto;
+  margin-left: -0.5rem;
+}
+
+.cartaoTitulo {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tam-subtitulo);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.cartaoTexto {
+  color: var(--cor-texto-inverso-suave);
+  margin-bottom: var(--espaco-4);
+}
+
+.corpo {
+  display: grid;
+  gap: var(--espaco-8);
+  padding-top: var(--espaco-4);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-2) var(--espaco-6);
+  padding-bottom: var(--espaco-6);
+  border-bottom: 1px solid var(--cor-borda);
+  font-family: var(--fonte-titulo);
+  font-size: var(--tam-texto-g);
+}
+
+.nav a,
+.listaLinks a,
+.contatos a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--toque-minimo);
+}
+
+.nav a:hover,
+.listaLinks a:hover,
+.contatos a:hover {
+  color: var(--cor-destaque-texto);
+}
+
+.colunas {
+  display: grid;
+  gap: var(--espaco-8);
+}
+
+.titulo {
+  margin-bottom: var(--espaco-2);
+  font-family: var(--fonte-texto);
+  font-size: var(--tam-pequeno);
+  font-weight: 600;
+}
+
+.listaLinks,
+.contatos,
+.enderecos {
+  font-size: var(--tam-pequeno);
+}
+
+.contatos {
+  display: grid;
+  gap: var(--espaco-4);
+}
+
+.contatos dt {
+  color: var(--cor-texto-suave);
+}
+
+.contatos dd a {
+  overflow-wrap: anywhere;
+}
+
+.enderecos {
+  display: grid;
+  gap: var(--espaco-4);
+  padding-top: var(--espaco-3);
+}
+
+.enderecos address {
+  font-style: normal;
+}
+
+.legal {
+  padding-top: var(--espaco-6);
+  border-top: 1px solid var(--cor-borda);
+  font-size: var(--tam-pequeno);
+  color: var(--cor-texto-suave);
+}
+
+@media (min-width: 768px) {
+  .colunas {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grade {
+    grid-template-columns: 4fr 8fr;
+    gap: var(--espaco-16);
+    align-items: start;
+  }
+
+  .corpo {
+    padding-top: var(--espaco-12);
+  }
+}
+

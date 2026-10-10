@@ -1,0 +1,93 @@
+/*
+  Tokens da marca Connect Express Log.
+  ÚNICO arquivo do projeto com valores de cor. Todo o resto usa var(--...).
+  Origem de cada valor: .claude/skills/connect-id-visual.
+*/
+
+:root {
+  /* Marca (Figma, seção Identidade) */
+  --cor-laranja: #f3570b;
+  --cor-verde: #47a81b;
+  --cor-azul: #0e7bd6;
+
+  /* Variações para contraste (decisão de projeto) */
+  --cor-laranja-escuro: #c2410c;
+  --cor-verde-escuro: #2f7a0e;
+  --cor-azul-escuro: #0a5fa8;
+
+  /* Neutros (decisão de projeto) */
+  --cor-tinta: #111111;
+  --cor-tinta-2: #1c1c1c;
+  --cor-tinta-suave: #5b6168;
+  --cor-linha: #d9dee3;
+  --cor-nevoa: #e9ecef;
+  --cor-papel: #f5f5f5;
+  --cor-branco: #ffffff;
+
+  /* Transparências */
+  --cor-branco-70: rgb(255 255 255 / 0.72);
+  --cor-branco-15: rgb(255 255 255 / 0.15);
+  --cor-tinta-60: rgb(17 17 17 / 0.6);
+  --cor-erro: #b42318;
+
+  /* Papéis: componentes usam só estes */
+  --cor-fundo: var(--cor-branco);
+  --cor-fundo-alt: var(--cor-nevoa);
+  --cor-superficie: var(--cor-papel);
+  --cor-fundo-escuro: var(--cor-tinta);
+  --cor-texto: var(--cor-tinta);
+  --cor-texto-suave: var(--cor-tinta-suave);
+  --cor-texto-inverso: var(--cor-branco);
+  --cor-texto-inverso-suave: var(--cor-branco-70);
+  --cor-borda: var(--cor-linha);
+  --cor-borda-inversa: var(--cor-branco-15);
+  --cor-acao: var(--cor-laranja);
+  --cor-acao-texto: var(--cor-tinta);
+  --cor-destaque: var(--cor-laranja);
+  --cor-destaque-texto: var(--cor-laranja-escuro);
+  --cor-link: var(--cor-laranja-escuro);
+  --cor-marca: var(--cor-verde);
+  --cor-foco: var(--cor-azul);
+
+  /* Tipografia */
+  --fonte-titulo: var(--fonte-geologica), system-ui, sans-serif;
+  --fonte-texto: var(--fonte-poppins), system-ui, sans-serif;
+
+  --tam-heroi: clamp(2.5rem, 1.4rem + 5.2vw, 5.5rem);
+  --tam-titulo: clamp(2rem, 1.35rem + 2.9vw, 3.5rem);
+  --tam-subtitulo: clamp(1.25rem, 1.08rem + 0.75vw, 1.75rem);
+  --tam-numero: clamp(2.5rem, 1.6rem + 3.6vw, 4.5rem);
+  --tam-texto-g: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+  --tam-texto: 1rem;
+  --tam-pequeno: 0.875rem;
+
+  --linha-titulo: 1.08;
+  --linha-texto: 1.6;
+  --letras-titulo: -0.02em;
+
+  /* Espaçamento: escala de 4 px */
+  --espaco-1: 0.25rem;
+  --espaco-2: 0.5rem;
+  --espaco-3: 0.75rem;
+  --espaco-4: 1rem;
+  --espaco-6: 1.5rem;
+  --espaco-8: 2rem;
+  --espaco-12: 3rem;
+  --espaco-16: 4rem;
+  --espaco-24: 6rem;
+  --espaco-32: 8rem;
+
+  --espaco-secao: clamp(4rem, 2.6rem + 6vw, 8rem);
+  --margem-lateral: clamp(1rem, 0.2rem + 3.4vw, 3rem);
+  --largura-conteudo: 75rem;
+  --altura-cabecalho: 4.5rem;
+
+  /* Forma */
+  --raio-controle: 2px;
+  --raio-cartao: 4px;
+  --toque-minimo: 2.75rem;
+
+  /* Movimento */
+  --duracao-rapida: 180ms;
+  --curva: cubic-bezier(0.2, 0.7, 0.2, 1);
+}

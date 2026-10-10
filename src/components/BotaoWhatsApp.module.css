@@ -1,0 +1,18 @@
+.botao {
+  position: fixed;
+  right: var(--espaco-4);
+  bottom: calc(var(--espaco-4) + env(safe-area-inset-bottom));
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--cor-verde-escuro);
+  color: var(--cor-branco);
+  transition: transform var(--duracao-rapida) var(--curva);
+}
+
+.botao:hover {
+  transform: scale(1.06);
+}

@@ -1,12 +1,8 @@
 {
-  "testCommand": "node --test",
+  "testCommand": "npm run build --silent 1>&2 && node --test --test-reporter=tap tests/*.test.mjs",
   "reporter": "tap",
   "testGlobs": [
-    "test/**",
-    "tests/**",
-    "src/**/*.test.*",
-    "src/**/*.spec.*",
-    "__tests__/**"
+    "tests/**"
   ],
   "srcGlobs": [
     "src/**"

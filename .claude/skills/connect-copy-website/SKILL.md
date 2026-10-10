@@ -27,21 +27,20 @@ Quem lê é um decisor de rede de farmácias, laboratório, clínica ou e-commer
 | Sua entrega é nosso maior compromisso | Medicamento na casa do cliente em até 3 horas |
 | Soluções ágeis e escaláveis | De 1 loja a mais de 100 farmácias na mesma operação |
 | Atuamos com excelência em setores estratégicos | Entregamos para as maiores redes de farmácias do país |
-| Estamos presente em todo o território brasileiro | Operação própria em 9 estados |
+| Estamos presente em todo o território brasileiro | Operação em 10 estados |
 | Contratar serviço | Pedir cotação |
 
 ## Fatos disponíveis
 
-Use só o que está nesta tabela. Itens "a confirmar" dependem da pergunta em aberto Q-003 da especificação; até a resposta, use o valor do site atual.
+Use só o que está nesta tabela. Regra definida pelo dono do projeto em 2026-10-10: valem o site atual e a apresentação juntos e, quando divergem, vale o maior número.
 
 | Fato | Valor | Fonte | Situação |
 |---|---|---|---|
-| Tempo de mercado | Mais de 15 anos | Site atual | Publicado |
-| Estados | BA, SP, RJ, ES, DF, MT, PR, MG, PE (9) | Site atual | Publicado |
-| Estados | 10 | Apresentação | A confirmar (qual é o décimo?) |
-| Farmácias atendidas | Mais de 100 | Apresentação | A confirmar |
-| Entregadores | Cerca de 450 motoboys | Apresentação | A confirmar |
-| Entrega expressa | Em até 3 horas | Apresentação | A confirmar |
+| Tempo de mercado | Mais de 15 anos | Site atual | Aprovado |
+| Estados | 10 estados | Apresentação | Aprovado. Nove têm nome confirmado: BA, SP, RJ, ES, DF, MT, PR, MG, PE. O décimo é a pergunta em aberto Q-008. |
+| Farmácias atendidas | Mais de 100 | Apresentação | Aprovado |
+| Entregadores | Cerca de 450 motoboys | Apresentação | Aprovado |
+| Entrega expressa | Em até 3 horas | Apresentação | Aprovado |
 | Modelos | Expressa e D-1 (D1 e D2 para e-commerce) | Apresentação e site | Publicado em parte |
 | Conformidade | Normas da ANVISA e da ANTT | Site atual | Publicado |
 | Matriz | R. Gilvan Fernandes, 188, Galpão 07, Recreio Ipitanga, Lauro de Freitas, BA, 42700-530 | Site atual | Publicado |
