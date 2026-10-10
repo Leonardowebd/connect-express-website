@@ -1,0 +1,47 @@
+# Connect Express Log - configuração do servidor na Hostinger (Apache/LiteSpeed).
+# Este arquivo vai para a raiz de public_html, junto com o site.
+# O bloco de cabeçalhos de segurança é acrescentado no fim pelo script
+# scripts/empacotar-hostinger.mjs, a partir de next.config.mjs.
+
+Options -Indexes
+ErrorDocument 404 /404.html
+AddDefaultCharset utf-8
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Sempre em HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Endereço oficial com www
+  RewriteCond %{HTTP_HOST} ^connectexpresslog\.com\.br$ [NC]
+  RewriteRule ^ https://www.connectexpresslog.com.br%{REQUEST_URI} [L,R=301]
+
+  # Formulários: /api/contato/ e /api/vagas/ são atendidos pelos scripts PHP
+  RewriteRule ^api/(contato|vagas)/?$ api/$1.php [L]
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType font/woff2 .woff2
+  AddType text/plain .txt
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain application/javascript application/json image/svg+xml application/xml
+</IfModule>
+
+# Arquivos com nome único (gerados pelo build) podem ficar um ano no navegador.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(webp|png|jpg|jpeg|svg|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.(html|txt|xml|json)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>

@@ -11,15 +11,21 @@ type Props = {
   sucesso: string;
   /** Mostrado quando o envio falha ou ainda não está configurado. */
   alternativa: { whatsapp: string; email: string };
+  /** Depois do envio, leva o visitante ao WhatsApp deste número com o pedido já escrito. */
+  seguirNoWhatsApp?: { numero: string; saudacao: string };
 };
 
 type Estado = 'parado' | 'enviando' | 'enviado' | 'falhou';
 
-export function Formulario({ campos, destino, textoBotao, sucesso, alternativa }: Props) {
+/** Espera para o visitante ler a confirmação antes de o WhatsApp abrir. */
+const ESPERA_DO_WHATSAPP_MS = 1500;
+
+export function Formulario({ campos, destino, textoBotao, sucesso, alternativa, seguirNoWhatsApp }: Props) {
   const id = useId();
   const form = useRef<HTMLFormElement>(null);
   const [erros, setErros] = useState<Erros>({});
   const [estado, setEstado] = useState<Estado>('parado');
+  const [linkDoWhatsApp, setLinkDoWhatsApp] = useState<string | null>(null);
 
   const ler = () => Object.fromEntries(new FormData(form.current ?? undefined).entries()) as Record<string, string>;
 
@@ -58,6 +64,17 @@ export function Formulario({ campos, destino, textoBotao, sucesso, alternativa }
         setEstado('parado');
         return;
       }
+      if (resposta.ok && seguirNoWhatsApp) {
+        // O pedido já está registrado por e-mail. O WhatsApp abre com os mesmos dados,
+        // para a conversa com o comercial começar na hora.
+        const linhas = campos
+          .filter((c) => (valores[c.nome] ?? '').trim() !== '')
+          .map((c) => `${c.rotulo}: ${valores[c.nome].trim()}`);
+        const texto = [seguirNoWhatsApp.saudacao, '', ...linhas].join('\n');
+        const link = `https://wa.me/${seguirNoWhatsApp.numero}?text=${encodeURIComponent(texto)}`;
+        setLinkDoWhatsApp(link);
+        window.setTimeout(() => window.location.assign(link), ESPERA_DO_WHATSAPP_MS);
+      }
       setEstado(resposta.ok ? 'enviado' : 'falhou');
     } catch {
       setEstado('falhou');
@@ -68,6 +85,15 @@ export function Formulario({ campos, destino, textoBotao, sucesso, alternativa }
     return (
       <p className={styles.sucesso} role="status">
         {sucesso}
+        {linkDoWhatsApp ? (
+          <>
+            {' '}
+            Abrindo o WhatsApp para você falar com o comercial agora.{' '}
+            <a className="link" href={linkDoWhatsApp}>
+              Abrir o WhatsApp
+            </a>
+          </>
+        ) : null}
       </p>
     );
   }

@@ -1,11 +1,11 @@
 {
   "feature": "connect-express-website",
-  "timestamp": "2026-10-10T22:22:28.943Z",
-  "gitRev": "23f2fb9",
+  "timestamp": "2026-10-10T22:31:11.621Z",
+  "gitRev": "88807b2",
   "command": "npm run build --silent 1>&2 && node --test --test-reporter=tap tests/*.test.mjs",
   "reporter": "tap",
   "exitCode": 0,
-  "testsParsed": 47,
+  "testsParsed": 48,
   "results": {
     "AC-001": {
       "status": "pass",
@@ -70,6 +70,11 @@
     "AC-013": {
       "status": "pass",
       "testName": "@spec:AC-013 telefones, e-mails e endereços estão em texto",
+      "method": "tap"
+    },
+    "AC-051": {
+      "status": "pass",
+      "testName": "@spec:AC-051 o pedido fica registrado por e-mail e segue para o WhatsApp",
       "method": "tap"
     },
     "AC-014": {

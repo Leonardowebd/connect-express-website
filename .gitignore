@@ -12,3 +12,5 @@ out/
 next-env.d.ts
 .playwright-mcp/
 .vercel
+hostinger/*.zip
+.api-fora-do-build/

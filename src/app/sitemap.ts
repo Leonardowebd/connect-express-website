@@ -10,3 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: caminho === '/' ? 1 : 0.8,
   }));
 }
+
+// Necessário para gerar o arquivo no modo de site estático (Hostinger).
+export const dynamic = 'force-static';

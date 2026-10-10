@@ -44,13 +44,30 @@ Para trocar uma foto, salve o novo arquivo em `public/imagens/` com o mesmo nome
 
 ## Formulários
 
-Os formulários de contato e de vagas enviam para o endereço da variável de ambiente `FORMULARIO_WEBHOOK_URL` (veja `.env.example`). Sem essa variável, o formulário valida os campos e mostra os contatos diretos em vez de enviar. O destino final ainda precisa ser definido com o cliente.
+O pedido de contato é registrado por e-mail e, em seguida, o visitante é levado ao WhatsApp comercial com os mesmos dados já escritos. O cadastro de vagas só envia o e-mail.
 
-## Publicar
+- Na Hostinger, quem envia são os scripts PHP de `hostinger/api`. Destinos e remetente ficam em `hostinger/api/config.php`.
+- Na Vercel (prévia), o envio depende da variável `FORMULARIO_WEBHOOK_URL`. Sem ela, o formulário mostra os contatos diretos.
 
-O projeto está ligado à Vercel e ao repositório do GitHub: cada envio para `main` publica em https://connectexpresslog.vercel.app.
+## Publicar na Hostinger
 
-Enquanto a variável `SITE_NO_AR` não for `sim` na Vercel, o site responde com `X-Robots-Tag: noindex` e fica fora dos buscadores. Defina essa variável só no lançamento, junto com o domínio oficial.
+O site vai como arquivos estáticos, com PHP só para os formulários. Funciona em qualquer plano de hospedagem da Hostinger.
+
+1. **Gerar o pacote:** `npm run hostinger`. O arquivo sai em `hostinger/site-hostinger.zip`.
+2. **Criar as caixas de e-mail** no hPanel, em E-mails: `site@connectexpresslog.com.br` (remetente dos avisos), `comercial@` e `vagas@` (destinos). O remetente precisa existir, senão as mensagens caem em spam ou são recusadas.
+3. **Conferir o PHP:** em Avançado > Configuração PHP, versão 8.1 ou mais nova.
+4. **Guardar o site antigo:** no Gerenciador de Arquivos, baixe ou renomeie a `public_html` atual (o WordPress antigo) antes de substituir.
+5. **Enviar o pacote:** envie o zip para `public_html` e extraia ali. O `.htaccess` e a pasta `api` precisam ficar na raiz de `public_html`. Arquivos que começam com ponto só aparecem com "mostrar ocultos" ligado.
+6. **Ligar o SSL** do domínio no hPanel (Segurança > SSL), se ainda não estiver ativo.
+7. **Testar no ar:** abrir o site, enviar o formulário de contato com um e-mail seu, conferir a chegada em `comercial@` e a abertura do WhatsApp. Repetir em Trabalhe Conosco.
+
+Para mudar um destino depois, edite `api/config.php` direto no servidor e também `hostinger/api/config.php` aqui, para o próximo pacote não desfazer a mudança.
+
+Diferenças em relação à Vercel: as imagens vão no tamanho em que estão em `public/` (não há redimensionamento sob demanda), e os cabeçalhos de segurança vêm do `.htaccess`, gerado de `next.config.mjs`.
+
+## Publicar na Vercel (prévia)
+
+`vercel deploy --prod --yes --scope leonardos-projects-dd01b80e`. O endereço `connectexpresslog.vercel.app` fica fora dos buscadores.
 
 ## Layout
 
@@ -59,7 +76,8 @@ O layout segue a referência Cargomaxis (nó 1-10 do Figma): cartões arredondad
 ## Pendências antes de ir ao ar
 
 - Confirmar o décimo estado atendido (o site lista nove nomes e fala em dez).
-- Definir o destino dos formulários.
+- Testar o envio dos formulários no servidor da Hostinger (os scripts PHP ainda não rodaram em servidor real).
+- Dizer na Política de Privacidade que o pedido de contato também é levado ao WhatsApp.
 - Revisar o texto da Política de Privacidade com o cliente.
 - Receber o logotipo em SVG e três fotos para os espaços que hoje repetem imagem.
 - Confirmar a lista de clientes exibida.

@@ -1,0 +1,5 @@
+# Só os dois pontos de entrada respondem. Configuração, biblioteca e a lista de
+# campos não podem ser lidas pelo navegador.
+<FilesMatch "^(config|enviar)\.php$|\.json$">
+  Require all denied
+</FilesMatch>

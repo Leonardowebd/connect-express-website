@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "npm run build --silent 1>&2 && node --test --test-reporter=tap tests/*.test.mjs"
+    "test": "npm run build --silent 1>&2 && node --test --test-reporter=tap tests/*.test.mjs",
+    "hostinger": "node scripts/empacotar-hostinger.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

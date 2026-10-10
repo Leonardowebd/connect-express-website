@@ -64,6 +64,7 @@ export function Contato() {
             textoBotao="Pedir cotação"
             sucesso="Recebemos sua mensagem. O comercial vai entrar em contato."
             alternativa={{ whatsapp: linkWhatsApp, email: contatos.comercial.email }}
+            seguirNoWhatsApp={{ numero: contatos.comercial.whatsapp, saudacao: 'Olá! Acabei de pedir uma cotação pelo site.' }}
           />
         </div>
       </div>

@@ -32,8 +32,15 @@ export const cabecalhosDeSeguranca = [
   { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
 ];
 
+// Na Hostinger (hospedagem compartilhada, sem Node) o site vai como arquivos
+// estáticos: "npm run hostinger" liga este modo. Lá não existe otimização de
+// imagem sob demanda, e os cabeçalhos de segurança vão pelo .htaccess.
+const hostinger = process.env.HOSPEDAGEM === 'hostinger';
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig = hostinger
+  ? { output: 'export', trailingSlash: true, poweredByHeader: false, images: { unoptimized: true } }
+  : {
   trailingSlash: true,
   poweredByHeader: false,
   images: { formats: ['image/avif', 'image/webp'], qualities: [75, 90] },

@@ -22,3 +22,6 @@ export default function robots(): MetadataRoute.Robots {
     host: URL_SITE,
   };
 }
+
+// Necessário para gerar o arquivo no modo de site estático (Hostinger).
+export const dynamic = 'force-static';

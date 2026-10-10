@@ -140,3 +140,8 @@
 - Arquivos: scripts/gerar-mapas.mjs, public/dados/brasil-ufs.json, public/dados/terra.json, src/data/mapa.ts, src/efeitos/MapaCobertura.tsx, src/efeitos/mapa/motor.ts, src/efeitos/mapa/mapa.module.css, tests/us-016-mapa.test.mjs
 - Notas: Skill connect-smart-effects. Canvas 2D sem dependências. Contornos do IBGE e do Natural Earth, simplificados pelo script. As duas versões ficam no mesmo painel da seção Cobertura, dentro da grade: globo visto em ângulo (padrão) e mapa em bloco, alternados por um controle.
 
+## T-024 - Pacote para a Hostinger, com envio por e-mail e sequência no WhatsApp [concluida]
+
+- Refs: US-004, AC-051
+- Arquivos: scripts/empacotar-hostinger.mjs, hostinger/.htaccess, hostinger/api/.htaccess, hostinger/api/config.php, hostinger/api/enviar.php, hostinger/api/contato.php, hostinger/api/vagas.php, next.config.mjs, src/components/Formulario/Formulario.tsx, src/components/secoes/Contato.tsx, tests/us-004-hostinger.test.mjs
+- Notas: "npm run hostinger" gera o site estático em out/ e o zip em hostinger/. Os scripts PHP repetem as regras de src/lib/envio.ts e leem a lista de campos gerada de src/lib/validacao.ts. Os cabeçalhos de segurança do .htaccess são gerados de next.config.mjs.
