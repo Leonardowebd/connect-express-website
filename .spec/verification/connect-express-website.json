@@ -1,7 +1,7 @@
 {
   "feature": "connect-express-website",
-  "timestamp": "2026-10-10T21:25:13.990Z",
-  "gitRev": "344689c",
+  "timestamp": "2026-10-10T21:26:43.407Z",
+  "gitRev": "b41ec47",
   "command": "npm run build --silent 1>&2 && node --test --test-reporter=tap tests/*.test.mjs",
   "reporter": "tap",
   "exitCode": 0,
