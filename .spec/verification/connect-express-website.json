@@ -1,7 +1,7 @@
 {
   "feature": "connect-express-website",
-  "timestamp": "2026-10-10T20:20:00.862Z",
-  "gitRev": "d3547f0",
+  "timestamp": "2026-10-10T20:50:45.048Z",
+  "gitRev": "3edc5ee",
   "command": "npm run build --silent 1>&2 && node --test --test-reporter=tap tests/*.test.mjs",
   "reporter": "tap",
   "exitCode": 0,
@@ -239,7 +239,7 @@
     },
     "AC-050": {
       "status": "pass",
-      "testName": "@spec:AC-050 o globo fica dentro da seção e alterna com o mapa",
+      "testName": "@spec:AC-050 o globo fica dentro da seção, visto em ângulo",
       "method": "tap"
     }
   },

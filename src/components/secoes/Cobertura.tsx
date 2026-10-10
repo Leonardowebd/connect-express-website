@@ -1,3 +1,4 @@
+import { Buildings, Warehouse } from '@phosphor-icons/react/dist/ssr';
 import { Revelar } from '@/animacoes/Revelar';
 import { TOTAL_ESTADOS, centrosDeDistribuicao, enderecos, estados } from '@/data/empresa';
 import { cobertura } from '@/data/inicio';
@@ -23,6 +24,7 @@ export function Cobertura() {
         <Revelar emSequencia className={styles.basesGrade}>
           {enderecos.map((e) => (
             <article key={e.tipo} className={styles.cartao}>
+              <Buildings aria-hidden="true" weight="duotone" size={32} className={styles.icone} />
               <h3>{e.tipo}</h3>
               <address>
                 {e.rua}
@@ -34,6 +36,7 @@ export function Cobertura() {
             </article>
           ))}
           <article className={styles.cartao}>
+            <Warehouse aria-hidden="true" weight="duotone" size={32} className={styles.icone} />
             <h3>Centros de distribuição</h3>
             <p>{centrosDeDistribuicao.join(' e ')}</p>
           </article>

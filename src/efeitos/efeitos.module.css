@@ -135,7 +135,7 @@
 .expansaoMoldura {
   position: absolute;
   inset: 0;
-  background: var(--cor-fundo-escuro-2);
+  background: var(--cor-noite);
 }
 
 .expansaoMidia {
@@ -148,7 +148,10 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(to top, var(--cor-fundo-escuro-2), var(--cor-veu) 55%, var(--cor-veu));
+  /* Escuro neutro e moderado: dá leitura ao texto sem esconder nem tingir a foto. */
+  background:
+    var(--textura-grao),
+    linear-gradient(to top, var(--cor-sombra-forte), var(--cor-sombra) 45%, var(--cor-sombra));
 }
 
 .expansaoConteudo {
@@ -176,12 +179,12 @@
 }
 
 /* Com o efeito ligado pelo script. */
-/* O palco é verde para o título branco ser legível também fora da moldura. */
+/* O palco é escuro para o título branco ser legível também fora da moldura. */
 .expansao[data-pronto] .expansaoPalco {
   position: sticky;
   top: 0;
   min-height: 0;
-  background: var(--cor-fundo-escuro);
+  background: var(--textura-grao), var(--cor-noite);
 }
 
 .expansao[data-pronto] .expansaoMoldura {

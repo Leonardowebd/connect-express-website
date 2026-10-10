@@ -156,60 +156,21 @@
   border-radius: 0;
 }
 
-/* Alternância entre globo e mapa */
-
-.modos {
-  display: inline-flex;
-  justify-self: start;
-  gap: var(--espaco-1);
-  padding: var(--espaco-1);
-  border: 1px solid var(--cor-borda-inversa);
-  border-radius: var(--raio-pilula);
-  background: var(--mapa-vidro);
-}
-
-.modos button {
-  min-height: var(--toque-minimo);
-  padding-inline: var(--espaco-4);
-  border: 0;
-  border-radius: var(--raio-pilula);
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  font-size: var(--tam-pequeno);
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.modos button[aria-pressed='true'] {
-  background: var(--mapa-linha);
-  color: var(--cor-tinta);
-}
-
-/* Painel arredondado dentro da grade da seção, igual nos dois modos */
+/* Painel arredondado dentro da grade da seção */
 
 .mapa {
   border-radius: var(--raio-b);
 }
 
 /*
-  Celular: o mapa ocupa a largura toda, o controle de modo fica sobre ele,
-  o cartão vira uma faixa compacta e os estados rolam em uma linha.
+  Celular: o mapa ocupa a largura toda, o cartão fica compacto e os
+  estados rolam em uma linha.
 */
 .tela {
   aspect-ratio: 1 / 1.05;
 }
 
-.modos {
-  position: absolute;
-  top: var(--espaco-4);
-  left: var(--espaco-4);
-  z-index: 2;
-}
-
-/* Sem posição própria no celular, para o controle de modo se prender ao mapa e não ao painel. */
 .painel {
-  position: static;
   gap: var(--espaco-3);
   padding: 0 var(--espaco-4) var(--espaco-6);
 }
@@ -257,12 +218,7 @@
     min-height: 36rem;
   }
 
-  .modos {
-    position: static;
-  }
-
   .painel {
-    position: relative;
     order: -1;
     gap: var(--espaco-4);
     padding: var(--espaco-8) 0 var(--espaco-8) var(--espaco-8);

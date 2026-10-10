@@ -8,12 +8,38 @@
   padding-inline: var(--espaco-3);
 }
 
+/* Chapéu: o rótulo curto acima de cada título. Ponto da marca, caixa alta, sem sublinhado. */
 .rotulo {
-  display: inline-block;
-  margin-bottom: var(--espaco-3);
-  font-size: var(--tam-pequeno);
-  text-decoration: underline;
-  text-underline-offset: 0.3em;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espaco-2);
+  margin-bottom: var(--espaco-4);
+  font-family: var(--fonte-titulo);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--cor-texto-suave);
+}
+
+.rotulo::before {
+  content: '';
+  flex: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--cor-marca);
+}
+
+:global(.secao-escura) .rotulo,
+:global(.sobre-escuro) .rotulo {
+  color: var(--cor-texto-inverso-suave);
+}
+
+:global(.secao-escura) .rotulo::before,
+:global(.sobre-escuro) .rotulo::before {
+  background: var(--cor-acao);
 }
 
 .titulo {
@@ -39,7 +65,7 @@
   color: var(--cor-acao-texto);
   font-family: var(--fonte-titulo);
   font-size: 0.9375rem;
-  font-weight: 500;
+  font-weight: 600;
   white-space: nowrap;
   transition: background-color var(--duracao-rapida) var(--curva);
 }
@@ -65,6 +91,11 @@
 
 .pilulaClara {
   background: var(--cor-branco);
+  color: var(--cor-tinta);
+}
+
+.pilulaClara .pilulaSeta {
+  color: var(--cor-branco);
 }
 
 .pilulaClara .pilulaSeta {
@@ -125,9 +156,12 @@
   height: auto;
 }
 
-/* No cabeçalho claro, o botão do menu precisa de contorno para aparecer. */
+/* Nas páginas internas (cabeçalho claro), o botão do menu é claro com barras escuras. */
 .topoSolido .topoMenu > button {
-  box-shadow: 0 0 0 1px var(--cor-borda);
+  border-color: var(--cor-borda);
+  background: var(--cor-superficie);
+  color: var(--cor-tinta);
+  backdrop-filter: none;
 }
 
 /* Cabeçalho das páginas internas: mesma navegação, sobre fundo claro. */
@@ -233,12 +267,11 @@
   color: var(--cor-texto-suave);
 }
 
+/* Faixa de clientes: sem caixa, um laço contínuo que se dissolve nas laterais. */
 .faixa {
   position: relative;
   margin-top: var(--espaco-12);
-  border: 1px solid var(--cor-borda);
-  border-radius: var(--raio-cartao);
-  background: var(--cor-branco);
+  padding-block: var(--espaco-4);
   overflow: hidden;
 }
 
@@ -265,11 +298,32 @@
   padding: var(--espaco-3) var(--espaco-4);
 }
 
-.faixa img {
+/* Cada logo tem duas imagens empilhadas: a colorida embaixo e a verde por cima. */
+.logo {
+  position: relative;
+}
+
+.logo img {
+  display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 1;
   object-fit: contain;
+}
+
+.logo .logoVerde {
+  position: absolute;
+  inset: var(--espaco-3) var(--espaco-4);
+  width: calc(100% - 2 * var(--espaco-4));
+  height: calc(100% - 2 * var(--espaco-3));
+  transition: opacity 320ms var(--curva);
+}
+
+/* Só onde existe mouse: no toque, a cor original ficaria presa depois do primeiro toque. */
+@media (hover: hover) {
+  .logo:hover .logoVerde {
+    opacity: 0;
+  }
 }
 
 @keyframes faixa-rolar {
@@ -1111,14 +1165,11 @@
 .topicoSelo {
   display: grid;
   place-items: center;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 2.25rem;
+  height: 2.25rem;
   border-radius: 50%;
   background: var(--cor-fundo-escuro);
   color: var(--cor-texto-inverso);
-  font-family: var(--fonte-titulo);
-  font-size: 0.8125rem;
-  font-weight: 500;
 }
 
 .colagem {
@@ -1167,4 +1218,45 @@
     column-gap: var(--espaco-12);
     align-items: start;
   }
+}
+
+/* Herói: sombra no alto para a navegação, grão sobre a foto */
+
+.heroiSombra {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, var(--cor-sombra-forte), var(--cor-sombra-suave) 32%, transparent 55%),
+    linear-gradient(to top, var(--cor-sombra), transparent 45%);
+  pointer-events: none;
+}
+
+.grao {
+  position: absolute;
+  inset: 0;
+  background: var(--textura-grao);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* No celular o herói é mais baixo: a foto precisa esticar menos e fica mais nítida. */
+@media (max-width: 767px) {
+  .heroi {
+    min-height: min(40rem, 82svh);
+  }
+}
+
+/* Ícones (Phosphor, em dois tons). A cor vem do texto: aqui, o verde da marca. */
+
+.icone {
+  flex: none;
+  color: var(--cor-fundo-escuro);
+}
+
+.linhaTexto .icone {
+  margin-bottom: var(--espaco-3);
+}
+
+.topicoSelo svg {
+  display: block;
 }

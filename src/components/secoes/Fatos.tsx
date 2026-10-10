@@ -38,15 +38,17 @@ export function Fatos() {
           <div className={styles.faixaTrilho}>
             <ul data-clientes="">
               {clientes.map((c) => (
-                <li key={c.nome}>
+                <li key={c.nome} className={styles.logo}>
                   <Image src={c.logo} alt={c.nome} width={500} height={500} sizes="144px" />
+                  <Image src={c.logoVerde} alt="" width={500} height={500} sizes="144px" className={styles.logoVerde} />
                 </li>
               ))}
             </ul>
             <ul aria-hidden="true">
               {clientes.map((c) => (
-                <li key={c.nome}>
+                <li key={c.nome} className={styles.logo}>
                   <Image src={c.logo} alt="" width={500} height={500} sizes="144px" />
+                  <Image src={c.logoVerde} alt="" width={500} height={500} sizes="144px" className={styles.logoVerde} />
                 </li>
               ))}
             </ul>

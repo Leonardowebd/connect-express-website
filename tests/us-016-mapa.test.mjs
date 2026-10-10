@@ -49,16 +49,14 @@ test('@spec:AC-049 o mapa é leve e não esconde informação', () => {
   assert.ok(blocos(blocos(inicio, 'ul', 'data-estados')[0], 'li').length >= 9);
 });
 
-test('@spec:AC-050 o globo fica dentro da seção e alterna com o mapa', () => {
+test('@spec:AC-050 o globo fica dentro da seção, visto em ângulo', () => {
   const secao = blocos(inicio, 'section', 'id="cobertura"')[0];
-  assert.ok(secao.includes('data-efeito="mapa-globo"'), 'o globo é o modo inicial, dentro da seção de cobertura');
-  const controle = (secao.match(/<div[^>]*role="group"[^>]*>([\s\S]*?)<\/div>/) ?? [])[0] ?? '';
-  const botoes = [...controle.matchAll(/<button([^>]*)>([^<]*)<\/button>/g)].map((m) => [m[2], attr(`<button${m[1]}>`, 'aria-pressed')]);
-  assert.deepEqual(botoes, [['Globo', 'true'], ['Mapa', 'false']], 'controle com nome e estado para trocar de modo');
+  assert.ok(secao.includes('data-efeito="mapa-globo"'), 'o globo está dentro da seção de cobertura');
   assert.ok(!fs.existsSync(path.join(RAIZ, '.next/server/app/globo.html')), 'não existe página própria para o globo');
   const estilos = fs.readFileSync(path.join(RAIZ, 'src/efeitos/mapa/mapa.module.css'), 'utf8');
   assert.doesNotMatch(estilos, /100svh|100dvh|100vh/, 'o painel não ocupa a tela inteira');
   assert.match(estilos, /\.mapa \{[^}]*border-radius: var\(--raio-b\)/, 'painel arredondado, dentro da grade');
   const motor = fonte('mapa/motor.ts');
   assert.match(motor, /const ROLO = /, 'o globo é desenhado em ângulo');
+  assert.match(motor, /altura \* 0\.96 - y1 \* raio/, 'o Brasil fica embaixo, deixando a borda do globo à vista no alto');
 });

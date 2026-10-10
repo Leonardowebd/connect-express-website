@@ -13,7 +13,8 @@ export function Chamada() {
   return (
     <section aria-labelledby="titulo-chamada" className="sobre-escuro">
       <ExpansaoNaRolagem
-        midia={<Imagem id="chamada-final" tom="escuro" preencher sizes="100vw" />}
+        midia={<Imagem id="chamada-final" tom="escuro" preencher qualidade={90} sizes="(max-width: 767px) 240vw, 100vw" />}
+        zoom={1.15}
         titulo={
           <h2 id="titulo-chamada" className={styles.chamadaTitulo}>
             Pronto para entregar mais rápido?

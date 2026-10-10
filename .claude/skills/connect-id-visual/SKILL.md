@@ -71,6 +71,7 @@ As variações escuras existem por contraste. Conferir cada par com uma ferramen
 ### Contraste das cores de marca contra branco
 
 - Laranja `#F3570B`: cerca de 3,4:1. Serve para título grande (24 px ou mais, ou 18,66 px em negrito) e elementos gráficos. Não serve para texto pequeno.
+  - Exceção decidida pelo dono do projeto em 2026-10-10: **texto branco nos botões laranja** (`--cor-acao-texto`), em peso 600. O par fica em 3,4:1, abaixo dos 4,5:1 do AA para texto pequeno; se o cliente passar por auditoria de acessibilidade, a saída é usar `--cor-laranja-escuro` como fundo do botão.
 - Verde `#47A81B`: cerca de 3,1:1. Mesma restrição.
 - Azul `#0E7BD6`: cerca de 4,4:1. Abaixo do mínimo de 4,5:1 por pouco. Para texto corrido, usar o azul escuro.
 

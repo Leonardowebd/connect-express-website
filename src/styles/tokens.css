@@ -28,6 +28,14 @@
   --cor-branco-suave: rgb(255 255 255 / 0.86);
   --cor-branco-15: rgb(255 255 255 / 0.15);
   --cor-veu: rgb(23 66 10 / 0.62);
+  /* Sombras neutras, para dar leitura a texto sobre foto sem tingir de verde */
+  --cor-noite: #0e1311;
+  --cor-sombra-forte: rgb(10 14 12 / 0.62);
+  --cor-sombra: rgb(10 14 12 / 0.42);
+  --cor-sombra-suave: rgb(10 14 12 / 0.18);
+  /* Grão fino, para as áreas escuras não ficarem chapadas. É um arquivo pronto:
+     ruído gerado por filtro SVG a cada pintura deixava a página lenta. */
+  --textura-grao: url('/texturas/grao.png');
   --cor-erro: #b42318;
 
   /* Mapa de cobertura: verdes muito escuros, como um mapa noturno */
@@ -58,7 +66,8 @@
   --cor-borda: var(--cor-linha);
   --cor-borda-inversa: var(--cor-branco-15);
   --cor-acao: var(--cor-laranja);
-  --cor-acao-texto: var(--cor-tinta);
+  /* Texto branco nos botões laranja, por decisão do dono do projeto (contraste de 3,4:1). */
+  --cor-acao-texto: var(--cor-branco);
   --cor-destaque: var(--cor-laranja);
   --cor-destaque-texto: var(--cor-laranja-escuro);
   --cor-destaque-inverso: var(--cor-branco);

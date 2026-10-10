@@ -1,8 +1,7 @@
 'use client';
 
-// Mapa interativo de cobertura, dentro do painel da seção. Dois modos, que o
-// visitante alterna: "globo" (globo fixo sobre o Brasil, visto em ângulo) e
-// "plano" (Brasil em bloco inclinado).
+// Mapa interativo de cobertura, dentro do painel da seção: um globo fixo
+// sobre o Brasil, visto em ângulo.
 // O canvas é decorativo para leitores de tela: a lista de botões dos estados
 // e o cartão dão o mesmo conteúdo em texto, com teclado e com toque.
 // Os contornos só são baixados quando o mapa chega perto da tela.
@@ -19,12 +18,10 @@ import {
   type Caminhao,
   type Cena,
   type Cores,
-  type Modo,
 } from './mapa/motor';
 import styles from './mapa/mapa.module.css';
 
 type Props = {
-  modoInicial?: Modo;
   estados: { uf: string; nome: string }[];
   total: number;
   className?: string;
@@ -46,13 +43,7 @@ const TOKENS: Record<keyof Cores, string> = {
   linha: '--mapa-linha',
 };
 
-const MODOS: { modo: Modo; rotulo: string }[] = [
-  { modo: 'globo', rotulo: 'Globo' },
-  { modo: 'plano', rotulo: 'Mapa' },
-];
-
-export function MapaCobertura({ modoInicial = 'globo', estados, total, className = '' }: Props) {
-  const [modo, setModo] = useState<Modo>(modoInicial);
+export function MapaCobertura({ estados, total, className = '' }: Props) {
   const raiz = useRef<HTMLDivElement>(null);
   const tela = useRef<HTMLCanvasElement>(null);
   const [apontado, setApontado] = useState<string | null>(null);
@@ -119,7 +110,6 @@ export function MapaCobertura({ modoInicial = 'globo', estados, total, className
         c.height = Math.round(altura * densidade);
       }
       cena = montarCena({
-        modo,
         largura,
         altura,
         ufs: dados.ufs,
@@ -161,7 +151,7 @@ export function MapaCobertura({ modoInicial = 'globo', estados, total, className
       try {
         const [ufs, terra] = await Promise.all([
           fetch('/dados/brasil-ufs.json').then((r) => r.json() as Promise<Dados['ufs']>),
-          modo === 'globo' ? fetch('/dados/terra.json').then((r) => r.json() as Promise<Anel[]>) : Promise.resolve([]),
+          fetch('/dados/terra.json').then((r) => r.json() as Promise<Anel[]>),
         ]);
         if (cancelado) return;
         dados = { ufs, terra };
@@ -229,27 +219,19 @@ export function MapaCobertura({ modoInicial = 'globo', estados, total, className
       canvas.removeEventListener('pointerup', aoTocar);
       redesenhar.current = () => {};
     };
-  }, [modo]);
+  }, []);
 
   const base = ativo ? basesDoMapa.find((b) => b.uf === ativo) : undefined;
   const ehAtendido = ativo ? atendidos.current.has(ativo) : false;
-  const descricao = `Mapa do Brasil com os estados atendidos pela Connect Express Log em destaque: ${estados
+  const descricao = `Globo com o Brasil ao centro e os estados atendidos pela Connect Express Log em destaque: ${estados
     .map((e) => e.nome)
     .join(', ')}. Rotas ilustrativas ligam as bases aos estados.`;
 
   return (
-    <div ref={raiz} data-efeito={`mapa-${modo}`} className={`${styles.mapa} ${className}`.trim()}>
+    <div ref={raiz} data-efeito="mapa-globo" className={`${styles.mapa} ${className}`.trim()}>
       <canvas ref={tela} className={styles.tela} role="img" aria-label={descricao} />
 
       <div className={styles.painel}>
-        <div className={styles.modos} role="group" aria-label="Forma de ver a cobertura">
-          {MODOS.map((m) => (
-            <button key={m.modo} type="button" aria-pressed={modo === m.modo} onClick={() => setModo(m.modo)}>
-              {m.rotulo}
-            </button>
-          ))}
-        </div>
-
         <div className={styles.cartao} aria-live="polite">
           {ativo ? (
             <>

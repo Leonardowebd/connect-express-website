@@ -1,9 +1,12 @@
+import { Cpu, HandHeart, Handshake, Heartbeat, ShieldCheck, Timer } from '@phosphor-icons/react/dist/ssr';
 import { Revelar } from '@/animacoes/Revelar';
 import { Imagem } from '@/components/Imagem/Imagem';
 import { quemSomos, valores } from '@/data/inicio';
 import { TextoRevelado } from '@/efeitos/TextoRevelado';
 import { TrocaPixel } from '@/efeitos/TrocaPixel';
 import styles from './secoes.module.css';
+
+const ICONES_DOS_VALORES = [Heartbeat, ShieldCheck, Timer, Cpu, Handshake, HandHeart];
 
 export function Sobre() {
   return (
@@ -50,12 +53,16 @@ export function Sobre() {
 
         <h3 className={styles.subtituloSecao}>{valores.titulo}</h3>
         <Revelar emSequencia className={styles.valores}>
-          {valores.itens.map((v) => (
-            <article key={v.titulo} className={styles.cartao} data-valor="">
-              <h4>{v.titulo}</h4>
-              <p>{v.texto}</p>
-            </article>
-          ))}
+          {valores.itens.map((v, i) => {
+            const Icone = ICONES_DOS_VALORES[i % ICONES_DOS_VALORES.length];
+            return (
+              <article key={v.titulo} className={styles.cartao} data-valor="">
+                <Icone aria-hidden="true" weight="duotone" size={32} className={styles.icone} />
+                <h4>{v.titulo}</h4>
+                <p>{v.texto}</p>
+              </article>
+            );
+          })}
         </Revelar>
       </div>
     </section>

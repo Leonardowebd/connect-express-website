@@ -36,7 +36,7 @@ export const cabecalhosDeSeguranca = [
 const nextConfig = {
   trailingSlash: true,
   poweredByHeader: false,
-  images: { formats: ['image/avif', 'image/webp'] },
+  images: { formats: ['image/avif', 'image/webp'], qualities: [75, 90] },
   async headers() {
     const cabecalhos = [...cabecalhosDeSeguranca];
     // Pré-visualizações e o endereço vercel.app, antes do lançamento, não podem ser indexados.

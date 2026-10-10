@@ -1,18 +1,52 @@
+/* Pílula flutuante: fundo claro, borda fina, círculo verde com o ícone. */
+
 .botao {
   position: fixed;
   right: var(--espaco-4);
   bottom: calc(var(--espaco-4) + env(safe-area-inset-bottom));
   z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espaco-2);
+  min-height: 3.25rem;
+  padding: var(--espaco-1) var(--espaco-4) var(--espaco-1) var(--espaco-1);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-pilula);
+  background: var(--cor-branco);
+  box-shadow: 0 0.5rem 1.5rem var(--cor-sombra-suave);
+  color: var(--cor-tinta);
+  font-family: var(--fonte-titulo);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1;
+  transition:
+    transform var(--duracao-rapida) var(--curva),
+    border-color var(--duracao-rapida) var(--curva);
+}
+
+.icone {
   display: grid;
   place-items: center;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
   border-radius: 50%;
-  background: var(--cor-verde-escuro);
-  color: var(--cor-branco);
+  background: var(--cor-fundo-escuro);
+  color: var(--cor-texto-inverso);
   transition: transform var(--duracao-rapida) var(--curva);
 }
 
 .botao:hover {
-  transform: scale(1.06);
+  border-color: var(--cor-marca);
+  transform: translateY(-2px);
+}
+
+.botao:hover .icone {
+  transform: rotate(-8deg) scale(1.05);
+}
+
+@media (min-width: 1024px) {
+  .botao {
+    right: var(--espaco-8);
+    bottom: var(--espaco-8);
+  }
 }

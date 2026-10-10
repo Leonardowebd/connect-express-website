@@ -7,11 +7,22 @@
   flex: none;
   width: 3rem;
   height: 3rem;
-  border: 0;
+  border: 1px solid var(--cor-borda-inversa);
   border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Vidro com barras brancas, como as pílulas da navegação sobre a foto. */
+.botaoMenu {
+  background: var(--cor-borda-inversa);
+  color: var(--cor-texto-inverso);
+  backdrop-filter: blur(10px);
+}
+
+/* O botão de fechar fica sobre o painel verde: círculo branco, X escuro. */
+.botaoFechar {
   background: var(--cor-branco);
   color: var(--cor-tinta);
-  cursor: pointer;
 }
 
 .barras,
@@ -68,19 +79,44 @@
   overscroll-behavior: contain;
   visibility: hidden;
   opacity: 0;
-  transform: translateY(-0.75rem);
+  clip-path: inset(0 0 100% 0);
   transition:
-    opacity 220ms var(--curva),
-    transform 260ms var(--curva),
-    visibility 0s linear 260ms;
+    opacity 380ms var(--curva-suave),
+    clip-path 520ms var(--curva-suave),
+    visibility 0s linear 520ms;
+  --curva-suave: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .painel[data-aberto='true'] {
   visibility: visible;
   opacity: 1;
-  transform: none;
+  clip-path: inset(0);
   transition-delay: 0s;
 }
+
+/* Os itens sobem um pouco depois do painel, um após o outro. */
+.painel li,
+.painel .acoes {
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition:
+    opacity 420ms var(--curva-suave),
+    transform 520ms var(--curva-suave);
+}
+
+.painel[data-aberto='true'] li,
+.painel[data-aberto='true'] .acoes {
+  opacity: 1;
+  transform: none;
+  transition-delay: calc(120ms + var(--ordem, 0) * 45ms);
+}
+
+.lista li:nth-child(2) { --ordem: 1; }
+.lista li:nth-child(3) { --ordem: 2; }
+.lista li:nth-child(4) { --ordem: 3; }
+.lista li:nth-child(5) { --ordem: 4; }
+.atalhos li { --ordem: 5; }
+.painel .acoes { --ordem: 6; }
 
 .topo {
   display: flex;

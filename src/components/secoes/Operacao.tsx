@@ -1,8 +1,11 @@
+import { Lightning, MapPinArea, Pill, UsersThree } from '@phosphor-icons/react/dist/ssr';
 import { Revelar } from '@/animacoes/Revelar';
 import { Imagem } from '@/components/Imagem/Imagem';
 import { operacao, quemSomos } from '@/data/inicio';
 import { Pilula } from './Pilula';
 import styles from './secoes.module.css';
+
+const ICONES = [Pill, MapPinArea, Lightning, UsersThree];
 
 /** Por que a Connect: painel claro com os tópicos em cartões numerados e uma colagem com a métrica. */
 export function Operacao() {
@@ -16,17 +19,20 @@ export function Operacao() {
           </h2>
           <p className="texto-suave">{quemSomos.paragrafos[1]}</p>
           <Revelar emSequencia className={styles.topicos}>
-            {operacao.itens.map((item, i) => (
-              <article key={item.titulo} className={styles.topico} data-topico="">
-                <p className={styles.topicoSelo} aria-hidden="true">
-                  {i + 1}
-                </p>
+            {operacao.itens.map((item, i) => {
+              const Icone = ICONES[i % ICONES.length];
+              return (
+                <article key={item.titulo} className={styles.topico} data-topico="">
+                  <p className={styles.topicoSelo}>
+                    <Icone aria-hidden="true" weight="duotone" size={20} />
+                  </p>
                 <div>
                   <h3>{item.titulo}</h3>
                   <p className="texto-suave">{item.texto}</p>
                 </div>
-              </article>
-            ))}
+                </article>
+              );
+            })}
           </Revelar>
           <Pilula href="/#contato">Pedir cotação</Pilula>
         </div>

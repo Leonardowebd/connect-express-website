@@ -99,8 +99,25 @@ textarea {
 }
 
 .rotulo {
-  font-size: var(--tam-pequeno);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espaco-2);
+  font-family: var(--fonte-titulo);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
   color: var(--cor-texto-suave);
+}
+
+.rotulo::before {
+  content: '';
+  flex: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--cor-marca);
 }
 
 .secao-escura .rotulo {
@@ -182,7 +199,7 @@ textarea {
   border-radius: var(--raio-controle);
   font-family: var(--fonte-titulo);
   font-size: var(--tam-texto);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
   cursor: pointer;
   transition:

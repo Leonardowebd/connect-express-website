@@ -1,3 +1,4 @@
+import { Flask, Motorcycle, Package, Pill } from '@phosphor-icons/react/dist/ssr';
 import { Revelar } from '@/animacoes/Revelar';
 import { Imagem } from '@/components/Imagem/Imagem';
 import { solucoes } from '@/data/inicio';
@@ -5,6 +6,13 @@ import { servicos } from '@/data/servicos';
 import { ObservaPrevias } from '@/efeitos/ObservaPrevias';
 import { Pilula } from './Pilula';
 import styles from './secoes.module.css';
+
+const ICONES: Record<string, typeof Pill> = {
+  'entrega-expressa-de-medicamentos': Pill,
+  'transporte-de-materiais-biologicos': Flask,
+  'entregas-rapidas-com-motoboy': Motorcycle,
+  'transporte-e-logistica-para-e-commerce': Package,
+};
 
 /**
  * Cada solução tem uma imagem de prévia.
@@ -23,9 +31,12 @@ export function Solucoes() {
         </div>
         <ObservaPrevias>
           <Revelar emSequencia className={styles.linhas}>
-            {servicos.map((s) => (
+            {servicos.map((s) => {
+              const Icone = ICONES[s.slug] ?? Package;
+              return (
               <article key={s.slug} className={styles.linha} data-solucao={s.slug}>
-                <div>
+                <div className={styles.linhaTexto}>
+                  <Icone aria-hidden="true" weight="duotone" size={36} className={styles.icone} />
                   <h3>{s.nome}</h3>
                   <p className="texto-suave">{s.resumo}</p>
                 </div>
@@ -36,7 +47,8 @@ export function Solucoes() {
                   Ver solução<span className="so-leitor">: {s.nome}</span>
                 </Pilula>
               </article>
-            ))}
+              );
+            })}
           </Revelar>
         </ObservaPrevias>
       </div>
