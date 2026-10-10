@@ -1034,7 +1034,18 @@
 
 .declaracao {
   max-width: 24ch;
-  margin-bottom: var(--espaco-12);
+}
+
+.sobreTexto {
+  display: grid;
+  gap: var(--espaco-6);
+  order: -1;
+}
+
+@media (min-width: 1024px) {
+  .sobreTexto {
+    order: 0;
+  }
 }
 
 /* Troca entre a foto e os números */

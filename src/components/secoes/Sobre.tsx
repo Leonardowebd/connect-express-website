@@ -38,8 +38,6 @@ export function Sobre() {
 
       <div className="secao">
       <div className="conteudo">
-        <TextoRevelado className={styles.declaracao}>{quemSomos.declaracao}</TextoRevelado>
-
         <Revelar className={styles.sobre}>
           <div className={styles.sobreTroca}>
             <TrocaPixel
@@ -61,10 +59,14 @@ export function Sobre() {
             />
             <p className={styles.dica}>Toque na imagem para ver os números.</p>
           </div>
-          <div className="prosa texto-suave">
-            {quemSomos.paragrafos.slice(0, 1).map((p) => (
-              <p key={p}>{p}</p>
-            ))}
+          {/* Declaração e texto juntos: ao lado da foto no computador, acima dela no celular. */}
+          <div className={styles.sobreTexto}>
+            <TextoRevelado className={styles.declaracao}>{quemSomos.declaracao}</TextoRevelado>
+            <div className="prosa texto-suave">
+              {quemSomos.paragrafos.slice(0, 1).map((p) => (
+                <p key={p}>{p}</p>
+              ))}
+            </div>
           </div>
         </Revelar>
 
