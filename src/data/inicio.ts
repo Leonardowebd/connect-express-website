@@ -30,7 +30,12 @@ export const quemSomos = {
   paragrafos: [
     'A Connect Express Log é uma transportadora especializada em logística para a saúde. Atende redes de farmácias, laboratórios, clínicas, hospitais e lojas virtuais com entregas rápidas, rastreadas e dentro das normas da ANVISA e da ANTT.',
     'A operação tem matriz em Lauro de Freitas, na Bahia, filial em São Paulo e centros de distribuição em São Paulo e no Rio de Janeiro. São 10 estados atendidos, cerca de 450 motoboys e mais de 100 farmácias na rotina diária.',
-    'O trabalho é um só: fazer a urgência da saúde encontrar a precisão da logística.',
+  ],
+  declaracao: 'O trabalho é um só: fazer a urgência da saúde encontrar a precisão da logística.',
+  fatos: [
+    { valor: '10', legenda: 'estados' },
+    { valor: '+100', legenda: 'farmácias' },
+    { valor: '450', legenda: 'motoboys' },
   ],
 };
 

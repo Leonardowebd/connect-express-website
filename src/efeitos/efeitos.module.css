@@ -1,0 +1,205 @@
+/*
+  Estilos dos efeitos. Regras de uso: .claude/skills/connect-smart-effects.
+  Só tokens de cor. Só transform, opacity, clip-path e filter são animados.
+*/
+
+/* Texto revelado */
+
+.textoRevelado {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.5rem, 1.1rem + 2vw, 2.75rem);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: var(--letras-titulo);
+  text-wrap: balance;
+}
+
+.palavra {
+  display: inline-block;
+}
+
+/* Desfoque gradual */
+
+.desfoqueGradual {
+  position: absolute;
+  pointer-events: none;
+  isolation: isolate;
+}
+
+.camadaDeDesfoque {
+  position: absolute;
+  inset: 0;
+}
+
+/* Navegadores sem backdrop-filter recebem um véu simples. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .camadaDeDesfoque {
+    background: var(--cor-veu);
+  }
+
+  .camadaDeDesfoque:not(:last-child) {
+    display: none;
+  }
+}
+
+/* Cada camada é um backdrop-filter: em tela pequena, três bastam. */
+@media (max-width: 767px) {
+  .camadaDeDesfoque:nth-child(n + 4) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .desfoqueGradual {
+    display: none;
+  }
+}
+
+/* Troca por pixels */
+
+.troca {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: var(--raio-cartao);
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  cursor: pointer;
+}
+
+.trocaPalco {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  isolation: isolate;
+}
+
+.trocaCamada {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.trocaCamada[data-visivel='false'] {
+  visibility: hidden;
+}
+
+.trocaGrade {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.trocaPixel {
+  position: absolute;
+  overflow: hidden;
+  opacity: 0;
+  contain: paint;
+}
+
+.trocaConteudoDoPixel {
+  position: absolute;
+}
+
+/* Expansão na rolagem */
+
+.expansao {
+  position: relative;
+  width: 100%;
+}
+
+/*
+  Estado padrão, sem JavaScript ou com movimento reduzido: mídia aberta,
+  título no alto, conteúdo e botão visíveis logo abaixo.
+*/
+.expansaoPalco {
+  position: relative;
+  display: grid;
+  min-height: 32rem;
+  overflow: hidden;
+}
+
+.expansaoMoldura {
+  position: absolute;
+  inset: 0;
+  background: var(--cor-fundo-escuro-2);
+}
+
+.expansaoMidia {
+  position: absolute;
+  inset: 0;
+  transform-origin: center;
+}
+
+.expansaoVeu {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to top, var(--cor-fundo-escuro-2), var(--cor-veu) 55%, var(--cor-veu));
+}
+
+.expansaoConteudo {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--espaco-6);
+  padding: var(--espaco-8) var(--margem-lateral) var(--espaco-16);
+  color: var(--cor-texto-inverso);
+  text-align: center;
+}
+
+.expansaoTitulo {
+  position: absolute;
+  inset: var(--espaco-16) 0 auto;
+  display: flex;
+  justify-content: center;
+  padding-inline: var(--margem-lateral);
+  color: var(--cor-texto-inverso);
+  text-align: center;
+  pointer-events: none;
+}
+
+/* Com o efeito ligado pelo script. */
+/* O palco é verde para o título branco ser legível também fora da moldura. */
+.expansao[data-pronto] .expansaoPalco {
+  position: sticky;
+  top: 0;
+  min-height: 0;
+  background: var(--cor-fundo-escuro);
+}
+
+.expansao[data-pronto] .expansaoMoldura {
+  will-change: clip-path;
+}
+
+.expansao[data-pronto] .expansaoMidia {
+  will-change: transform;
+}
+
+.expansao[data-pronto] .expansaoVeu {
+  opacity: 0;
+}
+
+.expansao[data-pronto] .expansaoConteudo {
+  justify-content: center;
+  padding-bottom: var(--espaco-8);
+  opacity: 0;
+  visibility: hidden;
+  will-change: opacity, transform;
+}
+
+.expansao[data-pronto] .expansaoTitulo {
+  inset: 0;
+  align-items: center;
+  will-change: opacity, transform;
+}

@@ -1,6 +1,8 @@
 import { Revelar } from '@/animacoes/Revelar';
 import { Imagem } from '@/components/Imagem/Imagem';
 import { quemSomos, valores } from '@/data/inicio';
+import { TextoRevelado } from '@/efeitos/TextoRevelado';
+import { TrocaPixel } from '@/efeitos/TrocaPixel';
 import styles from './secoes.module.css';
 
 export function Sobre() {
@@ -16,8 +18,30 @@ export function Sobre() {
           </div>
           <p className="texto-g">{quemSomos.chamada}</p>
         </div>
+
+        <TextoRevelado className={styles.declaracao}>{quemSomos.declaracao}</TextoRevelado>
+
         <Revelar className={styles.sobre}>
-          <Imagem id="quem-somos" sizes="(min-width: 1024px) 45vw, 100vw" />
+          <div className={styles.sobreTroca}>
+            <TrocaPixel
+              rotulo="Alternar entre a foto da equipe e os números da operação"
+              proporcao="3 / 2"
+              padrao="diagonal"
+              aleatoriedade={0.35}
+              primeiro={<Imagem id="quem-somos" preencher sizes="(min-width: 1024px) 45vw, 100vw" />}
+              segundo={
+                <dl className={styles.sobreFatos}>
+                  {quemSomos.fatos.map((f) => (
+                    <div key={f.legenda}>
+                      <dt>{f.legenda}</dt>
+                      <dd>{f.valor}</dd>
+                    </div>
+                  ))}
+                </dl>
+              }
+            />
+            <p className={styles.dica}>Toque na imagem para ver os números.</p>
+          </div>
           <div className="prosa texto-suave">
             {quemSomos.paragrafos.slice(1).map((p) => (
               <p key={p}>{p}</p>

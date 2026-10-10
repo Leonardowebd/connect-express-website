@@ -46,7 +46,7 @@ Um único conjunto, em SVG embutido, traço de mesma espessura. Ícone decorativ
 
 ## Movimento
 
-Animação feita com GSAP. As regras de código estão em `connect-frontend`.
+Animação feita com GSAP. As regras de código estão em `connect-frontend`. Para decidir se um efeito entra, onde e como otimizar, use `connect-smart-effects`.
 
 - Transições de estado (hover, foco, abrir menu): 150 a 300 ms, em CSS.
 - Entradas de seção ao rolar: 0,3 a 0,8 s, deslocamento de até 24 px, uma vez só.

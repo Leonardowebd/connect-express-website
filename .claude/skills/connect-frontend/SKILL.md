@@ -70,6 +70,7 @@ next.config.ts                    cabeçalhos de segurança, cache e redireciona
 - Pontos de quebra dentro do `matchMedia`, alinhados aos de `connect-responsive`.
 - Sem rolagem sequestrada, sem `pin` em seção longa no celular, sem suavização de rolagem.
 - Duração entre 0,3 e 0,8 s para entradas; `ease: 'power2.out'` como padrão. Definir duração e curva em um arquivo de constantes.
+- Efeitos maiores (texto revelado, desfoque gradual, troca por pixels, expansão na rolagem, prévia das soluções) ficam em `src/efeitos/` e seguem a skill `connect-smart-effects`.
 - Componentes prontos em `animacoes/`: `Revelar` (entrada ao rolar), `Contador` (número que sobe) e `Escalonar` (entrada em sequência de filhos). Seções usam esses, não escrevem linha do tempo própria.
 - O `Contador` mostra o número final no HTML; a animação só troca o texto durante a contagem.
 

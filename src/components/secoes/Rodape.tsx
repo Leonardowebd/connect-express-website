@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { contatos, empresa, enderecos, redes } from '@/data/empresa';
 import { servicos } from '@/data/servicos';
+import { DesfoqueGradual } from '@/efeitos/DesfoqueGradual';
 import styles from './secoes.module.css';
 
 export function Rodape() {
@@ -82,6 +83,7 @@ export function Rodape() {
         <p className={styles.letreiro} aria-hidden="true">
           Connect Express
         </p>
+        <DesfoqueGradual posicao="bottom" tamanho="5rem" forca={1.5} camadas={4} />
       </div>
     </footer>
   );

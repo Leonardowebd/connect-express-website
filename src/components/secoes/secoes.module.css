@@ -404,28 +404,21 @@
   text-decoration: none;
 }
 
-/* Chamada sobre foto */
+/* Chamada final (o palco é do efeito de expansão) */
 
-.chamada {
-  position: relative;
-  display: flex;
-  align-items: center;
-  min-height: 24rem;
-  padding: var(--espaco-12) var(--espaco-6);
-  border-radius: var(--raio-b);
-  overflow: hidden;
-  background: var(--cor-fundo-escuro-2);
-  color: var(--cor-texto-inverso);
-  isolation: isolate;
+.chamadaTitulo {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(2rem, 1.2rem + 4vw, 5rem);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  max-width: 14ch;
+  text-wrap: balance;
 }
 
 .chamadaTexto {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  gap: var(--espaco-4);
-  justify-items: start;
   max-width: 34rem;
+  font-size: var(--tam-texto-g);
 }
 
 /* Rodapé com letreiro */
@@ -526,10 +519,6 @@
 
   .cartoes {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .chamada {
-    padding: var(--espaco-16) var(--espaco-12);
   }
 
   .rodape {
@@ -862,5 +851,132 @@
 
   .contato {
     grid-template-columns: 5fr 7fr;
+  }
+}
+
+/* Rodapé: a faixa de desfoque fica sob as colunas, sobre o letreiro. */
+.rodape {
+  position: relative;
+}
+
+/* Declaração em destaque, revelada palavra a palavra */
+
+.declaracao {
+  max-width: 24ch;
+  margin-bottom: var(--espaco-12);
+}
+
+/* Troca entre a foto e os números */
+
+.sobreTroca {
+  display: grid;
+  gap: var(--espaco-2);
+}
+
+.sobreFatos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: center;
+  gap: var(--espaco-4);
+  height: 100%;
+  margin: 0;
+  padding: var(--espaco-6);
+  background: var(--cor-fundo-escuro);
+  color: var(--cor-texto-inverso);
+  text-align: center;
+}
+
+.sobreFatos div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--espaco-1);
+}
+
+.sobreFatos dd {
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.75rem, 1.2rem + 2.4vw, 3.25rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.sobreFatos dt {
+  font-size: var(--tam-pequeno);
+  color: var(--cor-texto-inverso-suave);
+}
+
+.dica {
+  font-size: 0.8125rem;
+  color: var(--cor-texto-suave);
+}
+
+/*
+  Prévia de imagem das soluções.
+  Padrão (toque, ou tela estreita): dentro da linha, com espaço reservado,
+  revelada pela rolagem. Sem JavaScript, fica sempre visível.
+*/
+
+.previa {
+  width: 100%;
+  max-width: 28rem;
+}
+
+/*
+  O recorte fica no filho, não na própria prévia: um elemento recortado por
+  inteiro nunca conta como visível para o observador de rolagem.
+*/
+.previa > * {
+  clip-path: inset(0 round var(--raio-cartao));
+  transition:
+    clip-path 700ms var(--curva),
+    opacity 500ms var(--curva);
+}
+
+[data-pronto] .previa:not([data-visivel]) > * {
+  clip-path: inset(0 0 100% 0 round var(--raio-cartao));
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .linha .previa {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+/* Com mouse e tela larga: a prévia flutua, inclinada, sobre a linha em foco. */
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+  .linha {
+    position: relative;
+  }
+
+  .linha .previa > *,
+  [data-pronto] .linha .previa:not([data-visivel]) > * {
+    clip-path: none;
+    opacity: 1;
+  }
+
+  .linha .previa {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    z-index: 2;
+    width: 17rem;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) rotate(-10deg) scale(0.86);
+    transition:
+      opacity 260ms var(--curva),
+      transform 420ms var(--curva);
+  }
+
+  .linha:hover .previa,
+  .linha:focus-within .previa {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(-6deg) scale(1);
+  }
+
+  .linha:hover,
+  .linha:focus-within {
+    z-index: 1;
   }
 }

@@ -308,6 +308,41 @@ Como equipe do projeto, quero publicar o site sem as fotos definitivas e trocá-
 - **Quando** coloco o arquivo final com o nome previsto na pasta de imagens
 - **Então** o site passa a usar a imagem final sem alteração de layout ou de código de página
 
+### US-015 - Ver efeitos que ajudam, sem atrapalhar
+
+Como visitante, quero que os efeitos visuais do site funcionem no meu aparelho e não escondam nada, para que eu veja todo o conteúdo no celular, no teclado ou com movimento reduzido.
+
+#### AC-043 - A frase em destaque aparece palavra a palavra sem deixar de ser texto
+
+- **Dado** a seção Quem Somos
+- **Quando** rolo até a frase em destaque
+- **Então** ela ganha nitidez palavra a palavra, e o texto completo está na página mesmo sem o efeito
+
+#### AC-044 - Cada solução mostra uma imagem, com mouse ou com toque
+
+- **Dado** a lista de soluções
+- **Quando** passo o mouse ou o foco sobre uma solução no computador, ou rolo até ela no celular
+- **Então** a imagem daquela solução aparece (com espaço reservado no celular, sem empurrar o conteúdo)
+
+#### AC-045 - A chamada final se abre com a rolagem e o botão nunca some
+
+- **Dado** a chamada final de cotação
+- **Quando** rolo a página
+- **Então** a foto se abre até ocupar a tela e mostra o botão de cotação
+- **E** sem o efeito, o título, o texto e o botão já aparecem
+
+#### AC-046 - A troca entre foto e números funciona por toque e por teclado
+
+- **Dado** a foto da seção Quem Somos
+- **Quando** toco ou aciono pelo teclado
+- **Então** ela troca pelos números da operação, e o controle informa seu nome e seu estado
+
+#### AC-047 - Os efeitos respeitam quem pede menos movimento
+
+- **Dado** um visitante com movimento reduzido ativado
+- **Quando** abre o site
+- **Então** nenhum efeito anima nem prende a rolagem, e o conteúdo aparece no estado final
+
 ## Fora de escopo
 
 - Blog (no site atual o link aponta para `#`).
@@ -337,6 +372,7 @@ Como equipe do projeto, quero publicar o site sem as fotos definitivas e trocá-
 | ASM-014 | A versão B cobre só a página inicial, em `/b/`, com o layout do nó 1-10 do Figma (Cargomaxis) e as cores da marca. As páginas internas continuam no layout A até a escolha. | confirmada | Versão B escolhida e promovida a site principal em 2026-10-10. Ver ASM-016. |
 | ASM-015 | A versão C cobre só a página inicial, em `/c/`, com o layout do nó 1-8 do Figma (SwiftMove) e as cores da marca. | invalidada | Versão C descartada pelo dono do projeto em 2026-10-10. |
 | ASM-016 | O layout do site é o da versão B (referência Cargomaxis, nó 1-10 do Figma), em todas as páginas. As versões A e C saíram do código. | confirmada | Escolha do dono do projeto em 2026-10-10. |
+| ASM-017 | Os quatro efeitos pedidos pelo dono do projeto vêm do React Bits e foram adaptados. A licença da biblioteca precisa ser conferida antes da entrega ao cliente. | aberta | - |
 
 ## Perguntas em aberto
 

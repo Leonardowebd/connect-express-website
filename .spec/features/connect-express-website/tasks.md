@@ -121,3 +121,16 @@
 - Refs: US-012, US-002, AC-005
 - Arquivos: src/app/(site)/paginas.module.css, src/app/(site)/servicos/[slug]/page.tsx, src/app/(site)/servicos/[slug]/pagina.module.css, src/app/(site)/trabalhe-conosco/page.tsx, src/app/(site)/politica-de-privacidade/page.tsx
 - Notas: Skills connect-design-concept, connect-ui-design. O dono do projeto escolheu a versão B (referência Cargomaxis, nó 1-10 do Figma) em 2026-10-10. As versões A e C saíram do código. Páginas internas com o mesmo cabeçalho, rodapé, pílulas e cartões arredondados.
+
+## T-021 - Skill de smart effects e os quatro efeitos [concluida]
+
+- Refs: US-015, AC-043, AC-045, AC-046, AC-047
+- Arquivos: .claude/skills/connect-smart-effects/SKILL.md, src/efeitos/TextoRevelado.tsx, src/efeitos/DesfoqueGradual.tsx, src/efeitos/TrocaPixel.tsx, src/efeitos/ExpansaoNaRolagem.tsx, src/efeitos/efeitos.module.css, src/components/secoes/Chamada.tsx, tests/us-015-efeitos.test.mjs
+- Notas: Skill connect-smart-effects. Efeitos do React Bits adaptados: texto revelado na declaração de Quem Somos, desfoque gradual no herói e no rodapé, troca por pixels na foto de Quem Somos, expansão na rolagem na chamada final.
+
+## T-022 - Prévia de imagem das soluções, com mouse e com toque [concluida]
+
+- Refs: US-015, AC-044
+- Arquivos: src/efeitos/ObservaPrevias.tsx
+- Notas: Skill connect-smart-effects. Com mouse, a imagem flutua inclinada sobre a linha em foco, só com CSS. Em toque, fica dentro da linha e aparece com a rolagem.
+

@@ -1,11 +1,11 @@
 {
   "feature": "connect-express-website",
-  "timestamp": "2026-10-10T19:15:59.175Z",
-  "gitRev": "a6f474b",
+  "timestamp": "2026-10-10T19:46:52.129Z",
+  "gitRev": "3fe9db0",
   "command": "npm run build --silent 1>&2 && node --test --test-reporter=tap tests/*.test.mjs",
   "reporter": "tap",
   "exitCode": 0,
-  "testsParsed": 39,
+  "testsParsed": 44,
   "results": {
     "AC-001": {
       "status": "pass",
@@ -200,6 +200,31 @@
     "AC-039": {
       "status": "pass",
       "testName": "@spec:AC-039 trocar uma imagem é trocar um arquivo",
+      "method": "tap"
+    },
+    "AC-043": {
+      "status": "pass",
+      "testName": "@spec:AC-043 a frase em destaque aparece palavra a palavra sem deixar de ser texto",
+      "method": "tap"
+    },
+    "AC-044": {
+      "status": "pass",
+      "testName": "@spec:AC-044 cada solução mostra uma imagem, com mouse ou com toque",
+      "method": "tap"
+    },
+    "AC-045": {
+      "status": "pass",
+      "testName": "@spec:AC-045 a chamada final se abre com a rolagem e o botão nunca some",
+      "method": "tap"
+    },
+    "AC-046": {
+      "status": "pass",
+      "testName": "@spec:AC-046 a troca entre foto e números funciona por toque e por teclado",
+      "method": "tap"
+    },
+    "AC-047": {
+      "status": "pass",
+      "testName": "@spec:AC-047 os efeitos respeitam quem pede menos movimento",
       "method": "tap"
     }
   },
