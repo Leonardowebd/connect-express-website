@@ -105,7 +105,9 @@ Enquanto o cliente não escolhe, existem duas direções para a página inicial,
 - **Versão A**, em `/`: a tradução da referência CargoKite descrita acima. Cantos retos, mosaico, tipografia grande.
 - **Versão B**, em `/b/`: a referência Cargomaxis (nó `1-10` do Figma). Blocos em cartões bem arredondados, navegação em pílulas sobre a foto do herói, caixa de vidro com o título, fatos rápidos com os números à direita, faixa de clientes, soluções em linhas com botão em pílula, bloco arredondado de diferenciais, cobertura em foto e cartões, chamada sobre foto e rodapé com letreiro. Componentes em `src/components/b/`.
 
-A versão B fica fora dos buscadores. Depois da escolha, a outra sai do código.
+- **Versão C**, em `/c/`: a referência SwiftMove (nó `1-8` do Figma). Cabeçalho dentro do cartão do herói, texto centralizado, letreiro "Connect" atrás do herói e no rodapé, números ligados por pontos, títulos em caixa alta e peso forte, solução em destaque com três blocos de foto, painel claro com cartão de métrica, cartões de solução com etiqueta, setores atendidos sobre foto, clientes em cartões. Componentes em `src/components/c/`.
+
+As versões B e C ficam fora dos buscadores. Depois da escolha, as outras saem do código.
 
 ## Movimento
 

@@ -1,11 +1,11 @@
 {
   "feature": "connect-express-website",
-  "timestamp": "2026-10-10T18:32:14.502Z",
-  "gitRev": "3a86a82",
+  "timestamp": "2026-10-10T18:56:33.862Z",
+  "gitRev": "aaf35d4",
   "command": "npm run build --silent 1>&2 && node --test --test-reporter=tap tests/*.test.mjs",
   "reporter": "tap",
   "exitCode": 0,
-  "testsParsed": 41,
+  "testsParsed": 42,
   "results": {
     "AC-001": {
       "status": "pass",
@@ -210,6 +210,11 @@
     "AC-041": {
       "status": "pass",
       "testName": "@spec:AC-041 a versão B não concorre com a oficial nos buscadores",
+      "method": "tap"
+    },
+    "AC-042": {
+      "status": "pass",
+      "testName": "@spec:AC-042 a versão C mostra o mesmo conteúdo em um terceiro layout",
       "method": "tap"
     }
   },

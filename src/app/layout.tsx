@@ -11,7 +11,7 @@ import './globals.css';
 // serve pelo próprio domínio.
 const geologica = Geologica({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
   variable: '--fonte-geologica',
 });

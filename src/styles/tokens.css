@@ -94,6 +94,9 @@
   /* Versão B: cartões bem arredondados e botões em pílula */
   --raio-b: 1.75rem;
   --raio-pilula: 999px;
+  /* Versão C: cartões e botões de canto médio */
+  --raio-c: 1.25rem;
+  --raio-c-controle: 0.5rem;
   --toque-minimo: 2.75rem;
 
   /* Movimento */

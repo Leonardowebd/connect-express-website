@@ -324,6 +324,13 @@ Como dono do projeto, quero ver a página inicial em um segundo layout, com o me
 - **Quando** um buscador a encontra
 - **Então** ela pede para não ser indexada, aponta a página inicial como endereço oficial e não aparece no mapa de páginas
 
+#### AC-042 - A versão C mostra o mesmo conteúdo em um terceiro layout
+
+- **Dado** o endereço `/c/`
+- **Quando** abro a página
+- **Então** vejo a página inicial no layout da referência SwiftMove, com um único título principal, os números da operação, as quatro soluções com link, a cobertura com os estados, os clientes, as perguntas frequentes e o formulário de cotação
+- **E** ela pede para não ser indexada, aponta a página inicial como endereço oficial e não aparece no mapa de páginas
+
 ## Fora de escopo
 
 - Blog (no site atual o link aponta para `#`).
@@ -351,6 +358,7 @@ Como dono do projeto, quero ver a página inicial em um segundo layout, com o me
 | ASM-010 | O site é só em português do Brasil. | aberta | - |
 | ASM-013 | Paleta "verde domina": os blocos fortes usam o verde da marca, o laranja fica para botões e destaques, o azul para links e detalhes, e o preto só para texto. | confirmada | Escolha do dono do projeto em 2026-10-10. |
 | ASM-014 | A versão B cobre só a página inicial, em `/b/`, com o layout do nó 1-10 do Figma (Cargomaxis) e as cores da marca. As páginas internas continuam no layout A até a escolha. | confirmada | Escolha do dono do projeto em 2026-10-10. |
+| ASM-015 | A versão C cobre só a página inicial, em `/c/`, com o layout do nó 1-8 do Figma (SwiftMove) e as cores da marca. Depoimentos da referência foram trocados por cartões de clientes, porque não há depoimentos autorizados. | aberta | - |
 
 ## Perguntas em aberto
 

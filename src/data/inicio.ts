@@ -148,3 +148,13 @@ export const contatoSecao = {
   titulo: 'Peça uma cotação',
   texto: 'Conte como é a sua operação. O comercial responde com uma proposta para o seu volume e a sua região.',
 };
+
+// Públicos atendidos, reunidos do campo "paraQuem" das soluções.
+export const publicos = [
+  'Redes de farmácias',
+  'Distribuidoras de medicamentos',
+  'Laboratórios',
+  'Clínicas e hospitais',
+  'Lojas virtuais e marketplaces',
+  'Empresas e comércios',
+];

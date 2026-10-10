@@ -119,6 +119,14 @@ export const imagens: EspacoDeImagem[] = [
     alt: 'Motos da Connect Express Log saindo para rota ao amanhecer',
     pedido: 'Foto panorâmica, escura o bastante para texto branco por cima, com a frota ou a base em atividade.',
   },
+  {
+    id: 'setores',
+    arquivo: 'setores.webp',
+    largura: 2400,
+    altura: 1200,
+    alt: 'Balcão de farmácia com pedidos separados para entrega',
+    pedido: 'Foto horizontal de farmácia, laboratório ou clínica atendidos, com área escura à direita para texto branco.',
+  },
 ];
 
 export const buscarImagem = (id: string) => {

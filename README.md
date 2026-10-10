@@ -58,8 +58,9 @@ Enquanto a variável `SITE_NO_AR` não for `sim` na Vercel, o site responde com 
 
 - Versão A: `/`, layout editorial (referência CargoKite).
 - Versão B: `/b/`, só a página inicial, layout em cartões arredondados (referência Cargomaxis, nó 1-10 do Figma).
+- Versão C: `/c/`, só a página inicial, títulos em caixa alta e letreiro (referência SwiftMove, nó 1-8 do Figma).
 
-As duas usam os mesmos dados de `src/data/`. Depois da escolha, a versão descartada sai do código.
+As três usam os mesmos dados de `src/data/`. Depois da escolha, as versões descartadas saem do código.
 
 ## Pendências antes de ir ao ar
 

@@ -122,3 +122,8 @@
 - Arquivos: src/app/b/page.tsx, src/app/b/layout.tsx, src/app/(site)/layout.tsx, src/app/(site)/page.tsx, src/app/(site)/paginas.module.css, src/app/(site)/servicos/[slug]/page.tsx, src/app/(site)/servicos/[slug]/pagina.module.css, src/app/(site)/trabalhe-conosco/page.tsx, src/app/(site)/politica-de-privacidade/page.tsx, src/components/b/b.module.css, src/components/b/Pilula.tsx, src/components/b/CabecalhoB.tsx, src/components/b/HeroiB.tsx, src/components/b/FatosB.tsx, src/components/b/SolucoesB.tsx, src/components/b/OperacaoB.tsx, src/components/b/CoberturaB.tsx, src/components/b/ChamadaB.tsx, src/components/b/RodapeB.tsx, tests/us-014-versao-b.test.mjs
 - Notas: Skills connect-design-concept, connect-ui-design. Layout da referência Cargomaxis (nó 1-10 do Figma): cartões arredondados, navegação em pílulas sobre a foto, soluções em linhas, rodapé com letreiro. As rotas da versão A foram para o grupo (site), sem mudar de endereço.
 
+## T-020 - Versão C da página inicial em /c/ [concluida]
+
+- Refs: US-014, AC-042
+- Arquivos: src/app/c/page.tsx, src/app/c/layout.tsx, src/components/c/c.module.css, src/components/c/Botao.tsx, src/components/c/HeroiC.tsx, src/components/c/NumerosC.tsx, src/components/c/DestaqueC.tsx, src/components/c/SobMedidaC.tsx, src/components/c/SolucoesC.tsx, src/components/c/SetoresC.tsx, src/components/c/ClientesC.tsx, src/components/c/ChamadaC.tsx, src/components/c/RodapeC.tsx
+- Notas: Skills connect-design-concept, connect-ui-design. Layout da referência SwiftMove (nó 1-8 do Figma): cabeçalho dentro do cartão do herói, letreiro atrás do herói e no rodapé, números ligados por pontos, solução em destaque com três blocos de foto, painel claro com métrica, cartões de solução com etiqueta, setores sobre foto.
