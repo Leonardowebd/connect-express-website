@@ -1,13 +1,13 @@
 ---
 name: connect-security
-description: Segurança do site da Connect Express Log - cabeçalhos na Vercel, política de conteúdo, formulários, segredos, dependências, LGPD e repositório privado. Use ao configurar `vercel.json`, ao criar ou alterar um formulário ou função de envio, ao adicionar script de terceiros ou dependência, ao lidar com variáveis de ambiente, ou antes de publicar.
+description: Segurança do site da Connect Express Log - cabeçalhos na Vercel, política de conteúdo, formulários, segredos, dependências, LGPD e repositório privado. Use ao configurar os cabeçalhos em `next.config.ts`, ao criar ou alterar um formulário ou função de envio, ao adicionar script de terceiros ou dependência, ao lidar com variáveis de ambiente, ou antes de publicar.
 ---
 
 # Segurança: Connect Express Log
 
 Site institucional estático na Vercel, com dois formulários. A superfície é pequena: cabeçalhos, formulários, terceiros, segredos e dados pessoais.
 
-## Cabeçalhos (em `vercel.json`, para todas as rotas)
+## Cabeçalhos (na função `headers()` de `next.config.ts`, para todas as rotas)
 
 | Cabeçalho | Valor |
 |---|---|
@@ -37,13 +37,17 @@ object-src 'none';
 upgrade-insecure-requests
 ```
 
-- Sem `'unsafe-inline'` e sem `'unsafe-eval'`. Script e estilo ficam em arquivos, não embutidos. JSON-LD em `<script type="application/ld+json">` não é executado e não precisa de exceção.
+- Sem `'unsafe-eval'` em produção.
+- **Limite do Next.js:** o App Router embute scripts de hidratação no HTML. Com páginas estáticas não dá para usar `nonce`, que exige renderização por requisição. Opções, em ordem de preferência: (1) política por hash com a opção experimental `sri` do Next, se estiver estável na versão usada; (2) `script-src 'self' 'unsafe-inline'`, aceitando a perda dessa camada em troca de páginas estáticas. Registrar na tarefa qual foi escolhida e por quê. Não trocar páginas estáticas por dinâmicas só para ter `nonce`.
+- `style-src 'self' 'unsafe-inline'` é necessário porque o GSAP anima por estilo embutido no elemento.
+- JSON-LD em `<script type="application/ld+json">` não é executado.
 - Cada domínio de terceiro (mapa, medição) entra de forma explícita, com justificativa na tarefa.
 - Testar primeiro com `Content-Security-Policy-Report-Only` na pré-visualização.
 
 ## Formulários
 
-- **Validação nos dois lados.** O navegador valida para ajudar; a função de envio valida de novo e é a que vale.
+- **Validação nos dois lados.** O navegador valida para ajudar; o Route Handler em `app/api/contato/route.ts` valida de novo e é o que vale.
+- **Só `POST`**, com conferência de `Origin` contra o domínio do site.
 - **Limites.** Tamanho máximo por campo, tipo conferido, e-mail em formato válido.
 - **Robôs.** Campo armadilha escondido de pessoas (fora da tela, `tabindex="-1"`, `autocomplete="off"`, `aria-hidden="true"`). Preenchido, descarta o envio. Tempo mínimo entre abrir e enviar. Se o spam passar, acrescentar Cloudflare Turnstile.
 - **Limite de envios** por IP na função.
@@ -58,7 +62,8 @@ Atende ao critério de aceite AC-031.
 
 - Chaves de serviço de e-mail ou CRM só em variáveis de ambiente da Vercel. Nunca no código, nunca no repositório.
 - `.env` e `.env.*` no `.gitignore`. Manter `.env.example` sem valores.
-- Variável com prefixo `PUBLIC_` vai para o navegador: nunca colocar segredo ali.
+- Variável com prefixo `NEXT_PUBLIC_` vai para o navegador: nunca colocar segredo ali.
+- Código que lê segredo fica em módulo de servidor, com `import 'server-only'`.
 - Chave exposta por engano é trocada na hora, não apenas apagada do histórico.
 
 ## Links e terceiros

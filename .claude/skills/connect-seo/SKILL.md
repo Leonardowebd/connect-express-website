@@ -41,14 +41,15 @@ Esses itens são cobertos pelos critérios de aceite AC-019 e AC-020.
 ## Migração sem perder posição
 
 - Manter exatamente os endereços do site atual listados na tabela.
-- Redirecionamento 301 em `vercel.json` para qualquer endereço antigo que mude ou deixe de existir. Levantar a lista com `site:connectexpresslog.com.br` e com o Search Console antes de trocar o domínio.
+- Redirecionamento 301 na função `redirects()` de `next.config.ts` para qualquer endereço antigo que mude ou deixe de existir. Levantar a lista com `site:connectexpresslog.com.br` e com o Search Console antes de trocar o domínio.
 - Âncoras antigas (`/#sobre`, `/#servicos`, `/#contato`) continuam existindo como `id` na página inicial.
 - `www` é o endereço oficial; a versão sem `www` e a `http` redirecionam para ele.
 - Depois de publicar: enviar o sitemap no Search Console e acompanhar erros de rastreamento por 4 semanas.
 
 ## Arquivos do site
 
-- `/sitemap.xml` com todas as páginas públicas e data de alteração.
+- `/sitemap.xml` gerado por `app/sitemap.ts`, com todas as páginas públicas e data de alteração.
+- Título, descrição, canônico e Open Graph pela API `metadata` do Next em cada página, com `metadataBase` no layout.
 - `/robots.txt` liberando o site e apontando para o sitemap (critério de aceite AC-021).
 - Pré-visualizações da Vercel não podem ser indexadas: `X-Robots-Tag: noindex` fora do domínio de produção.
 - Página 404 própria, com links para início, soluções e contato.

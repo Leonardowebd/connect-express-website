@@ -46,8 +46,13 @@ Um único conjunto, em SVG embutido, traço de mesma espessura. Ícone decorativ
 
 ## Movimento
 
-- Duração entre 150 e 300 ms, só em `opacity` e `transform`.
-- Nada se move sem ação do visitante, exceto entrada sutil de seção.
+Animação feita com GSAP. As regras de código estão em `connect-frontend`.
+
+- Transições de estado (hover, foco, abrir menu): 150 a 300 ms, em CSS.
+- Entradas de seção ao rolar: 0,3 a 0,8 s, deslocamento de até 24 px, uma vez só.
+- Números da operação podem contar até o valor final ao entrar na tela.
+- Só `opacity` e `transform`.
+- O movimento serve para orientar a leitura. Nada de rolagem sequestrada, paralaxe pesada ou elemento que persegue o cursor.
 - Respeitar `prefers-reduced-motion: reduce` desligando animações.
 
 ## Portões de qualidade

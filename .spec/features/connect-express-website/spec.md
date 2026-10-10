@@ -210,8 +210,8 @@ Como visitante com internet móvel, quero que o site abra rápido, para que eu n
 #### AC-026 - As páginas são leves
 
 - **Dado** o site gerado para publicação
-- **Quando** somo o peso de cada página com seu CSS e JavaScript próprios (sem imagens)
-- **Então** nenhuma página passa de 200 KB
+- **Quando** somo o peso comprimido do HTML, do CSS e do JavaScript da primeira carga de cada página (sem imagens)
+- **Então** nenhuma página passa de 250 KB
 
 #### AC-027 - Nada bloqueia a primeira pintura
 
@@ -321,7 +321,8 @@ Como equipe do projeto, quero publicar o site sem as fotos definitivas e trocá-
 
 | ID | Suposição | Status | Resolução |
 |---|---|---|---|
-| ASM-001 | O site será estático, gerado com Astro e CSS próprio baseado em tokens, sem framework de interface no navegador. | aberta | - |
+| ASM-001 | O site será estático, gerado com Astro e CSS próprio baseado em tokens, sem framework de interface no navegador. | invalidada | O dono do projeto definiu Next.js, React e GSAP em 2026-10-10. |
+| ASM-011 | Com Next.js: App Router em TypeScript, páginas geradas de forma estática no build, estilos em CSS Modules com tokens (sem Tailwind) e formulário enviado por Route Handler. | aberta | - |
 | ASM-002 | O nome usado no site é "Connect Express Log" (a apresentação escreve "Connecte Express"). | aberta | - |
 | ASM-003 | As quatro soluções do site atual são mantidas, com a logística farmacêutica em destaque. | aberta | - |
 | ASM-004 | Os endereços das páginas de serviço e de Trabalhe Conosco são preservados para não perder posicionamento no Google. | aberta | - |
