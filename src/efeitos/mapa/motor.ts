@@ -223,6 +223,17 @@ export function desenharBase(
     }
     ctx.globalAlpha = 1;
     preencher(ctx, cena.terra, cores.terra);
+    // Fronteiras e costas dos outros países: um risco fino e discreto.
+    ctx.globalAlpha = 0.16;
+    ctx.lineWidth = 0.75;
+    ctx.lineJoin = 'round';
+    for (const anel of cena.terra) {
+      ctx.beginPath();
+      anel.forEach((p, i) => (i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1])));
+      ctx.closePath();
+      ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
   }
 
   // Topo dos estados

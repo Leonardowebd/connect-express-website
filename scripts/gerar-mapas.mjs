@@ -1,10 +1,11 @@
 // Gera os contornos usados pelos mapas de cobertura, já simplificados.
-// Fontes: malha de estados do IBGE e contorno de terras do Natural Earth (world-atlas).
+// Fontes: malha de estados do IBGE e contorno dos países do Natural Earth (world-atlas).
+// A terra é guardada país a país, para o globo poder riscar as fronteiras.
 // Uso: node scripts/gerar-mapas.mjs
 import fs from 'node:fs';
 
 const IBGE = 'https://servicodados.ibge.gov.br/api/v3/malhas/paises/BR?formato=application/vnd.geo%2Bjson&qualidade=minima&intrarregiao=UF';
-const TERRA = 'https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/land-110m.json';
+const TERRA = 'https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json';
 const CENTRO = [-54, -15];
 
 const UF_POR_CODIGO = {
@@ -104,11 +105,11 @@ async function terra() {
       Math.cos(CENTRO[1] * RAD) * Math.cos(lat * RAD) * Math.cos((lon - CENTRO[0]) * RAD) >
     -0.15;
   const aneis = [];
-  for (const g of topo.objects.land.geometries) {
+  for (const g of topo.objects.countries.geometries) {
     const poligonos = g.type === 'Polygon' ? [g.arcs] : g.arcs;
     for (const p of poligonos) {
       const r = anel(p[0]);
-      if (area(r) < 1.5 || !r.some(perto)) continue;
+      if (area(r) < 0.8 || !r.some(perto)) continue;
       aneis.push(arredondar(simplificar(r, 0.25), 1));
     }
   }
