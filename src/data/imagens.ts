@@ -86,8 +86,8 @@ export const imagens: EspacoDeImagem[] = [
     arquivo: 'chamada-final.webp',
     largura: 1672,
     altura: 941,
-    alt: 'Frota da Connect Express Log, com caminhões refrigerados e motos, em pátio ao entardecer',
-    origem: 'Frota compacta em pátio ao entardecer.png',
+    alt: 'Motoboy da Connect Express Log, de uniforme verde, em movimento por uma rua da cidade',
+    origem: 'Motoboy verde em movimento urbano-1.png',
     pedido: 'Repetida da solução de medicamentos. Ideal: foto panorâmica própria, da frota ou da base em atividade.',
   },
   {
