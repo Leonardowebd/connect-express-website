@@ -3,7 +3,7 @@
 // (WebP, na largura indicada) e gere o site de novo. Se o arquivo não existir,
 // o site mostra um substituto da marca na mesma proporção.
 // "origem" registra de qual arquivo de Dados/Imagens Novo site a foto veio.
-// Com seis fotos para dez espaços, quatro se repetem: ver "pedido".
+// Dez espaços e nove fotos: "quem-somos" e "solucao-biologicos" usam a mesma.
 
 export type EspacoDeImagem = {
   id: string;
@@ -41,8 +41,8 @@ export const imagens: EspacoDeImagem[] = [
     arquivo: 'sobre-palco.webp',
     largura: 1672,
     altura: 941,
-    alt: 'Carreta verde da Connect Express Log na estrada',
-    origem: 'Caminhão verde da Connect ExpressLog.png',
+    alt: 'Motoboy da Connect Express Log visto de cima, em entrega por uma avenida',
+    origem: 'Connect ExpressLog em rota urbana.png',
     pedido: 'Foto horizontal em tela cheia, que aceite texto branco por cima. Ideal: a base ou a equipe em operação.',
   },
   {
@@ -58,8 +58,8 @@ export const imagens: EspacoDeImagem[] = [
     id: 'solucao-biologicos',
     arquivo: 'solucao-biologicos.webp',
     largura: 1280,
-    altura: 721,
-    alt: 'Profissional de uniforme verde calçando luvas antes de manusear a carga',
+    altura: 720,
+    alt: 'Profissional de uniforme verde da Connect Express Log calçando luvas antes de preparar a carga',
     origem: 'Cuidado no preparo da carga biológica-3.png',
     pedido: 'Preparo de carga biológica, com luvas e caixa térmica.',
   },
@@ -67,17 +67,17 @@ export const imagens: EspacoDeImagem[] = [
     id: 'solucao-motoboy',
     arquivo: 'solucao-motoboy.webp',
     largura: 1280,
-    altura: 721,
-    alt: 'Motoboy da Connect Express Log em movimento na cidade',
-    origem: 'Motoboy verde em movimento urbano-1.png',
+    altura: 720,
+    alt: 'Motoboy da Connect Express Log, de uniforme verde e capacete, em moto com baú da marca em rua comercial',
+    origem: 'Motoboy Connect ExpressLog em rota urbana.png',
     pedido: 'Motoboy uniformizado, com a moto e o baú da marca.',
   },
   {
     id: 'solucao-ecommerce',
     arquivo: 'solucao-ecommerce.webp',
     largura: 1280,
-    altura: 721,
-    alt: 'Profissional de luvas fechando uma caixa com fita da marca',
+    altura: 720,
+    alt: 'Profissional da Connect Express Log, de luvas, lacrando uma caixa de encomenda com fita verde da marca',
     origem: 'Lacre verde para transporte biológico-4.png',
     pedido: 'Ideal: triagem de pacotes de e-commerce no centro de distribuição.',
   },
@@ -86,17 +86,17 @@ export const imagens: EspacoDeImagem[] = [
     arquivo: 'chamada-final.webp',
     largura: 1672,
     altura: 941,
-    alt: 'Caminhão refrigerado da Connect Express Log ao pôr do sol',
-    origem: 'Caminhão compacto no pátio ao entardecer-2.png',
+    alt: 'Frota de motos da Connect Express Log em frente ao galpão, ao pôr do sol',
+    origem: 'Frota Connect ExpressLog ao pôr do sol.png',
     pedido: 'Repetida da solução de medicamentos. Ideal: foto panorâmica própria, da frota ou da base em atividade.',
   },
   {
     id: 'operacao',
     arquivo: 'operacao.webp',
     largura: 1280,
-    altura: 721,
-    alt: 'Motoboy da Connect Express Log com baú da marca em avenida',
-    origem: 'Motoboy verde em movimento urbano-1.png',
+    altura: 720,
+    alt: 'Motos verdes da Connect Express Log alinhadas, com baús da marca, prontas para sair',
+    origem: 'Frota verde alinhada para partir.png',
     pedido: 'Repetida da solução de motoboy. Ideal: base em atividade, com separação ou conferência de pedidos.',
   },
   {
@@ -104,8 +104,8 @@ export const imagens: EspacoDeImagem[] = [
     arquivo: 'operacao-detalhe.webp',
     largura: 800,
     altura: 800,
-    alt: 'Caixa sendo lacrada com fita verde da marca',
-    origem: 'Lacre verde para transporte biológico-4.png (recorte quadrado)',
+    alt: 'Moto verde da Connect Express Log estacionada, com a marca no tanque',
+    origem: 'Adesivo Connect ExpressLog no tanque verde.png (recorte quadrado)',
     pedido: 'Recorte da foto de e-commerce. Ideal: detalhe próprio, como rastreio no celular ou leitura de código.',
   },
 ];
