@@ -1,0 +1,48 @@
+# Gera o site estático e publica o resultado na branch "hostinger-deploy".
+# A Hostinger (hPanel > Avançado > Git) puxa essa branch para public_html.
+name: Publicar para Hostinger
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hostinger-deploy
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run hostinger          # gera out/ (site + .htaccess + api) e o zip
+      - name: Atualizar a branch hostinger-deploy
+        run: |
+          set -e
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          rm -rf /tmp/deploy && mkdir /tmp/deploy
+          if git ls-remote --exit-code --heads origin hostinger-deploy >/dev/null 2>&1; then
+            git clone --branch hostinger-deploy --single-branch "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" /tmp/deploy
+            find /tmp/deploy -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          else
+            git -C /tmp/deploy init -b hostinger-deploy
+            git -C /tmp/deploy remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          fi
+          cp -a out/. /tmp/deploy/
+          cd /tmp/deploy
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "Sem mudanças"; exit 0; fi
+          git commit -m "Site gerado de ${GITHUB_SHA::7}"
+          git push origin hostinger-deploy
