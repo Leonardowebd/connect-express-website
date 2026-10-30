@@ -46,7 +46,7 @@ Use só o que está nesta tabela. Regra definida pelo dono do projeto em 2026-10
 | Matriz | R. Gilvan Fernandes, 188, Galpão 07, Recreio Ipitanga, Lauro de Freitas, BA, 42700-530 | Site atual | Publicado |
 | Filial | Av. Itaberaba, 4688, Itaberaba, São Paulo, SP, 02739-000 | Site atual | Publicado |
 | Centros de distribuição | São Paulo e Rio de Janeiro | Site atual | Publicado |
-| Comercial | (11) 95595-4684, comercial@connectexpresslog.com.br | Site atual | Publicado |
+| Comercial | (11) 5028-0388, comercial@connectexpresslog.com.br | Site atual | Publicado |
 | SAC | (11) 5028-0388, sac@connectexpresslog.com.br | Site atual | Publicado |
 | CNPJ | 23.039.490/0001-35 (Mcs Translog Logistica e Servicos de Transporte LTDA) | Site atual | Publicado |
 | Clientes | Decathlon, Drogaria Pacheco, Drogaria Rosário, Drogaria São Paulo, Extrafarma, Magazine Luiza, Pague Menos, Salvador Medical, Mastermed | Site atual | Publicado |

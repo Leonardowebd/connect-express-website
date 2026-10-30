@@ -16,9 +16,9 @@ export const empresa = {
 export const contatos = {
   comercial: {
     rotulo: 'Comercial',
-    telefone: '(11) 95595-4684',
-    telefoneLink: '+5511955954684',
-    whatsapp: '5511955954684',
+    telefone: '(11) 5028-0388',
+    telefoneLink: '+551150280388',
+    whatsapp: '551150280388',
     email: 'comercial@connectexpresslog.com.br',
   },
   sac: {

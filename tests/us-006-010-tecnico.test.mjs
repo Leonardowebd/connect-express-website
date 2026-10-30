@@ -123,7 +123,7 @@ test('@spec:AC-024 o site oferece um resumo para assistentes', () => {
   assert.match(resumo, /transportadora especializada em logística para a saúde/);
   for (const rota of ROTAS_DE_SOLUCAO) assert.ok(resumo.includes(`(${SITE}${rota})`), `link para ${rota}`);
   assert.match(resumo, /## Cobertura[\s\S]*Bahia/);
-  assert.match(resumo, /## Contato[\s\S]*\(11\) 95595-4684/);
+  assert.match(resumo, /## Contato[\s\S]*\(11\) 5028-0388/);
 });
 
 test('@spec:AC-025 cada solução é descrita como serviço', () => {

@@ -107,7 +107,7 @@ Como decisor interessado, quero pedir uma cotação pelo canal que eu preferir, 
 
 - **Dado** que estou em qualquer página
 - **Quando** toco no botão de WhatsApp
-- **Então** abre a conversa com o comercial (11) 95595-4684 com uma mensagem inicial já preenchida
+- **Então** abre a conversa com o comercial (11) 5028-0388 com uma mensagem inicial já preenchida
 
 #### AC-013 - Telefones, e-mails e endereços estão em texto
 

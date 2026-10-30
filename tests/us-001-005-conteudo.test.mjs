@@ -133,7 +133,7 @@ test('@spec:AC-011 o formulário avisa o que falta antes de enviar', async () =>
 
 test('@spec:AC-012 o WhatsApp comercial está a um toque', () => {
   for (const [rota, h] of paginas()) {
-    const zap = links(h).filter((l) => l.href?.startsWith('https://wa.me/5511955954684'));
+    const zap = links(h).filter((l) => l.href?.startsWith('https://wa.me/551150280388'));
     assert.ok(zap.length >= 1, `${rota}: link para o WhatsApp comercial`);
     assert.ok(zap.every((l) => /\?text=.+/.test(l.href)), `${rota}: mensagem inicial preenchida`);
   }
@@ -141,11 +141,11 @@ test('@spec:AC-012 o WhatsApp comercial está a um toque', () => {
 
 test('@spec:AC-013 telefones, e-mails e endereços estão em texto', () => {
   const hrefs = links(inicio).map((l) => l.href);
-  for (const esperado of ['tel:+5511955954684', 'tel:+551150280388', 'mailto:comercial@connectexpresslog.com.br', 'mailto:sac@connectexpresslog.com.br']) {
+  for (const esperado of ['tel:+551150280388', 'mailto:comercial@connectexpresslog.com.br', 'mailto:sac@connectexpresslog.com.br']) {
     assert.ok(hrefs.includes(esperado), esperado);
   }
   const t = texto(inicio);
-  for (const esperado of ['(11) 95595-4684', '(11) 5028-0388', 'R. Gilvan Fernandes, 188', 'Av. Itaberaba, 4688', '23.039.490/0001-35']) {
+  for (const esperado of ['(11) 5028-0388', 'R. Gilvan Fernandes, 188', 'Av. Itaberaba, 4688', '23.039.490/0001-35']) {
     assert.ok(t.includes(esperado), esperado);
   }
 });
