@@ -16,23 +16,45 @@ export const empresa = {
 export const contatos = {
   comercial: {
     rotulo: 'Comercial',
-    telefone: '(11) 5028-0388',
-    telefoneLink: '+551150280388',
-    whatsapp: '551150280388',
+    telefone: '(11) 95595-4684',
+    telefoneLink: '+5511955954684',
+    whatsapp: '5571991047146',
+    whatsappExibido: '(71) 99104-7146',
     email: 'comercial@connectexpresslog.com.br',
   },
   sac: {
     rotulo: 'SAC',
     telefone: '(11) 5028-0388',
     telefoneLink: '+551150280388',
+    whatsapp: '551150280388',
     email: 'sac@connectexpresslog.com.br',
   },
   vagas: { email: 'vagas@connectexpresslog.com.br' },
 } as const;
 
+// Canais do SAC. O principal atende 24 horas; os de turno reforçam manhã e tarde.
+export const canaisSac = [
+  { rotulo: 'Atendimento principal', horario: '24 horas, todos os dias', whatsapp: '551150280388', exibido: '(11) 5028-0388' },
+  { rotulo: 'Atendimento da manhã', horario: 'Manhã', whatsapp: '5521999700447', exibido: '(21) 99970-0447' },
+  { rotulo: 'Atendimento da tarde', horario: 'Tarde', whatsapp: '5511919269325', exibido: '(11) 91926-9325' },
+] as const;
+
+export const licencas = [
+  'Licença para transporte de material biológico',
+  'Licença para transporte de medicamentos e quimioterápicos',
+  'Autorização ambiental para transporte de produtos perigosos',
+  'Certificado de Regularidade do IBAMA',
+  'AFE para transporte de correlatos',
+  'AE (Autorização Especial) para transporte de medicamentos controlados',
+  'Registro na ANTT (Agência Nacional de Transportes Terrestres)',
+] as const;
+
 export const MENSAGEM_WHATSAPP = 'Olá! Vim pelo site e quero uma cotação.';
 
-export const linkWhatsApp = `https://wa.me/${contatos.comercial.whatsapp}?text=${encodeURIComponent(MENSAGEM_WHATSAPP)}`;
+export const conversaWhatsApp = (numero: string, texto?: string) =>
+  `https://wa.me/${numero}${texto ? `?text=${encodeURIComponent(texto)}` : ''}`;
+
+export const linkWhatsApp = conversaWhatsApp(contatos.comercial.whatsapp, MENSAGEM_WHATSAPP);
 
 export const enderecos = [
   {

@@ -140,7 +140,7 @@ export const perguntasGerais: Pergunta[] = [
   {
     pergunta: 'Como peço uma cotação?',
     resposta:
-      'A cotação é pedida pelo formulário de contato do site, pelo WhatsApp comercial (11) 5028-0388 ou pelo e-mail comercial@connectexpresslog.com.br. Informe o tipo de carga, as cidades atendidas e o volume médio de pedidos.',
+      'A cotação é pedida pelo formulário de contato do site, pelo WhatsApp comercial (71) 99104-7146 ou pelo e-mail comercial@connectexpresslog.com.br. Informe o tipo de carga, as cidades atendidas e o volume médio de pedidos.',
   },
 ];
 
@@ -159,3 +159,18 @@ export const publicos = [
   'Lojas virtuais e marketplaces',
   'Empresas e comércios',
 ];
+
+export const atendimentoSecao = {
+  rotulo: 'Atendimento',
+  titulo: 'Fale com a equipe certa',
+  comercial:
+    'O Departamento Comercial apresenta as soluções logísticas e monta a proposta para a necessidade da sua empresa.',
+  sac: 'O SAC dá suporte, tira dúvidas e acompanha as suas solicitações relacionadas às entregas.',
+};
+
+export const licencasSecao = {
+  rotulo: 'Licenças e autorizações',
+  titulo: 'Habilitada para transportar cargas da saúde',
+  texto:
+    'A Connect Express Log tem as licenças e autorizações exigidas para transportar material biológico, medicamentos, controlados e produtos perigosos.',
+};

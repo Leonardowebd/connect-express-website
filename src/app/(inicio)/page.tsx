@@ -1,9 +1,11 @@
 import { JsonLd } from '@/components/JsonLd';
+import { Atendimento } from '@/components/secoes/Atendimento';
 import { Chamada } from '@/components/secoes/Chamada';
 import { Cobertura } from '@/components/secoes/Cobertura';
 import { Contato } from '@/components/secoes/Contato';
 import { Fatos } from '@/components/secoes/Fatos';
 import { Heroi } from '@/components/secoes/Heroi';
+import { Licencas } from '@/components/secoes/Licencas';
 import { Operacao } from '@/components/secoes/Operacao';
 import { Perguntas } from '@/components/secoes/Perguntas';
 import { Sobre } from '@/components/secoes/Sobre';
@@ -23,9 +25,11 @@ export default function Inicio() {
       <Solucoes />
       <Operacao />
       <Sobre />
+      <Licencas />
       <Cobertura />
       <Chamada />
       <Perguntas perguntas={perguntasGerais} />
+      <Atendimento />
       <Contato />
       <JsonLd dados={site()} />
     </>
