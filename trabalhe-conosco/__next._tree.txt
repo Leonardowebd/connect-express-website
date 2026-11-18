@@ -1,10 +1,9 @@
-:HL["/_next/static/chunks/1tee2p_6y7xxs.css","style"]
+:HL["/_next/static/chunks/2nta3qt-6m1t4.css","style"]
 :HL["/_next/static/chunks/1c16bio4n3uz6.css","style"]
-:HL["/_next/static/chunks/0ljmvfrr9p30h.css","style"]
-:HL["/_next/static/chunks/02_rlmeusmjjk.css","style"]
-:HL["/_next/static/media/0981397205f5a2e0-s.p.1i0-tkhmnd6is.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/chunks/2azyp2hnwqz00.css","style"]
+:HL["/_next/static/media/a30037bada340db0-s.p.1i0-tkhmnd6is.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/logos/logo-connect-express-log.png","image"]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":"trabalhe-conosco","h":64,"c":"$Q3"}]]
 1:[["children",{"s":"(site)","c":"$Q2"}]]
-0:{"b":"Rg_EqSKBX1WRWbjxrlc6g","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"xX7ZaK3V_bhRT_1EL_rI9","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
