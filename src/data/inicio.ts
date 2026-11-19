@@ -140,7 +140,7 @@ export const perguntasGerais: Pergunta[] = [
   {
     pergunta: 'Como peço uma cotação?',
     resposta:
-      'A cotação é pedida pelo formulário de contato do site, pelo WhatsApp comercial (71) 99104-7146 ou pelo e-mail comercial@connectexpresslog.com.br. Informe o tipo de carga, as cidades atendidas e o volume médio de pedidos.',
+      'A cotação é pedida pelo formulário de contato do site, pelo WhatsApp comercial (21) 99970-0447 ou pelo e-mail comercial@connectexpresslog.com.br. Informe o tipo de carga, as cidades atendidas e o volume médio de pedidos.',
   },
 ];
 

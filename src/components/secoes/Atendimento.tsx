@@ -1,6 +1,6 @@
 import { EnvelopeSimple, Headset, Phone, WhatsappLogo } from '@phosphor-icons/react/dist/ssr';
 import { Revelar } from '@/animacoes/Revelar';
-import { canaisSac, contatos, conversaWhatsApp, linkWhatsApp } from '@/data/empresa';
+import { canaisSac, contatos, conversaWhatsApp, linkWhatsApp, MENSAGEM_SAC } from '@/data/empresa';
 import { atendimentoSecao } from '@/data/inicio';
 import styles from './secoes.module.css';
 
@@ -50,7 +50,7 @@ export function Atendimento() {
                   <span>
                     {c.rotulo} · {c.horario}
                   </span>
-                  <a href={conversaWhatsApp(c.whatsapp)} target="_blank" rel="noopener noreferrer">
+                  <a href={conversaWhatsApp(c.whatsapp, MENSAGEM_SAC)} target="_blank" rel="noopener noreferrer">
                     <WhatsappLogo aria-hidden="true" size={18} /> {c.exibido}
                   </a>
                 </li>

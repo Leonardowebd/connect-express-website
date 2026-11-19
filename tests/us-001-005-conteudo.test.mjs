@@ -133,7 +133,7 @@ test('@spec:AC-011 o formulário avisa o que falta antes de enviar', async () =>
 
 test('@spec:AC-012 o WhatsApp comercial está a um toque', () => {
   for (const [rota, h] of paginas()) {
-    const zap = links(h).filter((l) => l.href?.startsWith('https://wa.me/5571991047146'));
+    const zap = links(h).filter((l) => l.href?.startsWith('https://wa.me/5521999700447'));
     assert.ok(zap.length >= 1, `${rota}: link para o WhatsApp comercial`);
     assert.ok(zap.every((l) => /\?text=.+/.test(l.href)), `${rota}: mensagem inicial preenchida`);
   }

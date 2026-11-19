@@ -18,8 +18,8 @@ export const contatos = {
     rotulo: 'Comercial',
     telefone: '(11) 95595-4684',
     telefoneLink: '+5511955954684',
-    whatsapp: '5571991047146',
-    whatsappExibido: '(71) 99104-7146',
+    whatsapp: '5521999700447',
+    whatsappExibido: '(21) 99970-0447',
     email: 'comercial@connectexpresslog.com.br',
   },
   sac: {
@@ -50,6 +50,7 @@ export const licencas = [
 ] as const;
 
 export const MENSAGEM_WHATSAPP = 'Olá! Vim pelo site e quero uma cotação.';
+export const MENSAGEM_SAC = 'Olá! Vim pelo site e preciso de ajuda com uma entrega.';
 
 export const conversaWhatsApp = (numero: string, texto?: string) =>
   `https://wa.me/${numero}${texto ? `?text=${encodeURIComponent(texto)}` : ''}`;
