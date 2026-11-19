@@ -3,7 +3,7 @@
 // (WebP, na largura indicada) e gere o site de novo. Se o arquivo não existir,
 // o site mostra um substituto da marca na mesma proporção.
 // "origem" registra de qual arquivo de Dados/Imagens Novo site a foto veio.
-// Dez espaços e nove fotos: "quem-somos" e "solucao-biologicos" usam a mesma.
+// Doze espaços e onze fotos: "quem-somos" e "solucao-biologicos" usam a mesma.
 
 export type EspacoDeImagem = {
   id: string;
@@ -107,6 +107,24 @@ export const imagens: EspacoDeImagem[] = [
     alt: 'Moto verde da Connect Express Log estacionada, com a marca no tanque',
     origem: 'Adesivo Connect ExpressLog no tanque verde.png (recorte quadrado)',
     pedido: 'Recorte da foto de e-commerce. Ideal: detalhe próprio, como rastreio no celular ou leitura de código.',
+  },
+  {
+    id: 'licencas',
+    arquivo: 'licencas.webp',
+    largura: 486,
+    altura: 600,
+    alt: 'Moto, carro e caminhão verdes da Connect Express Log estacionados em frente às docas do galpão',
+    origem: 'Informativo "Licenças e autorizações" do cliente (recorte da foto, sem o texto)',
+    pedido: 'Vertical. Ideal: a mesma cena em resolução maior, para telas grandes.',
+  },
+  {
+    id: 'atendimento',
+    arquivo: 'atendimento.webp',
+    largura: 350,
+    altura: 480,
+    alt: 'Motoboy da Connect Express Log sorrindo de braços cruzados, encostado na moto com baú da marca',
+    origem: 'Informativo "Comercial" do cliente (recorte da foto, sem o texto)',
+    pedido: 'Vertical. Ideal: a mesma cena em resolução maior, para telas grandes.',
   },
 ];
 

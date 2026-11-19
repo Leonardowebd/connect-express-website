@@ -34,9 +34,9 @@ export const contatos = {
 
 // Canais do SAC. O principal atende 24 horas; os de turno reforçam manhã e tarde.
 export const canaisSac = [
-  { rotulo: 'Atendimento principal', horario: '24 horas, todos os dias', whatsapp: '551150280388', exibido: '(11) 5028-0388' },
-  { rotulo: 'Atendimento da manhã', horario: 'Manhã', whatsapp: '5521999700447', exibido: '(21) 99970-0447' },
-  { rotulo: 'Atendimento da tarde', horario: 'Tarde', whatsapp: '5511919269325', exibido: '(11) 91926-9325' },
+  { rotulo: 'Principal · 24 horas, todos os dias', whatsapp: '551150280388', exibido: '(11) 5028-0388' },
+  { rotulo: 'Manhã', whatsapp: '5521999700447', exibido: '(21) 99970-0447' },
+  { rotulo: 'Tarde', whatsapp: '5511919269325', exibido: '(11) 91926-9325' },
 ] as const;
 
 export const licencas = [

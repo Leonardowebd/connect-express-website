@@ -782,7 +782,46 @@
 .atendimento {
   display: grid;
   gap: var(--espaco-4);
+  align-content: start;
+}
+
+/* Foto vertical ao lado dos cartões; no celular vira faixa acima deles. */
+.fotoLateral img {
+  object-position: center 12%;
+}
+
+.comFoto {
+  display: grid;
+  gap: var(--espaco-4);
   margin-top: var(--espaco-8);
+}
+
+.fotoLateral {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  background: var(--cor-superficie);
+}
+
+@media (min-width: 1024px) {
+  .comFoto {
+    grid-template-columns: 2fr 1fr;
+    align-items: stretch;
+  }
+
+  .comFotoEsquerda {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .comFoto:not(.comFotoEsquerda) .fotoLateral {
+    order: 2;
+  }
+
+  .fotoLateral {
+    aspect-ratio: auto;
+    min-height: 100%;
+  }
 }
 
 .canais {
@@ -812,6 +851,10 @@
   overflow-wrap: anywhere;
 }
 
+.canais a[href^='mailto'] {
+  font-size: 0.9375rem;
+}
+
 .canais a:hover {
   text-decoration: underline;
   text-underline-offset: 0.25em;
@@ -827,8 +870,21 @@
   line-height: 1.3;
 }
 
+.licencasTexto {
+  max-width: 62ch;
+  margin-top: var(--espaco-4);
+}
+
 .licencasGrade {
-  margin-top: var(--espaco-8);
+  display: grid;
+  gap: var(--espaco-3);
+  align-content: start;
+}
+
+@media (min-width: 768px) {
+  .licencasGrade {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* Perguntas frequentes em cartões */

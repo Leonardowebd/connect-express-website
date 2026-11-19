@@ -1,5 +1,6 @@
 import { EnvelopeSimple, Headset, Phone, WhatsappLogo } from '@phosphor-icons/react/dist/ssr';
 import { Revelar } from '@/animacoes/Revelar';
+import { Imagem } from '@/components/Imagem/Imagem';
 import { canaisSac, contatos, conversaWhatsApp, linkWhatsApp, MENSAGEM_SAC } from '@/data/empresa';
 import { atendimentoSecao } from '@/data/inicio';
 import styles from './secoes.module.css';
@@ -15,6 +16,10 @@ export function Atendimento() {
           {atendimentoSecao.titulo}
         </h2>
 
+        <div className={`${styles.comFoto} ${styles.comFotoEsquerda}`}>
+        <div className={styles.fotoLateral}>
+          <Imagem id="atendimento" preencher sizes="(min-width: 1024px) 30vw, 100vw" />
+        </div>
         <Revelar emSequencia className={styles.atendimento}>
           <article className={styles.cartao}>
             <Phone aria-hidden="true" weight="duotone" size={32} className={styles.icone} />
@@ -47,9 +52,7 @@ export function Atendimento() {
             <ul className={styles.canais}>
               {canaisSac.map((c) => (
                 <li key={c.whatsapp}>
-                  <span>
-                    {c.rotulo} · {c.horario}
-                  </span>
+                  <span>{c.rotulo}</span>
                   <a href={conversaWhatsApp(c.whatsapp, MENSAGEM_SAC)} target="_blank" rel="noopener noreferrer">
                     <WhatsappLogo aria-hidden="true" size={18} /> {c.exibido}
                   </a>
@@ -64,6 +67,7 @@ export function Atendimento() {
             </ul>
           </article>
         </Revelar>
+        </div>
       </div>
     </section>
   );
